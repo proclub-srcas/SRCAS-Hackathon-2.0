@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Hackbyte3Logo from "../../public/FooterLogo/Hackbyte3Logo.png";
-import webdock from "../../public/FooterLogo/webdock_footer_logo.svg";
+import webdock from "../../public/FooterLogo/ProClubLogo.png";
 import benq from "../../public/FooterLogo/benq_footer_logo.svg";
 import linkedIn from "../../public/FooterLogo/linkedin.svg";
 import instagram from "../../public/FooterLogo/instagram.svg";
@@ -28,17 +28,17 @@ const Footer = () => {
         <div className="flex items-center justify-center py-4 px-2 md:px-6 mt-6 w-full">
           <Image
             src={Hackbyte3Logo}
-            alt="HackByte 3.0"
+            alt="SRCAS Hackathon 2.0"
             className="xxs:h-16 xs:h-20 md:h-32 w-auto"
           />
 
-          <div className="h-20 w-px bg-gray-500 mx-4"></div>
+          <div className="h-40 w-px bg-gray-500 mx-4"></div>
           <div className="flex flex-col w-full">
             <div className="text-white text-base font-semibold">
               Powered by
             </div>
             <div className="flex items-center space-x-2 md:space-x-4 text-white">
-              <Image src={webdock} alt="Webdock" className="xxs:h-4 xs:h-6 md:h-12" />
+              <Image src={webdock} alt="Webdock" className="xxs:h-12 xs:h-12 md:h-18" />
               <Image src={benq} alt="BenQ" className="xxs:h-7 xs:h-8 md:h-14" />
             </div>
           </div>
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between items-end md:items-center xl:px-32 lg:px-10 md:px-1 px-0 mt-8 bg-[#FF3044] rotate-2">
+      <div className="flex flex-col md:flex-row justify-between items-end md:items-center xl:px-32 lg:px-10 md:px-1 px-0 mt-8 bg-[#007acc] rotate-2">
         <div className="flex flex-wrap justify-evenly xs:justify-start lg:gap-4 monitor:gap-12 xl:gap-8 gap-0 md:my-4 hover:items-start text-supporting-lightGray">
           {sidebarLinks.map((link) => (
             <Link

@@ -5,22 +5,22 @@ import Link from "next/link";
 import phoneImg from "@/public/Contact/phone.png";
 
 export const metadata = {
-  title: "Contact | HackByte",
+  title: "Contact | SRCAS Hackathon",
   description:
-    "Connect with us at HackByte! Reach out for assistance, questions, or just to say hello. Find information on reaching IIIT Jabalpur, including travel options.",
-  keywords: "contact, hackbyte, reach us, get in touch",
+    "Connect with us at SRCAS Hackathon! Reach out for assistance, questions, or just to say hello. Find information on reaching SRCAS, including travel options.",
+  keywords: "contact, SRCAS Hackathon, reach us, get in touch",
   openGraph: {
-    title: "Contact | HackByte",
+    title: "Contact | SRCAS Hackathon",
     description:
-      "Connect with us at HackByte! Reach out for assistance, questions, or just to say hello. Find information on reaching IIIT Jabalpur, including travel options.",
-    url: "https://hackbyte.in/contact",
-    images:
-      "https://res.cloudinary.com/dlsqbiwug/image/upload/v1736876616/Frame_463_zdbkgu.png",
-    siteName: "HackByte - IIITDMJ Hackathon",
+      "Connect with us at SRCAS Hackathon! Reach out for assistance, questions, or just to say hello. Find information on reaching SRCAS, including travel options.",
+    url: "https://srcashackathon.live/contact",
+    images: "https://github.com/proclub-srcas/SRCAS-Hackathon/blob/main/public/srcas-hack-og.png", 
+    siteName: "SRCAS Hackathon",
     type: "website",
     locale: "en_US",
   },
 };
+
 
 export default function ContactSection() {
   return (
@@ -59,113 +59,58 @@ export default function ContactSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="space-y-2">
-            <h2 className="text-3xl md:text-4xl font-black">Call Us</h2>
-            <div className="flex flex-row gap-8 text-supporting-mediumGray font-medium">
-              <div>
-                <p>+91 98692 61132</p>
-                <p className="text-base text-supporting-mediumGray font-medium">
-                  Uttara Kamat
-                </p>
+        <div className="flex flex-col items-start gap-12 md:gap-20 md:flex-row">
+          <div className="flex flex-col items-start gap-4 md:gap-8">
+            <p className="text-[#FFFFFF] font-[500] text-[1.5rem] md:text-[1.875rem]">
+              Call Us
+            </p>
+            <div
+              className="flex flex-col gap-12 text-white
+            font-normal text-[1rem] md:flex-row lg:text-[1.5rem]"
+            >
+              <div className="flex flex-col items-start gap-2">
+                <p>+91 9629924052</p>
+                <p>Dr. M. Praneesh</p>
               </div>
-              <div>
-                <p>+91 93196 74300</p>
-                <p className="text-base text-supporting-mediumGray font-medium">
-                  Akshay Behl
-                </p>
+              <div className="flex flex-col items-start gap-2">
+                <p>+91 78453 14345</p>
+                <p>John Samuel</p>
+              </div>
+              <div className="flex flex-col items-start gap-2">
+                <p>+91 97863 50537</p>
+                <p>Tino Britty</p>
               </div>
             </div>
           </div>
-
-          <div className="space-y-2 hidden ">
-            <h2 className="text-3xl md:text-4xl font-black">Mail Us</h2>
-            <div className="space-y-1 flex flex-col text-supporting-mediumGray font-medium">
-              <Link target="_blank" href={"mailto:hackbyte@iiitdmj.ac.in"}>
-                hackbyte@iiitdmj.ac.in
-              </Link>
-            </div>
-          </div>
-
-          <div className="space-y-2 col-span-2 md:col-span-1">
-            <h2 className="text-3xl md:text-4xl font-black">Address</h2>
-            <p className="text-base text-supporting-mediumGray font-medium">
-              IIITDM Jabalpur, Near Dumna Airport,
-              <br /> Jabalpur, Madhya Pradesh 482005
+          <div className="flex flex-col items-start gap-4 md:gap-8">
+            <p className="text-[#FFFFFF] font-[500] text-[1.5rem] md:text-[1.875rem]">
+              Address
+            </p>
+            <p
+              className="max-w-full md:max-w-[18rem] lg:max-w-[25rem] text-white 
+            font-normal text-[1rem] lg:text-[1.5rem]"
+            >
+              2XCP+WQ4, Bus Stop, Avinashi Road Between Fun Mall & Lakshmi Mills, Nava India Rd, Peelamedu, Tamil Nadu
+              641006
             </p>
           </div>
         </div>
 
-        <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl xl:text-5xl font-black">
-            Reaching IIITDM Jabalpur
-          </h2>
-          <div className="aspect-video w-full rounded-3xl overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.4774721298!2d80.02231931544636!3d23.176386884867444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981ae1a0fb6a97d%3A0x44020f94f795d69f!2sIIITDM%20Jabalpur!5e0!3m2!1sen!2sin!4v1629789876543!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+        <div className="flex flex-col items-start gap-8 md:gap-12">
+          <p className="text-[#FFFFFF] font-normal font-['Inter'] text-[1.5rem] md:text-[1.875rem]">
+            Reaching SRCAS Coimbatore
+          </p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.218137130089!2d76.98439197480867!3d11.022253789141816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85849d74c3695%3A0x9153ec3168293ec5!2sSri%20Ramakrishna%20College%20of%20Arts%20%26%20Science!5e0!3m2!1sen!2sin!4v1716544629649!5m2!1sen!2sin"
+            className="w-full h-full md:h-[25rem] border-0 rounded-[1rem]"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:py-16 py-2">
-            <Card className="bg-transparent border-none p-4 space-y-4">
-              <div className="flex md:items-start items-center gap-6 md:flex-col flex-row">
-                <Train className="size-12 text-red-500 bg-red-500/30 p-2 rounded-lg" />
-                <h3 className="font-black text-2xl text-primary-white">
-                  By Train
-                </h3>
-              </div>
-              <p className="md:text-base text-base text-supporting-mediumGray font-medium">
-                Book tickets from IRCTC : The campus is{" "}
-                <b className="text-primary-white">
-                  10kms from the Railway Terminal
-                </b>{" "}
-                and auto fare is usually around{" "}
-                <b className="text-primary-white">₹200-₹250</b>.
-              </p>
-            </Card>
-
-            <Card className="bg-transparent border-none p-4 space-y-4">
-              <div className="flex md:items-start items-center gap-6 md:flex-col flex-row">
-                <Plane className="size-12 text-red-500 bg-red-500/30 p-2 rounded-lg" />
-                <h3 className="font-black text-2xl text-primary-white">
-                  By Flight
-                </h3>
-              </div>
-              <p className="md:text-base text-base text-supporting-mediumGray font-medium">
-                Daily flights from{" "}
-                <b className="text-primary-white">
-                  Delhi, Mumbai, Hyderabad, Indore and Bilaspur
-                </b>{" "}
-                . From <b className="text-primary-white">Bangalore</b>,
-                connecting flights are available.
-              </p>
-            </Card>
-
-            <Card className="bg-transparent border-none p-4 space-y-4">
-              <div className="flex md:items-start items-center gap-6 md:flex-col flex-row">
-                <Bus className="size-12 text-red-500 bg-red-500/30 p-2 rounded-lg" />
-                <h3 className="font-black text-2xl text-primary-white">
-                  By Bus
-                </h3>
-              </div>
-              <p className="md:text-base text-base text-supporting-mediumGray font-medium">
-                Only suggested if you live around 8-10hrs from Jabalpur.{" "}
-                <b className="text-primary-white">
-                  ISBT (Pandit Deen Dayal Bus Stand)
-                </b>{" "}
-                is around 13km from the venue, auto fare is usually around{" "}
-                <b className="text-primary-white">₹400-₹450</b>.
-              </p>
-            </Card>
-          </div>
         </div>
       </div>
-    </div>
+    
   );
 }

@@ -59,7 +59,7 @@ export default function Newsletter() {
             bounce: 0.5,
           },
         }}
-        className=" bg-[#FF3044] rounded-[32px] w-[80%] h-[368px] md:h-[500px] lg:h-[550px] transform -z-10"
+        className=" bg-[#007acc] rounded-[32px] w-[80%] h-[368px] md:h-[500px] lg:h-[550px] transform -z-10"
       ></motion.div>
       <motion.div
          initial={{
@@ -84,15 +84,15 @@ export default function Newsletter() {
         </div>
         <p className="text-[#161616] mb-4 text-sm xs:text-base md:text-xl lg:text-2xl monitor:text-3xl font-normal max-w-full md:max-w-[90%] leading-[140%]">
           To stay up-to-date with{" "}
-          <span className="font-bold ">HackByte 3.0</span>, consider subscribing
+          <span className="font-bold ">SRCAS Hackathon 2.0</span>, consider subscribing
           to our mailing list. Helps us share important updates right away with
           hackers and enthusiasts alike!
         </p>
         <div className="flex justify-between items-start">
-          <ul className="space-y-2 md:space-y-8 text-[#FF3044] font-bold text-sm xs:text-base md:text-lg monitor:text-2xl xl:text-xl leading-[140%]">
+          <ul className="space-y-2 md:space-y-8 text-[#007acc] font-bold text-sm xs:text-base md:text-lg monitor:text-2xl xl:text-xl leading-[140%]">
             <li className="flex items-center">
               <span className="mr-2 text-xl text-black">O</span> Be the first
-              ones to register for HackByte 3.0
+              ones to register for SRCAS Hackathon 2.0
             </li>
             <li className="flex items-center">
               <span className="mr-2 text-xl text-black">O</span> Get updates
@@ -106,7 +106,7 @@ export default function Newsletter() {
 
           <Image
             src={HB3Logo}
-            alt="HackByte 3.0 Logo"
+            alt="SRCAS Hackathon 2.0 Logo"
             className="mt-12 lg:mt-16 monitor:mt-0 xl:mt-20 md:w-40 lg:w-48 monitor:w-72 xl:w-64 hidden md:block"
           />
         </div>

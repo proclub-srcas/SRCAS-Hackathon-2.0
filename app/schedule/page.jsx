@@ -2,24 +2,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import schedule from "@/public/schedule.png";
 
-export const metadata = {
-  title: "Schedule | HackByte",
-  description:
-    "Check out the schedule for HackByte! Stay updated with the timeline of events and activities happening during IIIT Jabalpur's hackathon.",
-  keywords:
-    "Hackathon schedule, Timeline, Events, IIITDMJ, Hackbyte, Coding, Programming, Tech",
-  openGraph: {
-    title: "Schedule | HackByte",
-    description:
-      "Check out the schedule for HackByte! Stay updated with the timeline of events and activities happening during IIIT Jabalpur's hackathon.",
-    url: "https://hackbyte.in/schedule",
-    images:
-      "https://res.cloudinary.com/dlsqbiwug/image/upload/v1736876616/Frame_463_zdbkgu.png",
-    siteName: "HackByte - IIITDMJ Hackathon",
-    type: "website",
-    locale: "en_US",
-  },
-};
 
 const Schedule = () => {
   const EventFlowBox = ({ h, bgColor, title, description, time, snacks }) => {
@@ -140,7 +122,7 @@ const Schedule = () => {
                   h="50px"
                   bgColor="#0275f6"
                   time="6:15 PM"
-                  title="Explain Rules, HackByte 3.0 begins!"
+                  title="Explain Rules, SRCAS Hackathon 2.0 begins!"
                   description="Auditorium, LHTC (Lecture Hall)"
                 />
                 <EventFlowBox
@@ -152,7 +134,7 @@ const Schedule = () => {
                 />
                 <EventFlowBox
                   h="200px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="7:00 PM"
                   title="Hacking Time"
                   description="L104/L105, LHTC (Lecture Hall)"
@@ -166,7 +148,7 @@ const Schedule = () => {
                 />
                 <EventFlowBox
                   h="200px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="10:00 PM"
                   title="Hacking Time"
                   description="L104/L105, LHTC (Lecture Hall)"
@@ -202,7 +184,7 @@ const Schedule = () => {
                 />
                 <EventFlowBox
                   h="150px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="2:30 AM"
                   title="Hacking Time"
                   description="L104/L105, LHTC (Lecture Hall)"
@@ -210,14 +192,14 @@ const Schedule = () => {
                 />
                 <EventFlowBox
                   h="75px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="4:30 AM"
                   title="Checkpoint 1/4"
                   description=""
                 />
                 <EventFlowBox
                   h="225px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="5:15 AM"
                   title="Hacking Time"
                   description="L104/L105, LHTC (Lecture Hall)"
@@ -238,7 +220,7 @@ const Schedule = () => {
                 />
                 <EventFlowBox
                   h="200px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="10:00 AM"
                   title="Hacking Time"
                   description="L104/L105, LHTC (Lecture Hall)"
@@ -252,7 +234,7 @@ const Schedule = () => {
                 />
                 <EventFlowBox
                   h="100px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="1:00 PM"
                   title="Checkpoint 2/4"
                   description=""
@@ -266,7 +248,7 @@ const Schedule = () => {
                 />
                 <EventFlowBox
                   h="100px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="4:00 PM"
                   title="Hacking Time"
                   description="L104/L105, LHTC (Lecture Hall)"
@@ -280,7 +262,7 @@ const Schedule = () => {
                 />
                 <EventFlowBox
                   h="200px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="8:00 PM"
                   title="Hacking Time"
                   description="L104/L105, LHTC (Lecture Hall)"
@@ -294,14 +276,14 @@ const Schedule = () => {
                 />
                 <EventFlowBox
                   h="100px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="10:00 PM"
                   title="Checkpoint 3/4"
                   description=""
                 />
                 <EventFlowBox
                   h="200px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="11:00 PM"
                   title="Hacking Time"
                   description="L104/L105, LHTC (Lecture Hall)"
@@ -330,14 +312,14 @@ const Schedule = () => {
                 />
                 <EventFlowBox
                   h="100px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="1:30 AM"
                   title="MINI Event"
                   description="L104/L105, LHTC (Lecture Hall)"
                 />
                 <EventFlowBox
                   h="150px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="2:30 AM"
                   title="Hacking Time"
                   description="L104/L105, LHTC (Lecture Hall)"
@@ -345,7 +327,7 @@ const Schedule = () => {
                 />
                 <EventFlowBox
                   h="150px"
-                  bgColor="#FF3044"
+                  bgColor="#007acc"
                   time="4:00 AM"
                   title="Checkpoint 4/4"
                   description="L104/L105, LHTC (Lecture Hall)"

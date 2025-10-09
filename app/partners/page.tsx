@@ -7,24 +7,6 @@ import benq from "@/public/partnersPage/benq.png";
 import { inKindSponsorsData, normalSponsorsData } from "@/data/sponsorData";
 import TitleSponsorCard from "@/components/TitleSponsorCard";
 
-export const metadata = {
-  title: "Partners | HackByte",
-  description:
-    "Explore the invaluable support from our esteemed sponsors and partners at HackByte – the premier hackathon hosted by IIITDMJ. Discover their contributions and partnerships, playing a pivotal role in empowering the coding community.",
-  keywords:
-    "Sponsors, Partners, Hackathon, IIITDMJ, Hackbyte, Coding, Programming, Tech, Collaboration, Innovation, Community Support, Technology Events",
-  openGraph: {
-    title: "Partners | HackByte",
-    description:
-      "Explore the invaluable support from our esteemed sponsors and partners at HackByte – the premier hackathon hosted by IIITDMJ. Discover their contributions and partnerships, playing a pivotal role in empowering the coding community.",
-    url: "https://hackbyte.in/partners",
-    images:
-      "https://res.cloudinary.com/dlsqbiwug/image/upload/v1736876616/Frame_463_zdbkgu.png",
-    siteName: "HackByte - IIITDMJ Hackathon",
-    type: "website",
-    locale: "en_US",
-  },
-};
 
 const PartnersPage = () => {
   const TitleSponsors = [
@@ -64,7 +46,7 @@ const PartnersPage = () => {
             <Image
               src={HB3Logo}
               className="hidden md:block xl:w-[380px] lg:w-72 md:w-64 w-32"
-              alt="HackByte 3.0 Logo"
+              alt="SRCAS Hackathon 2.0 Logo"
             />
           </div>
         </div>

@@ -8,24 +8,6 @@ import { OrganizersData } from "@/data/organizersData";
 import { MentorsData } from "@/data/mentorsData";
 import { FamilyData } from "@/data/familyData";
 
-export const metadata = {
-  title: "Humans | HackByte",
-  description:
-    "Meet the team behind HackByte 3.0! Discover the faces and roles of the passionate individuals who are working tirelessly to make the hackathon a grand success. Join us and be a part of the team!",
-  keywords:
-    "Humans, Team, Hackathon, IIITDMJ, Hackbyte, Coding, Programming, Tech",
-  openGraph: {
-    title: "Humans | HackByte",
-    description:
-      "Meet the team behind HackByte 3.0! Discover the faces and roles of the passionate individuals who are working tirelessly to make the hackathon a grand success. Join us and be a part of the team!",
-    url: "https://hackbyte.in/humans",
-    images:
-      "https://res.cloudinary.com/dlsqbiwug/image/upload/v1736876616/Frame_463_zdbkgu.png",
-    siteName: "HackByte - IIITDMJ Hackathon",
-    type: "website",
-    locale: "en_US",
-  },
-};
 
 const Humans = () => {
   return (
@@ -38,7 +20,7 @@ const Humans = () => {
           <div>
             <div className="text-white font-black text-[36px] xs:text-[42px] md:text-[2.9rem] lg:text-[3.9rem] xl:text-[80px] xl:leading-[6rem] mb-5">
               Meet the Humans
-              <br /> of HackByte
+              <br /> of SRCAS Hackathon
             </div>
             <p className="text-supporting-mediumGray font-medium lg:text-2xl md:text-xl text-lg">
               Hacker Experience is what we prioritize! Have questions, need

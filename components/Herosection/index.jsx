@@ -26,19 +26,7 @@ const HeroSection = () => {
           Our Theme
           </div>
         </div>
-        <a
-          id="mlh-trust-badge"
-          href="https://mlh.io/apac?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="right-4 top-0 z-[10000] block w-[15%] max-w-[80px] min-w-[50px] absolute"
-        >
-          <img
-          src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg"
-          alt="Major League Hacking 2025 Hackathon Season"
-          className="w-full"
-          />
-        </a>
+        
         </div>
       </div>
       <div className="relative md:my-32 lg:my-0 monitor:my-16">
@@ -59,7 +47,7 @@ const HeroSection = () => {
         />
         <div className="max-w-[300px] absolute monitor:top-48 xl:top-40 xl:right-20 md:top-32 lg:right-12 sm:top-24 sm:mt-0 mt-44 right-0 sm:rotate-[-5deg] font-bold pr-8 hidden sm:block">
           <div className="sm:text-[#ff97a1] text-white/50 sm:text-lg lg:text-xl text-xl monitor:text-3xl xl:text-2xl md:leading-7 sm:text-start text-end">
-          Join us from
+          Join 
           <br />
           </div>
           <div className="text-white text-2xl sm:text-sm md:text-xl lg:text-2xl monitor:text-4xl xl:text-3xl md:leading-[33.60px] max-w-[80vw] sm:max-w-32 md:max-w-64 ">
@@ -74,15 +62,15 @@ const HeroSection = () => {
       </div>
       {/* This btn is for the Desktop view */}
       <div className="hidden sm:flex justify-center md:justify-end md:mr-8 lg:mr-16 md:-mt-24 lg:-mt-12 xl:-mt-16 mb-8">
-        <PulsatingButton className="px-6 xl:px-8 py-2 xl:py-3 bg-white text-[#FF3044] font-bold text-[28px] xl:text-[32px] hover:bg-black hover:text-white z-10 hover:cursor-pointer transition-colors ease-in-out duration-700">
-        <a href="https://hackbyte3.devfolio.co/">Register Now!</a>
+        <PulsatingButton className="px-6 xl:px-8 py-2 xl:py-3 bg-white text-[#007acc] font-bold text-[28px] xl:text-[32px] hover:bg-black hover:text-white z-10 hover:cursor-pointer transition-colors ease-in-out duration-700">
+        <a href="">Register Now!</a>
         </PulsatingButton>
       </div>
       <div className="flex flex-col gap-8 justify-center md:gap-0 md:flex-row md:justify-between lg:px-16 px-2 xs:px-8 md:pb-16 md: pb-4 sm:mt-0 mt-40">
         {/* This is the btn for the Mobile view */}
         <div className="sm:hidden flex justify-center md:justify-end md:mr-8 lg:mr-16 md:-mt-24 lg:-mt-12 xl:-mt-20 mb-8 z-10">
-        <PulsatingButton className="px-6 xl:px-8 py-2 xl:py-3 bg-white text-[#FF3044] font-bold text-[28px] xl:text-[32px] hover:bg-black hover:text-white z-10 hover:cursor-pointer">
-          <a href="https://hackbyte3.devfolio.co/">Register Now!</a>
+        <PulsatingButton className="px-6 xl:px-8 py-2 xl:py-3 bg-white text-[#007acc] font-bold text-[28px] xl:text-[32px] hover:bg-black hover:text-white z-10 hover:cursor-pointer">
+          <a href=" ">Register Now!</a>
         </PulsatingButton>
         </div>
         <div className="flex justify-evenly md:justify-center gap-4 md:pt-4 z-20">

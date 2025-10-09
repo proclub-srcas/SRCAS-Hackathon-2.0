@@ -5,24 +5,6 @@ import cup4 from "@/public/prizesPageLogo/cup4 (2).svg";
 import { sponsorTrackPrizesData } from "../../data/sponsorTrackPrizesData";
 import TrackPrizeCard from "@/components/TrackPrizeCard";
 
-export const metadata = {
-  title: "Prizes | HackByte",
-  description:
-    "Discover the exciting prizes at HackByte! Explore the rewards, recognition, and opportunities awaiting you. Connect with us for more information on IIIT Jabalpur's hackathon.",
-  keywords:
-    "Hackathon prizes, Rewards, Hackathon, IIITDMJ, Hackbyte, Coding, Programming, Tech",
-  openGraph: {
-    title: "Prizes | HackByte",
-    description:
-      "Discover the exciting prizes at HackByte! Explore the rewards, recognition, and opportunities awaiting you. Connect with us for more information on IIIT Jabalpur's hackathon.",
-    url: "https://hackbyte.in/prizes",
-    images:
-      "https://res.cloudinary.com/dlsqbiwug/image/upload/v1736876616/Frame_463_zdbkgu.png",
-    siteName: "HackByte - IIITDMJ Hackathon",
-    type: "website",
-    locale: "en_US",
-  },
-};
 
 export default function Prizes() {
   return (
@@ -79,7 +61,7 @@ export default function Prizes() {
                     className="text-[#FFA5AE] font-normal text-[1.25rem] 
       text-center md:text-left"
                   >
-                    Best performing All-Girls Team at HackByte
+                    Best performing All-Girls Team at SRCAS Hackathon
                   </p>
                 </div>
               </div>

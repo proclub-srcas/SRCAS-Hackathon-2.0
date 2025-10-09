@@ -1,4 +1,4 @@
-## About HackByte 3.0
+## About SRCAS Hackathon 2.0
 
 
 

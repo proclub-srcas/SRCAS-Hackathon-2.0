@@ -37,7 +37,15 @@ const BannerAnim = () => {
         async function loadSVGasPath2D(url) {
             try {
                 const response = await fetch(url);
-                const svgText = await response.text();
+                let svgText = await response.text();
+                
+                // Replace red colors with hacker green and make shapes black
+                svgText = svgText
+                    .replace(/#F91C32/g, '#005c99') // Replace main red with hacker green
+                    .replace(/#FF3044/g, '#007acc ') // Replace secondary red with black
+                    .replace(/fill="#FF3044"/g, 'fill="#000000"') // Make all shapes black
+                    .replace(/fill="#F91C32"/g, 'fill="#007acc"'); // Replace main background with hacker green
+                
                 const blob = new Blob([svgText], { type: "image/svg+xml" });
                 const blobURL = URL.createObjectURL(blob);
                 const img = new Image();
@@ -343,7 +351,7 @@ const BannerAnim = () => {
                                 rightEdge.lineTo(rightRotatedX, rightRotatedY);
                             }
 
-                            ctx.strokeStyle = "rgba(16, 16, 16, 0.5)";
+                            ctx.strokeStyle = "rgba(0, 255, 65, 0.8)"; // Hacker green with transparency
                             ctx.lineWidth = lineWidth;
                             ctx.stroke(rightEdge);
                         }

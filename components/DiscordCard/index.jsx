@@ -23,7 +23,7 @@ export default function DiscordCard() {
             bounce: 0.5,
           },
         }}
-        className=" bg-[#FF3044] rounded-[32px] w-[80%] h-[360px] xs:h-[385px] min-[410px]:h-[370px] md:h-[500px] lg:h-[560px] transform -z-10"
+        className=" bg-[#007acc] rounded-[32px] w-[80%] h-[360px] xs:h-[385px] min-[410px]:h-[370px] md:h-[500px] lg:h-[560px] transform -z-10"
       ></motion.div>
       <motion.div
         initial={{
@@ -48,7 +48,7 @@ export default function DiscordCard() {
         </div>
         <p className="text-[#161616] mb-4 md:mb-0 text-sm xs:text-base md:text-xl lg:text-2xl monitor:text-3xl font-normal max-w-full md:max-w-[90%] leading-[140%]">
           To stay up-to-date with{" "}
-          <span className="font-bold">HackByte 3.0</span>, consider joining our
+          <span className="font-bold">SRCAS Hackathon 2.0</span>, consider joining our
           discord.
           <span className="hidden lg:inline">
             {" "}
@@ -58,7 +58,7 @@ export default function DiscordCard() {
         </p>
 
         <div className="flex justify-between items-start">
-          <ul className="space-y-2 md:space-y-4 lg:space-y-6 text-[#FF3044] font-bold text-sm xs:text-base md:text-lg monitor:text-2xl xl:text-xl leading-[140%]">
+          <ul className="space-y-2 md:space-y-4 lg:space-y-6 text-[#007acc] font-bold text-sm xs:text-base md:text-lg monitor:text-2xl xl:text-xl leading-[140%]">
             <li className="flex items-center">
               <span className="mr-2 text-xl text-black">O</span>
               Get the latest news and announcements.
@@ -88,7 +88,7 @@ export default function DiscordCard() {
 
           <Image
             src={HB3Logo}
-            alt="HackByte 3.0 Logo"
+            alt="SRCAS Hackathon 2.0 Logo"
             className="mt-12 monitor:mt-0 md:w-40 lg:w-48 monitor:w-72 xl:w-64 hidden md:block"
           />
         </div>
