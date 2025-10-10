@@ -164,7 +164,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* Why Participate */}
       <div className="flex flex-col items-center gap-4 md:gap-16 md:py-28 py-16">
         <div className=" text-supporting-lightGray lg:text-5xl monitor:text-7xl xl:text-6xl md:text-4xl sm:text-2xl text-3xl xs:text-4xl font-bold leading-[48px] xs:leading-[64px] text-center">
