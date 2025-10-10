@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Mail } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -7,7 +6,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import faq from "@/public/Faq/question_mark.png";
-import Link from "next/link";
 import AnimatedTitle from "@/components/AnimatedTitle";
 
 export const metadata = {
@@ -73,7 +71,7 @@ const faqs = [
   },
   {
     question: "Who can I contact for further information or assistance?",
-    answer: "Feel free to send an email to srcasprogrammingclub@gmail.com, or visit our contact page for additional contact information. We're eagerly awaiting your message.",
+    answer: "Feel free to send an email to srcasprogrammingclub@gmail.com, or visit our contact page for additional contact information. We&apos;re eagerly awaiting your message.",
   },
 ];
 
@@ -87,8 +85,8 @@ export default function FAQSection() {
               Everything you need , right here!
             </h1>
             <p className="text-supporting-mediumGray text-lg md:text-xl lg:text-xl xl:text-2xl font-medium md:max-w-lg lg:max-w-3xl">
-              Elevating your hacker journey is what we're all about! 
-              Don't hesitate to contact us for assistance or to connect with like-minded individuals.
+              Elevating your hacker journey is what we&apos;re all about! 
+              Don&apos;t hesitate to contact us for assistance or to connect with like-minded individuals.
             </p>
           </div>
           <Image
@@ -105,7 +103,7 @@ export default function FAQSection() {
           </h1>
             <div className="space-y-4 animate-in duration-500 delay-500">
               <p className="text-supporting-mediumGray text-lg">
-                Unlock Product Insights and Billing Know-How! Can't find what you're after? Chat with our stellar team! chat to our friendly team.
+                Unlock Product Insights and Billing Know-How! Can&apos;t find what you&apos;re after? Chat with our stellar team! chat to our friendly team.
               </p>
             </div>
         </div>
