@@ -14,23 +14,24 @@ export default function Prizes() {
           <div className="flex justify-between px-4 md:px-16 lg:px-28 monitor:px-32">
             <div className="flex flex-col items-start gap-2">
               <p className="text-supporting-lightGray text-[36px] xs:text-[3rem] md:text-[3.5rem] lg:text-[5rem] xl:text-[6rem] leading-tight font-black max-w-[95%]">
-                Prizes for the Winners
+                SRCAS Hackathon 2.0 Prizes
               </p>
               <div className="flex flex-col items-start gap-3 md:gap-4">
                 <p
                   className="w-full xl:max-w-[85%] text-supporting-mediumGray
                 md:text-xl lg:text-2xl text-lg xs:text-md font-medium"
                 >
-                  Collaborate and innovate to build something awesome ! All
+                  Showcase your coding skills and innovative ideas at SRCAS! 
+                  Build amazing projects and compete for exciting prizes. All
                   monetary prizes will be split equally among the winning team
                   members.
                 </p>
-                <div className="rounded-full border bg-[#333333] border-[#D1CAC7] px-4 py-1">
+                <div className="rounded-full border bg-[#007acc] border-[#007acc] px-4 py-1">
                   <p
-                    className="w-full text-supporting-mediumGray
-                  text-center text-[1rem] md:text-[1.5rem]"
+                    className="w-full text-white
+                  text-center text-[1rem] md:text-[1.5rem] font-semibold"
                   >
-                    Winners will also get MLH winner pins 🌟
+                    Join the biggest hackathon in Tamil Nadu! 🚀
                   </p>
                 </div>
               </div>
@@ -44,72 +45,11 @@ export default function Prizes() {
 
           <div className="flex flex-col gap-6 md:gap-8 sm:mt-14">
             <PrizeSection />
-            <div className="grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-2 px-4 md:px-16 xl:px-28 monitor:px-32">
-              <div
-                className="flex flex-col items-center gap-4 md:gap-12 px-4 xs:px-6 py-6 
-                  md:flex-row md:px-6 rounded-3xl bg-[#451C20]"
-              >
-                <Image src={cup4} alt="cup" className="w-[4.7rem] h-[4.7rem]" />
-                <div className="w-full flex flex-col items-center md:items-start gap-2">
-                  <p className="text-[#fff] text-[2rem] font-bold">
-                    Best Girls Team
-                  </p>
-                  <p className="text-[#EFA685] text-[1.5rem] font-semibold">
-                    ₹5,000 Cash Prize
-                  </p>
-                  <p
-                    className="text-[#FFA5AE] font-normal text-[1.25rem] 
-      text-center md:text-left"
-                  >
-                    Best performing All-Girls Team at SRCAS Hackathon
-                  </p>
-                </div>
-              </div>
-              <div
-                className="flex flex-col items-center gap-4 md:gap-12 px-4 xs:px-6 py-6 
-                  md:flex-row md:px-6 rounded-3xl bg-[#451C20]"
-              >
-                <Image src={cup4} alt="cup" className="w-[4.7rem] h-[4.7rem]" />
-                <div className="w-full flex flex-col items-center md:items-start gap-2">
-                  <p className="text-[#fff] text-[2rem] font-bold text-center">
-                    First Time Hacking?
-                  </p>
-                  <p className="text-[#EFA685] text-[1.5rem] font-semibold">
-                    ₹5,000 Cash Prize
-                  </p>
-                  <p
-                    className="text-[#FFA5AE] font-normal text-[1.25rem] 
-      text-center md:text-left"
-                  >
-                    For freshmen and novices
-                  </p>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
 
-        {/* Sponsor Tracks Section */}
-        <div className="w-full flex flex-col pt-24 px-4 md:px-16 lg:px-28 monitor:px-32">
-          <p className="text-supporting-lightGray text-[2.25rem] md:text-[3.5rem] lg:text-[5rem] font-black">
-            Sponsored Tracks
-          </p>
-          <p
-            className="w-full xl:max-w-[85%] text-supporting-mediumGray
-          md:text-xl lg:text-2xl text-lg xs:text-md font-medium mb-8 sm:mb-12"
-          >
-            Explore our sponsor tracks and leverage their technologies to bring
-            your projects to life!
-          </p>
-          <div
-            className="w-full xl:max-w-[95%] monitor:max-w-[90%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 
-              gap-12 sm:gap-8 lg:gap-[44px]"
-          >
-            {sponsorTrackPrizesData.map((sponsor, index) => {
-              return <TrackPrizeCard key={index} index={index} {...sponsor} />;
-            })}
-          </div>
-        </div>
+       
       </div>
     </div>
   );

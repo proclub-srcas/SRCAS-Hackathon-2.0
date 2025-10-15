@@ -19,10 +19,8 @@ const PrizeCard = ({
   <div
     className={`flex flex-col items-center justify-center sm:-ml-8 lg:-ml-12 mt-8 sm:mt-28 ${
       prizeDescription == "2nd Prize - Silver"
-        ? "sm:order-1 order-2"
-        : prizeDescription == "3rd Prize - Bronze"
-        ? "sm:order-3 order-3"
-        : "order-1 sm:order-2 md:mb-16 lg:mb-20 xl:mb-32"
+        ? "sm:order-2 order-2"
+        : "order-1 sm:order-1 md:mb-16 lg:mb-20 xl:mb-32"
     }`}
   >
     <div className="flex flex-col items-center justify-center xl:w-[460px]">
@@ -59,7 +57,7 @@ const PrizeSection = () => {
     {
       lampImage: lamp_yellow,
       cupImage: cup1,
-      prizeAmount: "INR 40K",
+      prizeAmount: "INR 10K",
       prizeDescription: "1st Prize - Gold",
       gradientColors:
         "from-[#FFAE0C]/30 via-[#FFAE0C]/40 to-transparent to-85%",
@@ -69,22 +67,12 @@ const PrizeSection = () => {
     {
       lampImage: lamp_white,
       cupImage: cup2,
-      prizeAmount: "INR 25K",
+      prizeAmount: "INR 5K",
       prizeDescription: "2nd Prize - Silver",
       gradientColors:
         "from-supporting-mediumGray/30 via-supporting-mediumGray/40 to-transparent to-85%",
       gradientClasses: "clip-trapezium",
       textColor: "text-supporting-mediumGray",
-    },
-    {
-      lampImage: lamp_orange,
-      cupImage: cup3,
-      prizeAmount: "INR 15K",
-      prizeDescription: "3rd Prize - Bronze",
-      gradientColors:
-        "from-[#D76835]/30 via-[#D76835]/40 to-transparent to-85%",
-      gradientClasses: "clip-trapezium",
-      textColor: "text-[#D76835]",
     },
   ];
 

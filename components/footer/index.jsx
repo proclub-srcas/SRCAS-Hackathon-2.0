@@ -1,12 +1,10 @@
 import Image from "next/image";
-import Hackbyte3Logo from "../../public/FooterLogo/Hackbyte3Logo.png";
-import webdock from "../../public/FooterLogo/ProClubLogo.png";
-import benq from "../../public/FooterLogo/benq_footer_logo.svg";
+import proclub from "../../public/assets/ProClubLogo.png";
+import srcas from "../../public/assets/srcas.svg";
 import linkedIn from "../../public/FooterLogo/linkedin.svg";
 import instagram from "../../public/FooterLogo/instagram.svg";
 import twitter from "../../public/FooterLogo/twitter.svg";
 import discord from "../../public/FooterLogo/discord.svg";
-import milaap from "../../public/FooterLogo/milaap.svg";
 import Link from "next/link";
 import AnimatedTitle from "../AnimatedTitle";
 
@@ -23,88 +21,73 @@ const sidebarLinks = [
 
 const Footer = () => {
   return (
-    <div className="md:overflow-hidden bg-[#161616]">
-      <div className="flex flex-col md:flex-row md:justify-between items-start md:items-start xl:mx-32 lg:mx-20 md:mx-12 mx-4 gap-6 md:gap-0 mt-12 mb-20">
-        <div className="flex items-center justify-center py-4 px-2 md:px-6 mt-6 w-full">
-          <Image
-            src={Hackbyte3Logo}
-            alt="SRCAS Hackathon 2.0"
-            className="xxs:h-16 xs:h-20 md:h-32 w-auto"
-          />
-
-          <div className="h-40 w-px bg-gray-500 mx-4"></div>
-          <div className="flex flex-col w-full">
-            <div className="text-white text-base font-semibold">
-              Powered by
+    <div className="overflow-hidden bg-[#161616]">
+      <div className="flex flex-col lg:flex-row lg:justify-between items-center xl:mx-32 lg:mx-20 md:mx-12 mx-4 gap-8 lg:gap-0 mt-12 mb-20">
+        {/* Logo Section */}
+        <div className="flex flex-col items-center gap-4 lg:items-start">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+            <div className="flex flex-col items-center gap-2">
+              <Image
+                src={srcas}
+                alt="SRCAS"
+                className="h-24 sm:h-28 md:h-32 lg:h-36 xl:h-40 w-auto"
+              />
             </div>
-            <div className="flex items-center space-x-2 md:space-x-4 text-white">
-              <Image src={webdock} alt="Webdock" className="xxs:h-12 xs:h-12 md:h-18" />
-              <Image src={benq} alt="BenQ" className="xxs:h-7 xs:h-8 md:h-14" />
+            <div className="flex flex-col items-center gap-2">
+              <Image
+                src={proclub}
+                alt="ProClub"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 w-auto"
+              />
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-2 justify-start items-start md:items-end pt-8 md:pt-16 w-full">
-          <div className="text-right text-supporting-lightGray monitor:text-6xl xl:text-5xl text-3xl xs:text-4xl font-bold w-full">
-            <AnimatedTitle viewport={true}>Hack the Protocol</AnimatedTitle>
+        
+        {/* Tagline Section */}
+        <div className="flex flex-col gap-2 justify-center items-center lg:items-end pt-4 lg:pt-8 w-full lg:w-auto">
+          <div className="text-center lg:text-right text-supporting-lightGray text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
+            <AnimatedTitle viewport={true}>Code to Innovate</AnimatedTitle>
           </div>
-          <div className="text-right text-supporting-mediumGray monitor:text-5xl xl:text-4xl text-2xl xs:text-3xl font-normal w-full">
-            <AnimatedTitle viewport={true}>Break the red tape</AnimatedTitle>
+          <div className="text-center lg:text-right text-supporting-mediumGray text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal">
+            <AnimatedTitle viewport={true}>Build the Future</AnimatedTitle>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between items-end md:items-center xl:px-32 lg:px-10 md:px-1 px-0 mt-8 bg-[#007acc] rotate-2">
-        <div className="flex flex-wrap justify-evenly xs:justify-start lg:gap-4 monitor:gap-12 xl:gap-8 gap-0 md:my-4 hover:items-start text-supporting-lightGray">
+      <div className="flex flex-col lg:flex-row justify-between items-center xl:px-32 lg:px-10 md:px-4 px-4 mt-8 bg-[#007acc] rotate-2 py-4 lg:py-6">
+        {/* Navigation Links */}
+        <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4 lg:gap-6 xl:gap-8 text-supporting-lightGray">
           {sidebarLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="monitor:text-lg lg:text-base text-[14px] p-2 rounded-[2.5rem] font-bold leading-snug hover:-rotate-6 transition-all duration-300"
+              className="text-xs sm:text-sm md:text-base lg:text-lg p-2 sm:p-3 rounded-full font-bold leading-snug hover:-rotate-6 transition-all duration-300 hover:bg-white/10"
             >
               <span>{link.name}</span>
             </Link>
           ))}
         </div>
-        <div className="flex md:gap-4 gap-8 xs:gap-2 monitor:gap-8 xxs:w-full md:w-auto xxs:justify-evenly xs:justify-end items-center md:static xs:absolute top-11 right-4">
-          <Link href="https://www.linkedin.com/company/bitbyte-tpc">
+        
+        {/* Social Media Links */}
+        <div className="flex gap-4 sm:gap-6 lg:gap-4 xl:gap-6 items-center mt-4 lg:mt-0">
+          <Link href="https://www.linkedin.com/company/srcas-programming-club">
             <Image
               src={linkedIn}
               alt="linkedIn"
-              className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all duration-300 cursor-pointer"
+              className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 hover:scale-110 transition-all duration-300 cursor-pointer"
             />
           </Link>
-          <Link href="https://www.instagram.com/hackbyte.tpc">
+          <Link href="https://www.instagram.com/proclub_srcas">
             <Image
               src={instagram}
               alt="Instagram"
-              className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all duration-300 cursor-pointer"
-            />
-          </Link>
-          <Link href="https://x.com/HackbyteTPC">
-            <Image
-              src={twitter}
-              alt="Twitter"
-              className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all duration-300 cursor-pointer"
-            />
-          </Link>
-          <Link href="https://discord.gg/6RDuTPnAME">
-            <Image
-              src={discord}
-              alt="Discord"
-              className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all duration-300 cursor-pointer"
-            />
-          </Link>
-          <Link href="https://milaap.org/fundraisers/support-hackbyte-3-0">
-            <Image
-              src={milaap}
-              alt="Milaap"
-              className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all duration-300 cursor-pointer rounded-md"
+              className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 hover:scale-110 transition-all duration-300 cursor-pointer"
             />
           </Link>
         </div>
       </div>
-      <div className="text-supporting-darkGray font-bold xl:text-lg md:text-base text-sm py-2 lg:pl-32 md:pl-16 pl-4">
-        © 2025 Hackbyte, All rights reserved
+      <div className="text-supporting-darkGray font-bold text-xs sm:text-sm md:text-base lg:text-lg py-3 lg:py-4 text-center lg:text-left xl:pl-32 lg:pl-10 md:pl-4 px-4">
+        © 2025 SRCAS Programming Club, All rights reserved
       </div>
     </div>
   );

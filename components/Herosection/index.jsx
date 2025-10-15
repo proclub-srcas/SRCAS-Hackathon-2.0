@@ -20,7 +20,7 @@ const HeroSection = () => {
         <div className="w-full flex justify-between items-start">
         <div className="hidden sm:block">
           <div className="text-3xl md:text-4xl xl:text-5xl monitor:text-6xl font-bold text-supporting-lightGray">
-          Break the red tape
+          Break the blue tape
           </div>
           <div className="text-supporting-darkGray text-xl xl:text-2xl monitor:text-3xl font-bold leading-7">
           Our Theme
@@ -110,18 +110,7 @@ const HeroSection = () => {
           />
         </Link>
         </div>
-        <div className="flex lg:gap-16 md:gap-12 gap-3 xs:gap-14 rotate-[0deg] md:rotate-0 sm:justify-start justify-end items-center">
-        <Image
-          src={tpclogo}
-          alt="TPCLogo"
-          className="lg:w-[325px] md:w-[250px] w-48"
-        />
-        <Image
-          src={institutelogo}
-          alt="InstituteLogo"
-          className="lg:w-[175px] md:w-[120px] w-24"
-        />
-        </div>
+
       </div>
       </>
     );

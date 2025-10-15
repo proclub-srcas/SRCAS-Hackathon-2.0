@@ -15,11 +15,7 @@ const Gallery = () => {
               SRCAS Hackathon 2.0 <br />
               Highlights
             </div>
-            <Image
-              className="xl:w-[420px] lg:w-80 md:w-56 hidden md:block"
-              src={HB2Logo}
-              alt="SRCAS Hackathon 2.0 Logo"
-            />
+          
           </div>
           <div className=" max-w-[600px] lg:max-w-[650px] xl:max-w-[800px] text-supporting-mediumGray xl:text-2xl lg:text-xl text-lg font-medium leading-[33.60px]">
             Explore our gallery of memorable moments from SRCAS Hackathon 2.0 event at

@@ -11,16 +11,16 @@ const TitleSponsorCard = ({ title, description, imageSrc, link }) => {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="w-full xl:max-w-[95%] monitor:max-w-[90%] flex justify-center md:px-8 lg:px-0"
       >
-        <div className="flex flex-col h-full shadow-lg rounded-[20px] overflow-hidden">
+        <div className="flex flex-col h-full shadow-lg rounded-[20px] overflow-hidden min-h-[400px]">
           
             <Image
-              className="w-full rounded-t-[20px] object-cover hover:scale-110 transition-transform duration-500 ease-in-out"
+              className="w-full h-[181px] xl:h-[216px] rounded-t-[20px] object-cover hover:scale-110 transition-transform duration-500 ease-in-out"
               src={imageSrc}
               alt={title}
             />
           
-          <div className="flex flex-col justify-center items-start bg-[#4E2529] px-4 xl:px-8 py-8 md:p-[40px] gap-2 flex-1">
-            <p className="text-[#FF939E] font-bold text-[1.25rem] md:text-[1.5rem]">
+          <div className="flex flex-col justify-center items-start bg-[#1a365d] px-4 xl:px-8 py-8 md:p-[40px] gap-2 flex-1">
+            <p className="text-[#63b3ed] font-bold text-[1.25rem] md:text-[1.5rem]">
               Title Sponsor
             </p>
             <motion.div
