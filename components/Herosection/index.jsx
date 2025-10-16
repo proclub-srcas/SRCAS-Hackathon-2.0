@@ -4,10 +4,9 @@ import instagram from "@/public/FooterLogo/instagram.svg";
 import twitter from "@/public/FooterLogo/twitter.svg";
 import discord from "@/public/FooterLogo/discord.svg";
 import milaap from "@/public/FooterLogo/milaap.svg";
-import tpclogo from "@/public/HomePageLogo/tpclogo.svg";
-import institutelogo from "@/public/HomePageLogo/Institutelogo.svg";
-import redtapeImg from "@/public/HomePageLogo/Redtape1.svg";
-import HB3_powered_logo from "@/public/HB3_powered_logo.png";
+
+import bannerSvg from "@/public/assets/banner.svg";
+
 import Link from "next/link";
 import BannerAnim from "@/components/BannerAnim";
 import { PulsatingButton } from "@/components/ui/pulsating-button";
@@ -35,29 +34,12 @@ const HeroSection = () => {
         </div>
         <div className="md:hidden">
         <Image
-          src={redtapeImg}
-          alt="Redtape"
-          className="md:w-full md:pt-16 lg:scale-100 md:scale-[1.3] scale-[2] pt-32 md:-mt-8 lg:-mt-0 w-full"
+          src={bannerSvg}
+          alt="Banner"
+          className="md:w-full md:pt-16    lg:scale-100 md:scale-[1.3] scale-[2] pt-32 md:-mt-8 lg:-mt-0 w-full transform -rotate-12 -translate-x-12"
           priority
         />
-        <Image
-          src={HB3_powered_logo}
-          alt="Hackbyte 3.0"
-          className="w-[200px] xs:w-[250px] sm:w-[140px] md:w-[250px] lg:w-[350px] xl:w-[500px] absolute top-[95%] xs:top-[90%] sm:top-[57%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-[5deg]"
-        />
-        <div className="max-w-[300px] absolute monitor:top-48 xl:top-40 xl:right-20 md:top-32 lg:right-12 sm:top-24 sm:mt-0 mt-44 right-0 sm:rotate-[-5deg] font-bold pr-8 hidden sm:block">
-          <div className="sm:text-[#ff97a1] text-white/50 sm:text-lg lg:text-xl text-xl monitor:text-3xl xl:text-2xl md:leading-7 sm:text-start text-end">
-          Join 
-          <br />
-          </div>
-          <div className="text-white text-2xl sm:text-sm md:text-xl lg:text-2xl monitor:text-4xl xl:text-3xl md:leading-[33.60px] max-w-[80vw] sm:max-w-32 md:max-w-64 ">
-          4th-6th April 2025,
-          </div>
-          <div className="sm:text-[#ff97a1] text-white/50 text-lg sm:text-xs md:text-lg lg:text-xl xl:text-2xl md:leading-7 sm:text-start text-end">
-          at IIITDM Jabalpur
-          <br />
-          </div>
-        </div>
+     
         </div>
       </div>
       {/* This btn is for the Desktop view */}

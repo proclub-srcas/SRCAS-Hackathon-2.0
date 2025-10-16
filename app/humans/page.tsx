@@ -1,15 +1,86 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import HumansCard from "@/components/HumansCard";
 import Image from "next/image";
 import { MagicCard } from "@/components/ui/magic-card";
 
 import humansSticker from "@/public/humansPage/humansSticker.svg";
-import { OrganizersData } from "@/data/organizersData";
-import { MentorsData } from "@/data/mentorsData";
-import { FamilyData } from "@/data/familyData";
+import pravin from "@/public/assets/pravin.jpg";
+import sarath from "@/public/assets/sarath.jpg";
+import dhanjay from "@/public/assets/dhanjay.jpg";
+import girl from "@/public/assets/girl.jpg";
+import satheshwaran from "@/public/assets/Satheshwaran-V.jpg";
+import vikaas from "@/public/assets/vikaas.webp";
+import velan from "@/public/assets/velan.jpeg";
+import kanishka from "@/public/assets/kanishka.jpg";
 
 
 const Humans = () => {
+  const membersData = [
+    {
+      name: "Pravin",
+      profilepic: pravin,
+      linkedin: "#",
+      github: "#",
+      twitter: "#",
+      role: "Chairman of Pro Club",
+    },
+    {
+      name: "Sarath",
+      profilepic: sarath,
+      linkedin: "#",
+      github: "#",
+      twitter: "#",
+      role: "Vice Chairman",
+    },
+    {
+      name: "Dhanjay",
+      profilepic: dhanjay,
+      linkedin: "#",
+      github: "#",
+      twitter: "#",
+      role: "Secretary",
+    },
+    {
+      name: "Vaishnavi",
+      profilepic: girl,
+      linkedin: "#",
+      github: "#",
+      twitter: "#",
+      role: "Secretary",
+    },
+    {
+      name: "Satheshwaran V",
+      profilepic: satheshwaran,
+      linkedin: "#",
+      github: "#",
+      twitter: "#",
+      role: "Web & App Developer",
+    },
+    {
+      name: "Vikaas",
+      profilepic: vikaas,
+      linkedin: "#",
+      github: "#",
+      twitter: "#",
+      role: "Ethical Hacker",
+    },
+    {
+      name: "Velan",
+      profilepic: velan,
+      linkedin: "#",
+      github: "#",
+      twitter: "#",
+      role: "UI/UX Designer",
+    },
+    {
+      name: "Kanishka",
+      profilepic: kanishka,
+      linkedin: "#",
+      github: "#",
+      twitter: "#",
+      role: "Organizer",
+    },
+  ];
+
   return (
     <>
       <div
@@ -34,39 +105,12 @@ const Humans = () => {
           />
         </div>
 
-        <Tabs
-          defaultValue="Organizers"
-          className="flex flex-col justify-center mt-4 md:mt-12"
-        >
-          <TabsList className="bg-transparent mb-5 md:mb-11 flex justify-start ">
-            <TabsTrigger
-              value="Organizers"
-              className="sm:text-xl text-md font-bold text-supporting-mediumGray
-                         sm:py-2 sm:px-5 p-2 rounded-[8px]"
-            >
-              Organizers
-            </TabsTrigger>
-            <TabsTrigger
-              value="Mentors"
-              className="sm:text-xl text-md font-bold text-supporting-mediumGray 
-                         sm:py-2 sm:px-5 p-2 rounded-[8px]"
-            >
-              Mentors
-            </TabsTrigger>
-            <TabsTrigger
-              value="Elders"
-              className="sm:text-xl text-md font-bold text-supporting-mediumGray
-                         sm:py-2 sm:px-5 p-2 rounded-[8px]"
-            >
-              Our family
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent value="Organizers">
+        <div className="flex flex-col justify-center mt-4 md:mt-12">
             <div
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
                 place-content-center place-items-center gap-10"
             >
-              {OrganizersData.map((human, index) => (
+            {membersData.map((human, index) => (
                 <MagicCard
                   key={index}
                   className="cursor-pointer flex-col items-center justify-center whitespace-nowrap"
@@ -76,40 +120,7 @@ const Humans = () => {
                 </MagicCard>
               ))}
             </div>
-          </TabsContent>
-          <TabsContent value="Mentors">
-            <div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
-                place-content-center place-items-center gap-10"
-            >
-              {MentorsData.map((human, index) => (
-                <MagicCard
-                  key={index}
-                  className="cursor-pointer flex-col items-center justify-center whitespace-nowrap"
-                  gradientColor="#D9D9D955"
-                >
-                  <HumansCard index={index} {...human} />
-                </MagicCard>
-              ))}
             </div>
-          </TabsContent>
-          <TabsContent value="Elders">
-            <div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
-                place-content-center place-items-center gap-10"
-            >
-              {FamilyData.map((human, index) => (
-                <MagicCard
-                  key={index}
-                  className="cursor-pointer flex-col items-center justify-center whitespace-nowrap"
-                  gradientColor="#D9D9D955"
-                >
-                  <HumansCard index={index} {...human} />
-                </MagicCard>
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
       </div>
     </>
   );
