@@ -1,4 +1,4 @@
-import banner from "@/public/ImageGallery/banner.jpg";
+import banner from "@/public/ImageGallery/srcas hack memory/banner srcas hack.png";
 import HB2Logo from "@/public/ImageGallery/HB2Logo.svg";
 import { GridImage, BannerImage } from "@/components/ImageGrid";
 import Image from "next/image";
@@ -12,14 +12,13 @@ const Gallery = () => {
         <div className="flex flex-col items-start gap-5 ">
           <div className="flex justify-between items-center w-full">
             <div className=" text-white xl:text-[6rem] lg:text-[4.2rem] text-[36px] xs:text-[48px] font-black xl:leading-tight">
-              SRCAS Hackathon 2.0 <br />
+              SRCAS Hackathon 2024<br />
               Highlights
             </div>
           
           </div>
           <div className=" max-w-[600px] lg:max-w-[650px] xl:max-w-[800px] text-supporting-mediumGray xl:text-2xl lg:text-xl text-lg font-medium leading-[33.60px]">
-            Explore our gallery of memorable moments from SRCAS Hackathon 2.0 event at
-            IIITDM Jabalpur.
+            Explore our gallery of memorable moments from SRCAS Hackathon 2024
           </div>
         </div>
 

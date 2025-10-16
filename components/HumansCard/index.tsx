@@ -32,6 +32,7 @@ interface HumansCardProps {
   index: number;
   name: string;
   role?: string;
+  role2?: string;
   profilepic: StaticImageData;
   linkedin: string;
   twitter: string;
@@ -42,6 +43,7 @@ interface HumansCardProps {
 const HumansCard: React.FC<HumansCardProps> = ({
   name,
   role,
+  role2,
   profilepic,
   linkedin,
   twitter,
@@ -63,8 +65,12 @@ const HumansCard: React.FC<HumansCardProps> = ({
           {role && (
             <p className="font-bold text-supporting-mediumGray text-md sm:text-md leading-9">
               {role}
+              <p className="font-bold text-supporting-mediumGray text-md sm:text-md leading-9">
+              {role2}
+            </p>
             </p>
           )}
+            
           <div className="flex gap-6">
             <SocialMediaIcon href={linkedin} Icon={LinkedInLogoIcon} />
             <SocialMediaIcon href={twitter} Icon={TwitterLogoIcon} />

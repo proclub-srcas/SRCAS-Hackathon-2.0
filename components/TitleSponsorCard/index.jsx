@@ -20,15 +20,15 @@ const TitleSponsorCard = ({ title, description, imageSrc, link }) => {
             />
           
           <div className="flex flex-col justify-center items-start bg-[#1a365d] px-4 xl:px-8 py-8 md:p-[40px] gap-2 flex-1">
-            <p className="text-[#63b3ed] font-bold text-[1.25rem] md:text-[1.5rem]">
-              Title Sponsor
+            <p className="text-[#63b3ed] font-bold text-[1rem] md:text-[1rem]">
+              Hosted by
             </p>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <p className="font-gotham font-bold text-white text-[2rem] xl:text-[4rem]">
+              <p className="font-gotham font-bold text-white text-[2rem] xl:text-[2rem]">
                 {title}
               </p>
             </motion.div>

@@ -21,7 +21,8 @@ const Humans = () => {
       linkedin: "#",
       github: "#",
       twitter: "#",
-      role: "Chairman of Pro Club",
+      role: "Chairman",
+      role2:"Organizer"
     },
     {
       name: "Sarath",
@@ -30,6 +31,7 @@ const Humans = () => {
       github: "#",
       twitter: "#",
       role: "Vice Chairman",
+      role2:"Organizer"
     },
     {
       name: "Dhanjay",
@@ -38,6 +40,7 @@ const Humans = () => {
       github: "#",
       twitter: "#",
       role: "Secretary",
+      role2:"Organizer"
     },
     {
       name: "Vaishnavi",
@@ -45,7 +48,8 @@ const Humans = () => {
       linkedin: "#",
       github: "#",
       twitter: "#",
-      role: "Secretary",
+      role: "Secretary",  
+      role2:"Organizer"
     },
     {
       name: "Satheshwaran V",
@@ -53,7 +57,7 @@ const Humans = () => {
       linkedin: "#",
       github: "#",
       twitter: "#",
-      role: "Web & App Developer",
+      role: "Web Developer",
     },
     {
       name: "Vikaas",
@@ -61,7 +65,7 @@ const Humans = () => {
       linkedin: "#",
       github: "#",
       twitter: "#",
-      role: "Ethical Hacker",
+      role: "Organizer",
     },
     {
       name: "Velan",
@@ -69,7 +73,7 @@ const Humans = () => {
       linkedin: "#",
       github: "#",
       twitter: "#",
-      role: "UI/UX Designer",
+      role: "Organizer",
     },
     {
       name: "Kanishka",

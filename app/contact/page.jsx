@@ -73,12 +73,12 @@ export default function ContactSection() {
                 <p>Dr. M. Praneesh</p>
               </div>
               <div className="flex flex-col items-start gap-2">
-                <p>+91 78453 14345</p>
-                <p>John Samuel</p>
+                <p>+91 8778227393</p>
+                <p>Pravin B</p>
               </div>
               <div className="flex flex-col items-start gap-2">
-                <p>+91 97863 50537</p>
-                <p>Tino Britty</p>
+                <p>+91 90038 02153</p>
+                <p>Sarath P</p>
               </div>
             </div>
           </div>

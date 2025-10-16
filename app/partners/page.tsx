@@ -16,9 +16,9 @@ const PartnersPage = () => {
       link: "#",
     },
     {
-      title: "ProClub",
+      title: "Programming Club",
       description:
-        "ProClub is the programming club of SRCAS, dedicated to fostering innovation and technical excellence among students. We organize coding competitions, workshops, and hackathons to build a strong developer community.",
+        "Programming club of SRCAS, dedicated to fostering innovation and technical excellence among students. We organize coding competitions, workshops, and hackathons to build a strong developer community.",
       imageSrc: proclub,
       link: "#",
     },

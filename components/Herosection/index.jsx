@@ -56,41 +56,22 @@ const HeroSection = () => {
         </PulsatingButton>
         </div>
         <div className="flex justify-evenly md:justify-center gap-4 md:pt-4 z-20">
-        <Link href="https://www.linkedin.com/company/bitbyte-tpc">
+        <Link href="https://www.linkedin.com/company/srcas-programming-club">
           <Image
           src={linkedIn}
           alt="linkedIn"
           className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
           />
         </Link>
-        <Link href="https://www.instagram.com/hackbyte.tpc">
+        <Link href="https://www.instagram.com/proclub_srcas">
           <Image
           src={instagram}
           alt="Instagram"
           className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
           />
         </Link>
-        <Link href="https://x.com/HackbyteTPC">
-          <Image
-          src={twitter}
-          alt="Twitter"
-          className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
-          />
-        </Link>
-        <Link href="https://discord.gg/6RDuTPnAME">
-          <Image
-          src={discord}
-          alt="Discord"
-          className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
-          />
-        </Link>
-        <Link href="https://milaap.org/fundraisers/support-hackbyte-3-0">
-          <Image
-          src={milaap}
-          alt="Milaap"
-          className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer rounded-md"
-          />
-        </Link>
+      
+       
         </div>
 
       </div>
