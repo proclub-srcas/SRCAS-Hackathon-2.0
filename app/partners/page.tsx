@@ -2,7 +2,7 @@ import SponsorCard from "@/components/SponsorCard";
 import srcas from "@/public/assets/srcas.png";
 import proclub from "@/public/assets/ProClub.png";
 
-import { inKindSponsorsData, normalSponsorsData } from "@/data/sponsorData";
+import { normalSponsorsData } from "@/data/sponsorData";
 import TitleSponsorCard from "@/components/TitleSponsorCard";
 
 
