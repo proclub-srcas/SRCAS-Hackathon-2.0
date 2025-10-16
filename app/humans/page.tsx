@@ -34,15 +34,6 @@ const Humans = () => {
       role2:"Organizer"
     },
     {
-      name: "Dhanjay",
-      profilepic: dhanjay,
-      linkedin: "#",
-      github: "#",
-      twitter: "#",
-      role: "Secretary",
-      role2:"Organizer"
-    },
-    {
       name: "Vaishnavi",
       profilepic: girl,
       linkedin: "#",
@@ -51,6 +42,16 @@ const Humans = () => {
       role: "Secretary",  
       role2:"Organizer"
     },
+    {
+      name: "Dhanjay",
+      profilepic: dhanjay,
+      linkedin: "#",
+      github: "#",
+      twitter: "#",
+      role: "Joint Secretary",
+      role2:"Organizer"
+    },
+  
     {
       name: "Satheshwaran V",
       profilepic: satheshwaran,
