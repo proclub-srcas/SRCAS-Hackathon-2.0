@@ -6,6 +6,7 @@ import discord from "@/public/FooterLogo/discord.svg";
 import milaap from "@/public/FooterLogo/milaap.svg";
 
 import bannerSvg from "@/public/assets/banner.svg";
+import mobileImg from "@/public/assets/mobile-img.png";
 
 import Link from "next/link";
 import BannerAnim from "@/components/BannerAnim";
@@ -34,9 +35,9 @@ const HeroSection = () => {
         </div>
         <div className="md:hidden">
         <Image
-          src={bannerSvg}
-          alt="Banner"
-          className="md:w-full md:pt-16    lg:scale-100 md:scale-[1.3] scale-[2] pt-32 md:-mt-8 lg:-mt-0 w-full transform -rotate-12 -translate-x-12"
+          src={mobileImg}
+          alt="Mobile Banner"
+          className="md:w-full md:pt-16 lg:scale-100 md:scale-[1.3] scale-[2] pt-32 md:-mt-8 lg:-mt-0 w-full transform -rotate-12 -translate-x-12"
           priority
         />
      
