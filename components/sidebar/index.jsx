@@ -51,7 +51,6 @@ export const Sidebar = () => {
           </Link>
         ))}
         
-        {/* PPT Download Button */}
         <a
           href="/assets/srcas-hackathon.pptx"
           download="SRCAS-Hackathon-Presentation.pptx"
