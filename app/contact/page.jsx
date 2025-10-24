@@ -59,40 +59,66 @@ export default function ContactSection() {
           </div>
         </div>
 
-        <div className="flex flex-col items-start gap-12 md:gap-20 md:flex-row">
-          <div className="flex flex-col items-start gap-4 md:gap-8">
-            <p className="text-[#FFFFFF] font-[500] text-[1.5rem] md:text-[1.875rem]">
-              Call Us
-            </p>
-            <div
-              className="flex flex-col gap-12 text-white
-            font-normal text-[1rem] md:flex-row lg:text-[1.5rem]"
-            >
+        <div className="flex flex-col items-start gap-12 md:gap-20 md:flex-row ">
+          <div className="flex flex-col items-start gap-8 md:gap-12 flex-1">
+            <div className="flex flex-col items-start gap-4 md:gap-8">
+              <p className="text-[#FFFFFF] font-[500] text-[1.5rem] md:text-[1.875rem]">
+                Staff Coordinator
+              </p>
               <div className="flex flex-col items-start gap-2">
-                <p>+91 9629924052</p>
-                <p>Dr. M. Praneesh</p>
-              </div>
-              <div className="flex flex-col items-start gap-2">
-                <p>+91 8778227393</p>
-                <p>Pravin B</p>
-              </div>
-              <div className="flex flex-col items-start gap-2">
-                <p>+91 90038 02153</p>
-                <p>Sarath P</p>
+                <p className="text-white font-semibold   text-[1rem] lg:text-[1.5rem]">Dr. M. Praneesh</p>
+                <p className="text-white font-normal text-[1rem] lg:text-[1.5rem]">+91 9629924052</p>
               </div>
             </div>
+            
+            <div className="flex flex-col items-start gap-4 md:gap-8">
+              <p className="text-[#FFFFFF] font-[500] text-[1.5rem] md:text-[1.875rem]">
+                Student Coordinators
+              </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                 <div className="flex flex-col items-start gap-2">
+                 <p className="text-white font-semibold text-[1rem] lg:text-[1.5rem]">Mr. B. Pravin</p>
+                   <p className="text-white font-normal text-[1rem] lg:text-[1.5rem]">+91 8778227393</p>
+                  
+                 </div>
+                 <div className="flex flex-col items-start gap-2">
+                  
+                 <p className="text-white font-semibold text-[1rem] lg:text-[1.5rem]">Mr. R.S Dhananjay</p>
+                   <p className="text-white font-normal text-[1rem] lg:text-[1.5rem]">+91 9345060349</p>
+                 </div>
+                 <div className="flex flex-col items-start gap-2 sm:col-span-2">
+                  
+                 <p className="text-white font-semibold text-[1rem] lg:text-[1.5rem]">Mr. Sarath P</p>
+                   <p className="text-white font-normal text-[1rem] lg:text-[1.5rem]">+91 90038 02153</p>
+                 </div>
+               </div>
+            </div>
           </div>
-          <div className="flex flex-col items-start gap-4 md:gap-8">
-            <p className="text-[#FFFFFF] font-[500] text-[1.5rem] md:text-[1.875rem]">
-              Address
-            </p>
-            <p
-              className="max-w-full md:max-w-[18rem] lg:max-w-[25rem] text-white 
-            font-normal text-[1rem] lg:text-[1.5rem]"
-            >
-              2XCP+WQ4, Bus Stop, Avinashi Road Between Fun Mall & Lakshmi Mills, Nava India Rd, Peelamedu, Tamil Nadu
-              641006
-            </p>
+          
+          <div className="flex flex-col items-start gap-8 md:gap-12 flex-1">
+            <div className="flex flex-col items-start gap-4 md:gap-8">
+              <p className="text-[#FFFFFF] font-[500] text-[1.5rem] md:text-[1.875rem]">
+                Address
+              </p>
+              <p
+                className="max-w-full text-white 
+              font-normal text-[1rem] lg:text-[1.5rem]"
+              >
+                2XCP+WQ4, Bus Stop, Avinashi Road Between Fun Mall & Lakshmi Mills, Nava India Rd, Peelamedu, Tamil Nadu
+                641006
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-start gap-4 md:gap-8">
+              <p className="text-[#FFFFFF] font-[500] text-[1.5rem] md:text-[1.875rem]">
+                Email Us
+              </p>
+              <div className="flex flex-col items-start gap-2">
+                <p className="text-white font-normal text-[1rem] lg:text-[1.5rem]">
+                  proclub@srcas.ac.in
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -107,6 +133,30 @@ export default function ContactSection() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
+        </div>
+
+        {/* PPT Download CTA Section */}
+        <div className="flex flex-col items-center justify-center py-16 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Download Our Official PPT Template
+            </h2>
+            <p className="text-lg md:text-xl text-supporting-mediumGray mb-8 max-w-4xl mx-auto">
+              All participants must use this official PPT template for their submissions. This ensures uniformity and fairness in presentation across all teams.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="/assets/srcas-hackathon.pptx"
+                download="SRCAS-Hackathon-2024-Event-Guide.pptx"
+                className="bg-[#007acc] hover:bg-[#005a99] text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Download PPT 
+              </a>
+            </div>
+          </div>
         </div>
 
         </div>

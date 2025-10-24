@@ -11,6 +11,7 @@ import {
   Info,
   Image as Gallery,
   Phone,
+  Download,
 } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
@@ -129,6 +130,17 @@ const MobileSidebar = () => {
                 {fullyopen && <span className="">{link.name}</span>}
               </Link>
             ))}
+            
+            {/* PPT Download Button */}
+            <a
+              href="/assets/srcas-hackathon.pptx"
+              download="SRCAS-Hackathon-Presentation.pptx"
+              className="flex gap-5 text-white/40 hover:text-[#007acc] hover:bg-[#007acc]/10 px-3 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              onClick={() => setOpen(false)}
+            >
+              <Download className="hover:animate-bounce" />
+              {fullyopen && <span className="font-medium">Download PPT</span>}
+            </a>
           </div>
         )}
       </div>

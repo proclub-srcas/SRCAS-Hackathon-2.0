@@ -203,16 +203,41 @@ export default function Home() {
               Safe and Secure
               </div>
               <div className="text-base lg:text-base xl:text-lg monitor:text-xl font-normal text-supporting-darkGray md:max-w-64 lg:max-w-[500px] leading-[1.5rem]">
-                We follow the MLH <Link
-                  href="https://mail.mlh.io/e/c/eyJlbWFpbF9pZCI6ImRnU2lwd2tCQU11SERzcUhEZ0dWSHZKeG9wTzFtUmNmM3Rad01CST0iLCJocmVmIjoiaHR0cHM6Ly9tbGguaW8vY29kZS1vZi1jb25kdWN0P3V0bV9jYW1wYWlnbj1NZW1iZXIrRXZlbnQrLStPbmJvYXJkaW5nK1JlbWluZGVyXHUwMDI2dXRtX2NvbnRlbnQ9T25ib2FyZGluZytOZWVkZWRcdTAwMjZ1dG1fbWVkaXVtPUVtYWlsXHUwMDI2dXRtX3NvdXJjZT1DdXN0b21lci5pbyIsImludGVybmFsIjoiYTJhNzA5MDdmYTllMDFjYjg3MGUiLCJsaW5rX2lkIjo0MzE1fQ/516fa2299b66f1a1234c527d474494f98067ddaf9622617db3ae85da8f3d985b"
+                Organized by <Link
+                  href="https://www.srcas.ac.in/"
                   className="underline decoration-white/60"
                   target="_blank"
                 >
-                  Code of Conduct
-                </Link> for a inclusive, and secure environment for everyone
+                  Sri Ramakrishna College of Arts and Science
+                </Link> for an inclusive and secure environment for everyone
               </div>
             </div>
           </motion.div>
+        </div>
+      </div>
+
+      {/* PPT Download CTA Section */}
+      <div className="flex flex-col items-center justify-center py-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          Download Our Official PPT Template
+          </h2>
+          <p className="text-lg md:text-xl text-supporting-mediumGray mb-8 max-w-4xl mx-auto">
+          All participants must use this official PPT template for their submissions. This ensures uniformity and fairness in presentation across all teams.
+          </p>
+           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+             <a
+               href="/assets/srcas-hackathon.pptx"
+               download="SRCAS-Hackathon-2024-Event-Guide.pptx"
+               className="bg-[#007acc] hover:bg-[#005a99] text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl"
+             >
+               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+               </svg>
+               Download PPT 
+             </a>
+          
+           </div>
         </div>
       </div>
 

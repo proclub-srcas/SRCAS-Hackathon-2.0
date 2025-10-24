@@ -79,79 +79,97 @@ const Schedule = () => {
               >
                 Day 2
               </TabsTrigger>
-              <TabsTrigger
-                value="Day 3"
-                className="sm:text-xl text-md font-bold text-supporting-mediumGray
-                         sm:py-2 sm:px-5 p-2 rounded-[8px]"
-              >
-                Day 3
-              </TabsTrigger>
             </TabsList>
             <TabsContent value="Day 1">
               <div className="w-full flex flex-col sm:flex-row justify-between sm:items-center py-8 font-gotham font-black text-white">
                 <div className="text-[28px] xs:text-[32px] sm:text-[48px] lg:text-[64px] text-nowrap lg:pl-6 xl:pl-12">
-                  4th April
+                  14th August
                 </div>
-                {/* <div className="text-supporting-mediumGray text-[20px] xs:text-[24px] sm:text-[28px] lg:text-[32px]">
-                  Hacking Time: 3.5 Hours
-                </div> */}
               </div>
               <div className="lg:pl-6 xl:pl-12">
                 <EventFlowBox
-                  h="256px"
+                  h="50px"
                   bgColor="#0275f6"
-                  time="2:30 PM"
-                  title="Entry to the Hackathon Location"
-                  description="Main gate - Front of LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="75px"
-                  bgColor="#0275f6"
-                  time="5:00 PM"
-                  title="Inauguration Ceremony"
-                  description="Auditorium, LHTC (Lecture Hall)"
+                  time="8:00 AM"
+                  title="Registration"
+                  description="Conference Hall - 1"
                 />
                 <EventFlowBox
                   h="50px"
                   bgColor="#0275f6"
-                  time="5:45 PM"
-                  title="Introducing the event flow, Problem Statement"
-                  description="Auditorium, LHTC (Lecture Hall)"
+                  time="8:30 AM"
+                  title="Inauguration"
+                  description="Conference Hall - 1"
                 />
                 <EventFlowBox
-                  h="50px"
-                  bgColor="#0275f6"
-                  time="6:15 PM"
-                  title="Explain Rules, SRCAS Hackathon 2.0 begins!"
-                  description="Auditorium, LHTC (Lecture Hall)"
+                  h="150px"
+                  bgColor="#007acc"
+                  time="9:00 AM"
+                  title="Assembling the System"
+                  description="Allotted Venue"
                 />
                 <EventFlowBox
                   h="25px"
-                  bgColor="#0275f6"
-                  time="6:45 PM"
-                  title="Move to Hacking Area"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="200px"
-                  bgColor="#007acc"
-                  time="7:00 PM"
-                  title="Hacking Time"
-                  description="L104/L105, LHTC (Lecture Hall)"
+                  bgColor="#FFC20C"
+                  time="11:00 AM"
+                  title="Refreshment - 1"
+                  description="Allotted Venue"
                 />
                 <EventFlowBox
                   h="100px"
+                  bgColor="#1EB848"
+                  time="11:15 AM"
+                  title="Evaluation Phase - 1"
+                  description="Allotted Venue"
+                />
+                <EventFlowBox
+                  h="75px"
                   bgColor="#FFC20C"
-                  time="9:00 PM"
-                  title="Dinner Time!"
-                  description="Mess, Hostel Area"
+                  time="12:30 PM"
+                  title="Lunch"
+                  description="Hostel Dining area"
                 />
                 <EventFlowBox
                   h="200px"
                   bgColor="#007acc"
-                  time="10:00 PM"
-                  title="Hacking Time"
-                  description="L104/L105, LHTC (Lecture Hall)"
+                  time="1:30 PM"
+                  title="Assembling the System"
+                  description="Allotted Venue"
+                />
+                <EventFlowBox
+                  h="25px"
+                  bgColor="#FFC20C"
+                  time="5:00 PM"
+                  title="Refreshment & Networking"
+                  description="Allotted Venue"
+                />
+                <EventFlowBox
+                  h="150px"
+                  bgColor="#007acc"
+                  time="5:15 PM"
+                  title="Assembling the System"
+                  description="Allotted Venue"
+                />
+                <EventFlowBox
+                  h="75px"
+                  bgColor="#FFC20C"
+                  time="7:15 PM"
+                  title="Dinner"
+                  description="Hostel Dining area"
+                />
+                <EventFlowBox
+                  h="50px"
+                  bgColor="#007acc"
+                  time="8:15 PM"
+                  title="Assembling the System"
+                  description="Allotted Venue"
+                />
+                <EventFlowBox
+                  h="150px"
+                  bgColor="#1EB848"
+                  time="9:00 PM"
+                  title="Evaluation Phase 2"
+                  description="Allotted Venue"
                 />
                 <div className="font-bold text-xl sm:text-2xl text-supporting-lightGr min-w-[116px] text-white">
                   12:00 AM
@@ -161,239 +179,103 @@ const Schedule = () => {
             <TabsContent value="Day 2">
               <div className="w-full flex flex-col sm:flex-row justify-between sm:items-center py-8 font-gotham font-black text-white">
                 <div className="text-[28px] xs:text-[32px] sm:text-[48px] lg:text-[64px] text-nowrap lg:pl-6 xl:pl-12">
-                  5th April
+                  15th August
                 </div>
-                {/* <div className="text-supporting-mediumGray text-[20px] xs:text-[24px] sm:text-[28px] lg:text-[32px]">
-                  Hacking Time: 14.5 Hours
-                </div> */}
               </div>
               <div className="lg:pl-6 xl:pl-12">
                 <EventFlowBox
-                  h="150px"
-                  bgColor="#1EB848"
+                  h="50px"
+                  bgColor="#FFC20C"
                   time="12:00 AM"
-                  title="Mentorship Round 1"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="100px"
-                  bgColor="#FFC20C"
-                  time="1:30 AM"
-                  title="MINI Event"
-                  description="L104/L105, LHTC (Lecture Hall)"
+                  title="Tea break"
+                  description="Allotted Venue"
                 />
                 <EventFlowBox
                   h="150px"
                   bgColor="#007acc"
-                  time="2:30 AM"
-                  title="Hacking Time"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                  snacks={true}
-                />
-                <EventFlowBox
-                  h="75px"
-                  bgColor="#007acc"
-                  time="4:30 AM"
-                  title="Checkpoint 1/4"
-                  description=""
-                />
-                <EventFlowBox
-                  h="225px"
-                  bgColor="#007acc"
-                  time="5:15 AM"
-                  title="Hacking Time"
-                  description="L104/L105, LHTC (Lecture Hall)"
+                  time="12:30 AM"
+                  title="Assembling the System"
+                  description="Allotted Venue"
                 />
                 <EventFlowBox
                   h="100px"
-                  bgColor="#FFC20C"
-                  time="7:30 AM"
-                  title="Breakfast Time!"
-                  description="Mess, Hostel Area"
-                />
-                <EventFlowBox
-                  h="150px"
-                  bgColor="#FFC20C"
-                  time="8:30 AM"
-                  title="MLH Workshop"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="200px"
-                  bgColor="#007acc"
-                  time="10:00 AM"
-                  title="Hacking Time"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="100px"
-                  bgColor="#FFC20C"
-                  time="12:00 PM"
-                  title="Lunch Break!"
-                  description="Mess, Hostel Area"
-                />
-                <EventFlowBox
-                  h="100px"
-                  bgColor="#007acc"
-                  time="1:00 PM"
-                  title="Checkpoint 2/4"
-                  description=""
-                />
-                <EventFlowBox
-                  h="200px"
                   bgColor="#1EB848"
-                  time="2:00 PM"
-                  title="Judging Round 1"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="100px"
-                  bgColor="#007acc"
-                  time="4:00 PM"
-                  title="Hacking Time"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="100px"
-                  bgColor="#FFC20C"
-                  time="6:00 PM"
-                  title="Github Workshop"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="200px"
-                  bgColor="#007acc"
-                  time="8:00 PM"
-                  title="Hacking Time"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="100px"
-                  bgColor="#FFC20C"
-                  time="9:00 PM"
-                  title="Dinner Time!"
-                  description="Mess, Hostel Area"
-                />
-                <EventFlowBox
-                  h="100px"
-                  bgColor="#007acc"
-                  time="10:00 PM"
-                  title="Checkpoint 3/4"
-                  description=""
-                />
-                <EventFlowBox
-                  h="200px"
-                  bgColor="#007acc"
-                  time="11:00 PM"
-                  title="Hacking Time"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <div className="font-bold text-xl sm:text-2xl text-supporting-lightGray min-w-[116px]">
-                  12:00 AM
-                </div>
-              </div>
-            </TabsContent>
-            <TabsContent value="Day 3">
-              <div className="w-full flex flex-col sm:flex-row justify-between sm:items-center py-8 font-gotham font-black text-white">
-                <div className="text-[28px] xs:text-[32px] sm:text-[48px] lg:text-[64px] text-nowrap lg:pl-6 xl:pl-12">
-                  6th April
-                </div>
-                {/* <div className="text-supporting-mediumGray text-[20px] xs:text-[24px] sm:text-[28px] lg:text-[32px]">
-                  Hacking Time: 2.5 Hours
-                </div> */}
-              </div>
-              <div className="lg:pl-6 xl:pl-12">
-                <EventFlowBox
-                  h="150px"
-                  bgColor="#1EB848"
-                  time="12:00 AM"
-                  title="Mentorship Round 2"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="100px"
-                  bgColor="#007acc"
-                  time="1:30 AM"
-                  title="MINI Event"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="150px"
-                  bgColor="#007acc"
-                  time="2:30 AM"
-                  title="Hacking Time"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                  snacks={true}
-                />
-                <EventFlowBox
-                  h="150px"
-                  bgColor="#007acc"
-                  time="4:00 AM"
-                  title="Checkpoint 4/4"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="150px"
-                  bgColor="#8514FE"
-                  time="5:30 AM"
-                  title="Soft Deadline"
-                  description="L104/L105, LHTC (Lecture Hall)"
+                  time="3:30 AM"
+                  title="Evaluation Phase 3"
+                  description="Allotted Venue"
                 />
                 <EventFlowBox
                   h="50px"
-                  bgColor="#8514FE"
-                  time="7:00 AM"
-                  title="Hard Deadline"
-                  description="L104/L105, LHTC (Lecture Hall)"
+                  bgColor="#FFC20C"
+                  time="5:00 AM"
+                  title="Fun Event"
+                  description="Allotted Venue"
+                />
+                <EventFlowBox
+                  h="25px"
+                  bgColor="#FFC20C"
+                  time="5:30 AM"
+                  title="Refreshment"
+                  description="Allotted Venue"
                 />
                 <EventFlowBox
                   h="100px"
-                  bgColor="#FFC20C"
-                  time="7:30 AM"
-                  title="Breakfast Time!"
-                  description="L104/L105, LHTC (Lecture Hall)"
+                  bgColor="#007acc"
+                  time="5:45 AM"
+                  title="Assembling the System"
+                  description="Allotted Venue"
                 />
                 <EventFlowBox
                   h="100px"
-                  bgColor="#FFC20C"
-                  time="8:30 AM"
-                  title="Break"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="250px"
                   bgColor="#1EB848"
-                  time="9:30 AM"
-                  title="Judging Round 2"
-                  description="Mess, Hostel Area"
+                  time="7:00 AM"
+                  title="Final Evaluation"
+                  description="Allotted Venue"
                 />
                 <EventFlowBox
-                  h="100px"
+                  h="75px"
                   bgColor="#FFC20C"
-                  time="12:00 PM"
-                  title="Lunch Break"
-                  description="L104/L105, LHTC (Lecture Hall)"
+                  time="8:00 AM"
+                  title="Breakfast"
+                  description="Hostel Dining area"
                 />
                 <EventFlowBox
-                  h="150px"
-                  bgColor="#FFC20C"
-                  time="1:00 PM"
-                  title="Ice-Breaker Event"
-                  description="L104/L105, LHTC (Lecture Hall)"
-                />
-                <EventFlowBox
-                  h="150px"
+                  h="75px"
                   bgColor="#0275F6"
-                  time="2:30 PM"
-                  title="Closing Ceremony & Result Declaration"
-                  description="Auditorium(L-103), LHTC (Lecture Hall)"
+                  time="9:00 AM"
+                  title="Valedictory"
+                  description="Conference Hall - 1"
                 />
-                <div className="font-bold text-xl sm:text-2xl text-supporting-lightGr min-w-[116px] text-white">
-                  4:00 PM
+                <div className="font-bold text-xl sm:text-2xl text-supporting-lightGray min-w-[116px]">
+                  10:15 AM
                 </div>
               </div>
             </TabsContent>
           </Tabs>
+        </div>
+      </div>
+
+      {/* PPT Download CTA Section */}
+      <div className="flex flex-col items-center justify-center py-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Download Our Official PPT Template
+          </h2>
+          <p className="text-lg md:text-xl text-supporting-mediumGray mb-8 max-w-4xl mx-auto">
+            All participants must use this official PPT template for their submissions. This ensures uniformity and fairness in presentation across all teams.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="/assets/srcas-hackathon.pptx"
+              download="SRCAS-Hackathon-2024-Event-Guide.pptx"
+              className="bg-[#007acc] hover:bg-[#005a99] text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Download PPT 
+            </a>
+          </div>
         </div>
       </div>
     </>

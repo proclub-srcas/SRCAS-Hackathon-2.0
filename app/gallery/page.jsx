@@ -24,6 +24,32 @@ const Gallery = () => {
 
         <GridImage />
 
+        {/* Video Section */}
+        <div className="flex flex-col justify-center items-center my-8 xl:my-12">
+          <div className="text-center mb-6">
+            <h2 className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4">
+              SRCAS Hackathon 1.0
+            </h2>
+            <p className="text-supporting-mediumGray text-lg md:text-xl lg:text-2xl font-medium">
+              Relive the memories from our first hackathon
+            </p>
+          </div>
+          <div className="w-full h-full max-w-4xl mx-auto">
+            <video
+              src="/assets/srcas1.0.mp4"
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-auto rounded-lg shadow-2xl"
+              
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
         <div className="flex flex-col justify-center items-center my-4 xl:my-8">
           <div
             className="text-[#FAF8ED] text-center font-bold text-[2.375rem]
@@ -38,6 +64,30 @@ const Gallery = () => {
             <div className="w-full xl:w-[80%] h-full flex justify-center items-center">
               <BannerImage imgsrc={banner} />
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* PPT Download CTA Section */}
+      <div className="flex flex-col items-center justify-center py-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Download Our Official PPT Template
+          </h2>
+          <p className="text-lg md:text-xl text-supporting-mediumGray mb-8 max-w-4xl mx-auto">
+            All participants must use this official PPT template for their submissions. This ensures uniformity and fairness in presentation across all teams.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="/assets/srcas-hackathon.pptx"
+              download="SRCAS-Hackathon-2024-Event-Guide.pptx"
+              className="bg-[#007acc] hover:bg-[#005a99] text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Download PPT 
+            </a>
           </div>
         </div>
       </div>
