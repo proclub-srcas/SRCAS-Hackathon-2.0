@@ -50,7 +50,6 @@ export const Sidebar = () => {
             <span className=" hidden group-hover:inline">{link.name}</span>
           </Link>
         ))}
-        
         <a
           href="/assets/srcas-hackathon.pptx"
           download="SRCAS-Hackathon-Presentation.pptx"
