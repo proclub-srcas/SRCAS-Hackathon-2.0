@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeroSection from "@/components/Herosection";
+import NewHero from "@/components/NewHero";
 import g1 from "@/public/HomePageLogo/g1.svg";
 import g2 from "@/public/HomePageLogo/g2.svg";
 import g3 from "@/public/HomePageLogo/g3.svg";
@@ -109,7 +109,7 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
-      <HeroSection />
+      <NewHero />
       {/* Stats Section */}
       <div className="w-full py-16 px-4 mt-20 mb-28">
         <div className="max-w-7xl mx-auto">
