@@ -116,8 +116,7 @@ export default function Home() {
           {/* Hero Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 leading-tight">
-              Why Choose SRCAS Hackathon
-                2.0?
+              Why Participate ?
             
             </h2>
             
