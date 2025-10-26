@@ -1,8 +1,8 @@
 import banner from "@/public/ImageGallery/srcas hack memory/banner srcas hack.png";
-import HB2Logo from "@/public/ImageGallery/HB2Logo.svg";
 import { GridImage, BannerImage } from "@/components/ImageGrid";
 import Image from "next/image";
 import AnimatedTitle from "@/components/AnimatedTitle";
+import { Download } from "lucide-react";
 
 
 const Gallery = () => {
@@ -36,7 +36,7 @@ const Gallery = () => {
           </div>
           <div className="w-full h-full max-w-4xl mx-auto">
             <video
-              src="/assets/srcas-1.0.mp4"
+              src="/ImageGallery/srcas-1.0.mp4"
               controls
               autoPlay
               muted
@@ -78,15 +78,13 @@ const Gallery = () => {
             All participants must use this official PPT template for their submissions. This ensures uniformity and fairness in presentation across all teams.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+          <a
               href="/assets/srcas-hackathon.pptx"
               download="SRCAS-Hackathon-2024-Event-Guide.pptx"
-              className="bg-[#007acc] hover:bg-[#005a99] text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl"
+              className="bg-white/5 hover:bg-white/10 border-2 border-white/30 rounded-lg text-white font-normal py-4 px-8 text-lg transition-colors duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              Download PPT 
+              <Download className="w-5 h-5" />
+              Download PPT
             </a>
           </div>
         </div>

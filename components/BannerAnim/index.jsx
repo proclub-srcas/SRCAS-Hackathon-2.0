@@ -1,8 +1,7 @@
     "use client";
     import React, { useRef, useEffect } from "react";
-    import banner from "@/public/assets/banner.svg";
-    import og1 from "@/public/assets/og1.svg";
-    import og3Cropped from "@/public/assets/og3-cropped.svg";
+    import og1 from "@/public/assets/banner-lap.svg";
+    import og3Cropped from "@/public/assets/banner-mobile.svg";
 
     const BannerAnim = () => {
         const canvasRef = useRef(null);

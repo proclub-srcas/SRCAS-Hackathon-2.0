@@ -146,7 +146,7 @@ const MobileSidebar = () => {
               onClick={() => setOpen(false)}
             >
               <div className="w-5 h-5 flex items-center justify-center">
-                <Download className="hover:animate-bounce" />
+                <Download className="hover:animate-bounce  " />
               </div>
               {fullyopen && <span className="text-sm font-medium">Download PPT</span>}
             </a>

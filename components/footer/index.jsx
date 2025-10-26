@@ -1,10 +1,8 @@
 import Image from "next/image";
-import proclub from "../../public/assets/ProClubLogo.png";
-import srcas from "../../public/assets/srcas.svg";
+import proclub from "../../public/partnersPage/ProClubLogo.png";
+import srcas from "../../public/partnersPage/srcas.svg";
 import linkedIn from "../../public/FooterLogo/linkedin.svg";
 import instagram from "../../public/FooterLogo/instagram.svg";
-import twitter from "../../public/FooterLogo/twitter.svg";
-import discord from "../../public/FooterLogo/discord.svg";
 import Link from "next/link";
 import AnimatedTitle from "../AnimatedTitle";
 

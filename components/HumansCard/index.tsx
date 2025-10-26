@@ -4,7 +4,7 @@ import {
   LinkedInLogoIcon,
   GitHubLogoIcon,
 } from "@radix-ui/react-icons";
-import behanceLogo from "../../public/behanceLogo.svg";
+
 import { IconProps } from "@radix-ui/react-icons/dist/types";
 import { ComponentType } from "react";
 import Link from "next/link";
@@ -33,23 +33,42 @@ interface HumansCardProps {
   name: string;
   role?: string;
   role2?: string;
+  role3?: string;
   profilepic: StaticImageData;
   linkedin: string;
   twitter: string;
   github: string;
   behance?: string;
+  showSocialLinks?: boolean;
 }
 
 const HumansCard: React.FC<HumansCardProps> = ({
   name,
   role,
   role2,
+  role3,
   profilepic,
   linkedin,
   twitter,
   github,
-  behance
+  behance,
+  showSocialLinks = true
 }: HumansCardProps) => {
+  // Helper function to add line breaks after every 3 words
+  const addLineBreaks = (text: string) => {
+    const words = text.split(' ');
+    const result = [];
+    for (let i = 0; i < words.length; i += 3) {
+      result.push(words.slice(i, i + 3).join(' '));
+    }
+    return result.map((line, index) => (
+      <span key={index}>
+        {line}
+        {index < result.length - 1 && <br />}
+      </span>
+    ));
+  };
+
   return (
     <>
       <div className="flex flex-col gap-3 p-[16px] shadow text-white justify-center items-center">
@@ -60,37 +79,31 @@ const HumansCard: React.FC<HumansCardProps> = ({
           alt="Profile Picture"
         />
 
-        <div className="w-full flex flex-col gap-2 rounded-b-[8px]">
+        <div className="w-full flex flex-col gap-2 rounded-b-[8px] text-center">
           <p className="sm:text-xl text-lg text-white font-bold">{name}</p>
           {role && (
-            <p className="font-bold text-supporting-mediumGray text-md sm:text-md leading-9">
-              {role}
-              <p className="font-bold text-supporting-mediumGray text-md sm:text-md leading-9">
-              {role2}
-            </p>
-            </p>
+            <div className="flex flex-col gap-1">
+              <div className="font-bold text-supporting-mediumGray text-sm sm:text-md break-words text-center">
+                {addLineBreaks(role)}
+              </div>
+              {role2 && (
+                <div className="font-bold text-supporting-mediumGray mb-2 text-sm sm:text-md leading-7 break-words text-center">
+                  {addLineBreaks(role2)}
+                </div>
+              )}
+             
+            
+            </div>
           )}
             
-          <div className="flex gap-6">
-            <SocialMediaIcon href={linkedin} Icon={LinkedInLogoIcon} />
-            <SocialMediaIcon href={twitter} Icon={TwitterLogoIcon} />
-            { !behance ? (
-              <SocialMediaIcon href={github} Icon={GitHubLogoIcon} />
-            ) : (
-              <Link
-                href={behance}
-                target="_blank"
-                rel="noopener"
-                title="Behance Profile"
-              >
-                <Image
-                  src={behanceLogo}
-                  className="w-7 h-7"
-                  alt="Behance Logo"
-                />
-              </Link>
-            )}
-          </div>
+       
+            <div className="flex gap-6 justify-center">
+              <SocialMediaIcon href={linkedin} Icon={LinkedInLogoIcon} />
+              <SocialMediaIcon href={twitter} Icon={TwitterLogoIcon} />
+              
+                <SocialMediaIcon href={github} Icon={GitHubLogoIcon} />
+              </div>
+        
         </div>
       </div>
     </>

@@ -3,13 +3,10 @@ import linkedIn from "@/public/FooterLogo/linkedin.svg";
 import instagram from "@/public/FooterLogo/instagram.svg";
 import twitter from "@/public/FooterLogo/twitter.svg";
 import discord from "@/public/FooterLogo/discord.svg";
-import milaap from "@/public/FooterLogo/milaap.svg";
 
-import bannerSvg from "@/public/assets/banner.svg";
-import mobileImg from "@/public/assets/mobile.png";
-import og3Cropped from "@/public/assets/og3-cropped.svg";
+import og3Cropped from "@/public/assets/banner-mobile.svg";
 import startuptn from "@/public/partnersPage/startuptn-bg.png";
-import unstop from "@/public/partnersPage/unstop.webp";
+
 import Link from "next/link";
 import BannerAnim from "@/components/BannerAnim";
 import { PulsatingButton } from "@/components/ui/pulsating-button";

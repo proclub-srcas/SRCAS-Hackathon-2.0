@@ -1,8 +1,8 @@
 // Sponsors
-import startuptn from "@/public/assets/startuptn.webp";
-import deloitte from "@/public/assets/deloitte.webp";
-import viyen from "@/public/assets/viyen.webp";
-import tcs from "@/public/assets/tcs.webp";
+import startuptn from "@/public/partnersPage/startuptn.webp";
+import deloitte from "@/public/partnersPage/deloitte.webp";
+import viyen from "@/public/partnersPage/viyen.webp";
+import tcs from "@/public/partnersPage/tcs.webp";
 
 export const normalSponsorsData = [
   {
