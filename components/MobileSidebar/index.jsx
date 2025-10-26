@@ -59,7 +59,7 @@ const MobileSidebar = () => {
       if (open) {
         await animate(
           scope.current,
-          { height: "48x0px", width: "65px", borderRadius: "32px" },
+          { height: "480px", width: "65px", borderRadius: "32px" },
           { duration: 0.3 }
         );
         await animate(
