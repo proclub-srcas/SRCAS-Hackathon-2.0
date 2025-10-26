@@ -46,13 +46,10 @@ const HumansCard: React.FC<HumansCardProps> = ({
   name,
   role,
   role2,
-  role3,
   profilepic,
   linkedin,
   twitter,
-  github,
-  behance,
-  showSocialLinks = true
+  github
 }: HumansCardProps) => {
   // Helper function to add line breaks after every 3 words
   const addLineBreaks = (text: string) => {

@@ -17,7 +17,6 @@ import downloadSvg from "@/public/assets/download-svg.svg";
 import timerSvg from "@/public/HomePageLogo/timer.svg";
 import * as motion from "motion/react-client";
 import AnimatedTitle from "@/components/AnimatedTitle";
-import CountAnimation from "@/components/CountAnimation";
 import Link from "next/link";
 import { useState } from "react";
 import { Download } from "lucide-react";
@@ -248,7 +247,7 @@ export default function Home() {
               Why Participate?
             </h2>
             <p className="text-lg md:text-xl text-supporting-mediumGray mb-8 max-w-4xl mx-auto">
-              Join thousands of students in Tamil Nadu's premier hackathon and unlock your potential
+              Join thousands of students in Tamil Nadu&apos;s premier hackathon and unlock your potential
             </p>
           </div>
 
