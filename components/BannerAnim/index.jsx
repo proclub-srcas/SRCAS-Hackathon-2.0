@@ -1,6 +1,8 @@
     "use client";
     import React, { useRef, useEffect } from "react";
     import banner from "@/public/assets/banner.svg";
+    import og1 from "@/public/assets/og1.svg";
+    import og3Cropped from "@/public/assets/og3-cropped.svg";
 
     const BannerAnim = () => {
         const canvasRef = useRef(null);
@@ -58,7 +60,11 @@
 
             async function loadSVG() {
                 try {
-                    const svgData = await loadSVGasPath2D(banner.src);
+                    // Use different SVGs for desktop and mobile
+                    const isMobile = window.innerWidth < 768;
+                    const svgSource = isMobile ? og3Cropped.src : og1.src;
+                    
+                    const svgData = await loadSVGasPath2D(svgSource);
                     setupTearEffect(svgData.image);
                     URL.revokeObjectURL(svgData.url);
                 } catch (error) {
@@ -67,6 +73,13 @@
             }
 
             loadSVG();
+
+            // Handle window resize to switch between desktop and mobile SVGs
+            const handleResize = () => {
+                loadSVG();
+            };
+
+            window.addEventListener('resize', handleResize);
 
             function setupTearEffect(img) {
                 const activeColumns = {};
@@ -362,6 +375,11 @@
                     }
                 }
             }
+
+            // Cleanup resize listener
+            return () => {
+                window.removeEventListener('resize', handleResize);
+            };
         }, []);
 
         return (

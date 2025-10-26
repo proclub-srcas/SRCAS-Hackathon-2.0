@@ -130,8 +130,8 @@ export default function FAQSection() {
       </div>
 
       {/* PPT Download CTA Section */}
-      <div className="flex flex-col items-center justify-center py-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <div className="flex flex-col items-center justify-center py-16 px-4 mt-24">
+        <div className="max-w-7xl mx-auto text-center"> 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Download Our Official PPT Template
           </h2>

@@ -59,7 +59,7 @@ const MobileSidebar = () => {
       if (open) {
         await animate(
           scope.current,
-          { height: "400px", width: "65px", borderRadius: "32px" },
+          { height: "48x0px", width: "65px", borderRadius: "32px" },
           { duration: 0.3 }
         );
         await animate(
@@ -113,33 +113,42 @@ const MobileSidebar = () => {
             alt="closesidebar"
             onClick={() => setOpen(!open)}
             src={closesidebar}
+            
           />
         )}
         {open && (
-          <div className="flex-col justify-between h-full p-5 pt-14 flex overflow-hidden">
-            {sidebarLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`flex gap-5  ${
-                  pathname === link.href ? "text-white" : "text-white/40"
-                }`}
-                onClick={() => setOpen(false)}
-              >
-                {link.icon}
-                {fullyopen && <span className="">{link.name}</span>}
-              </Link>
-            ))}
+          <div className="flex flex-col justify-between h-full p-4 pt-12 overflow-hidden">
+            <div className="flex flex-col gap-3">
+              {sidebarLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`flex items-center gap-3 px-2 py-2 rounded-lg transition-all duration-300 ${
+                    pathname === link.href 
+                      ? "text-white " 
+                      : "text-white/60 hover:text-white hover:bg-white/5"
+                  }`}
+                  onClick={() => setOpen(false)}
+                >
+                  <div className="w-5 h-5 flex items-center justify-center">
+                    {link.icon}
+                  </div>
+                  {fullyopen && <span className="text-sm font-medium">{link.name}</span>}
+                </Link>
+              ))}
+            </div>
             
             {/* PPT Download Button */}
             <a
               href="/assets/srcas-hackathon.pptx"
               download="SRCAS-Hackathon-Presentation.pptx"
-              className="flex gap-5 text-white/40 hover:text-[#007acc] hover:bg-[#007acc]/10 px-3 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="flex items-center gap-3 px-2 py-2 rounded-lg text-white/60 hover:text-[#007acc] hover:bg-[#007acc]/10 transition-all duration-300"
               onClick={() => setOpen(false)}
             >
-              <Download className="hover:animate-bounce" />
-              {fullyopen && <span className="font-medium">Download PPT</span>}
+              <div className="w-5 h-5 flex items-center justify-center">
+                <Download className="hover:animate-bounce" />
+              </div>
+              {fullyopen && <span className="text-sm font-medium">Download PPT</span>}
             </a>
           </div>
         )}

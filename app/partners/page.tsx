@@ -1,7 +1,6 @@
 import SponsorCard from "@/components/SponsorCard";
 import srcas from "@/public/assets/srcas.png";
 import proclub from "@/public/assets/ProClub.png";
-
 import { normalSponsorsData } from "@/data/sponsorData";
 import TitleSponsorCard from "@/components/TitleSponsorCard";
 
@@ -13,14 +12,14 @@ const PartnersPage = () => {
       description:
         "Sri Ramakrishna College of Arts and Science (SRCAS) is a premier educational institution committed to providing quality education and fostering innovation. The college supports student initiatives and technological advancement through various programs and events.",
       imageSrc: srcas,
-      link: "#",
+      link: "https://www.srcas.ac.in/",
     },
     {
       title: "Programming Club",
       description:
         "Programming club of SRCAS, dedicated to fostering innovation and technical excellence among students. We organize coding competitions, workshops, and hackathons to build a strong developer community.",
       imageSrc: proclub,
-      link: "#",
+      link: "https://srcasprogrammingclub.vercel.app/",
     },
    
   ];

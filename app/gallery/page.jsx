@@ -36,7 +36,7 @@ const Gallery = () => {
           </div>
           <div className="w-full h-full max-w-4xl mx-auto">
             <video
-              src="/assets/srcas1.0.mp4"
+              src="/assets/srcas-1.0.mp4"
               controls
               autoPlay
               muted

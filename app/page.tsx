@@ -1,5 +1,6 @@
 import Image from "next/image";
-import NewHero from "@/components/NewHero";
+import HeroSection from "@/components/Herosection";
+import InstagramCard from "@/components/DiscordCard";
 import g1 from "@/public/HomePageLogo/g1.svg";
 import g2 from "@/public/HomePageLogo/g2.svg";
 import g3 from "@/public/HomePageLogo/g3.svg";
@@ -109,15 +110,17 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
-      <NewHero />
+      <HeroSection />
+      
+      
+      
       {/* Stats Section */}
       <div className="w-full py-16 px-4 mt-20 mb-28">
         <div className="max-w-7xl mx-auto">
           {/* Hero Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 leading-tight">
-              Why Choose SRCAS Hackathon
-                2.0?
+              Why Participate ?
             
             </h2>
             
@@ -215,7 +218,12 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-
+{/* Instagram Card Section */}
+<div className="w-full py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <InstagramCard />
+        </div>
+      </div>
       {/* PPT Download CTA Section */}
       <div className="flex flex-col items-center justify-center py-16 px-4">
         <div className="max-w-7xl mx-auto text-center">

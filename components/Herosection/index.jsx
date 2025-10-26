@@ -6,11 +6,14 @@ import discord from "@/public/FooterLogo/discord.svg";
 import milaap from "@/public/FooterLogo/milaap.svg";
 
 import bannerSvg from "@/public/assets/banner.svg";
-import mobileImg from "@/public/assets/mobile-reponsive.png";
-
+import mobileImg from "@/public/assets/mobile.png";
+import og3Cropped from "@/public/assets/og3-cropped.svg";
+import startuptn from "@/public/partnersPage/startuptn-bg.png";
+import unstop from "@/public/partnersPage/unstop.webp";
 import Link from "next/link";
 import BannerAnim from "@/components/BannerAnim";
 import { PulsatingButton } from "@/components/ui/pulsating-button";
+
 
 const HeroSection = () => {
   {
@@ -35,13 +38,17 @@ const HeroSection = () => {
         </div>
         <div className="md:hidden">
         <Image
-          src={mobileImg}
+          src={og3Cropped}
           alt="Mobile Banner"
-          className="md:w-full md:pt-16 lg:scale-100 md:scale-[1.3] scale-[2] pt-32 md:-mt-8 lg:-mt-0 w-full transform -rotate-12 -translate-x-6"
+          className="md:w-full md:pt-16 lg:scale-100 md:scale-[1.3] scale-[2] pt-32 md:-mt-8 lg:-mt-0 w-[90%] pl-5 transform -rotate-6 "
           priority
         />
      
         </div>
+
+
+       
+
       </div>
       {/* This btn is for the Desktop view */}
       <div className="hidden sm:flex justify-center md:justify-end md:mr-8 lg:mr-16 md:-mt-24 lg:-mt-12 xl:-mt-16 mb-8">
@@ -71,10 +78,33 @@ const HeroSection = () => {
           className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
           />
         </Link>
-      
-       
+        <Link href="https://x.com/proclub_srcas">
+          <Image
+          src={twitter}
+          alt="Twitter"
+          className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
+          />
+        </Link>
+        <Link href="https://discord.gg/">
+          <Image
+          src={discord}
+          alt="Discord"
+          className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
+          />
+          </Link>
         </div>
-
+        <div className="flex lg:gap-16 md:gap-12 gap-3 xs:gap-14 rotate-[0deg] md:rotate-0 sm:justify-start justify-center items-center">
+        <Image
+          src={startuptn}
+          alt="startuptn"
+          className="lg:w-[125px] md:w-[150px] w-32"
+        />
+        {/* <Image
+          src={unstop}
+          alt="unstop"
+          className="lg:w-[100px] md:w-[100px] w-32"
+        /> */}
+        </div>
       </div>
       </>
     );
