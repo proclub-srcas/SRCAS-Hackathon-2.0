@@ -424,8 +424,8 @@ export default function Home() {
                                 animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
                                 transition={{ duration: 0.2, delay: isExpanded ? 0.1 : 0 }}
                               >
-                                <h5 className="text-blue-400 font-semibold mb-2">Description:</h5>
-                                <p className="text-gray-300 text-sm leading-relaxed">{problem.description}</p>
+                                <h5 className="text-gray-200 font-semibold mb-2">Description:</h5>
+                                <p className="text-gray-300 text-base leading-relaxed">{problem.description}</p>
                               </motion.div>
 
                               <motion.div
@@ -433,8 +433,8 @@ export default function Home() {
                                 animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
                                 transition={{ duration: 0.2, delay: isExpanded ? 0.15 : 0 }}
                               >
-                                <h5 className="text-green-400 font-semibold mb-2">Expected Outcome:</h5>
-                                <p className="text-gray-300 text-sm leading-relaxed">{problem.expectedOutcome}</p>
+                                <h5 className="text-gray-200 font-semibold mb-2">Expected Outcome:</h5>
+                                <p className="text-gray-300 text-base leading-relaxed">{problem.expectedOutcome}</p>
                               </motion.div>
 
                               <motion.div
@@ -442,8 +442,8 @@ export default function Home() {
                                 animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
                                 transition={{ duration: 0.2, delay: isExpanded ? 0.2 : 0 }}
                               >
-                                <h5 className="text-yellow-400 font-semibold mb-2">Note:</h5>
-                                <p className="text-gray-300 text-sm leading-relaxed">{problem.note}</p>
+                                <h5 className="text-gray-200 font-semibold mb-2">Note:</h5>
+                                <p className="text-gray-300 text-base leading-relaxed">{problem.note}</p>
                               </motion.div>
 
                               <motion.div
@@ -453,12 +453,13 @@ export default function Home() {
                                 transition={{ duration: 0.2, delay: isExpanded ? 0.25 : 0 }}
                               >
                                 <div>
-                                  <h5 className="text-purple-400 font-semibold mb-2">SDG:</h5>
-                                  <p className="text-gray-300 text-sm">{problem.SDG}</p>
+                                  <h5 className="text-gray-200 font-semibold mb-2">SDG:</h5>
+                                  <p className="text-gray-300 text-base">{problem.SDG}</p>
                                 </div>
                                 <div>
-                                  <h5 className="text-orange-400 font-semibold mb-2">Type:</h5>
-                                  <p className="text-gray-300 text-sm">{problem.type}</p>
+                                  
+                                  <h5 className="text-gray-200 font-semibold mb-2">Type:</h5>
+                                  <p className="text-gray-300 text-base">{problem.type}</p>
                                 </div>
                               </motion.div>
                             </div>

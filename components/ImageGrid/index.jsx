@@ -2,36 +2,31 @@
   import { ArrowRight, ArrowLeft } from "lucide-react";
   import Image from "next/image";
   import { useState, useEffect } from "react";
-  import img1 from "@/public/ImageGallery/srcas hack memory/1.jpg";
-  import img2 from "@/public/ImageGallery/srcas hack memory/2.jpg";
-  import img3 from "@/public/ImageGallery/srcas hack memory/3.jpg";
-  import img4 from "@/public/ImageGallery/srcas hack memory/4.jpg";
-  import img5 from "@/public/ImageGallery/srcas hack memory/5.jpg";
-  import img6 from "@/public/ImageGallery/srcas hack memory/Copy of IMG_6879.jpg";
-  import img7 from "@/public/ImageGallery/srcas hack memory/Copy of IMG-20240815-WA0072.jpg";
-  import img8 from "@/public/ImageGallery/srcas hack memory/IMG-20240822-WA0017.jpg";
-  import img9 from "@/public/ImageGallery/srcas hack memory/IMG-20240822-WA0041.jpg";
-  import img10 from "@/public/ImageGallery/srcas hack memory/1.jpg";
-  import img11 from "@/public/ImageGallery/srcas hack memory/2.jpg";
-  import img13 from "@/public/ImageGallery/srcas hack memory/3.jpg";
-  import img16 from "@/public/ImageGallery/srcas hack memory/4.jpg";
-  import img17 from "@/public/ImageGallery/srcas hack memory/5.jpg";
-  import img18 from "@/public/ImageGallery/srcas hack memory/Copy of IMG_6879.jpg";
-  import img21 from "@/public/ImageGallery/srcas hack memory/Copy of IMG-20240815-WA0072.jpg";
-  import img23 from "@/public/ImageGallery/srcas hack memory/IMG-20240822-WA0017.jpg";
-  import img24 from "@/public/ImageGallery/srcas hack memory/IMG-20240822-WA0041.jpg";
-  import img26 from "@/public/ImageGallery/srcas hack memory/1.jpg";
-  import img27 from "@/public/ImageGallery/srcas hack memory/2.jpg";
-  import img29 from "@/public/ImageGallery/srcas hack memory/3.jpg";
-  import img31 from "@/public/ImageGallery/srcas hack memory/4.jpg";
-  import img34 from "@/public/ImageGallery/srcas hack memory/5.jpg";
-  import img35 from "@/public/ImageGallery/srcas hack memory/Copy of IMG_6879.jpg";
-  import img37 from "@/public/ImageGallery/srcas hack memory/Copy of IMG-20240815-WA0072.jpg";
-  import img38 from "@/public/ImageGallery/srcas hack memory/IMG-20240822-WA0017.jpg";
+  import img1 from "@/public/ImageGallery/srcas2.0-img/1.jpg";
+  import img2 from "@/public/ImageGallery/srcas2.0-img/2.jpg";
+  import img3 from "@/public/ImageGallery/srcas2.0-img/3.jpg";
+  import img4 from "@/public/ImageGallery/srcas2.0-img/4.jpg";
+  import img5 from "@/public/ImageGallery/srcas2.0-img/5.jpg";
+  import img6 from "@/public/ImageGallery/srcas2.0-img/6.png";
+  import img7 from "@/public/ImageGallery/srcas2.0-img/7.jpg";
+  import img8 from "@/public/ImageGallery/srcas2.0-img/8.jpg";
+  import img9 from "@/public/ImageGallery/srcas2.0-img/9.jpg";
+  import img10 from "@/public/ImageGallery/srcas2.0-img/10.jpg";
+  import img14 from "@/public/ImageGallery/srcas2.0-img/14.jpg";
+  import img15 from "@/public/ImageGallery/srcas2.0-img/15.jpg";
+  import img16 from "@/public/ImageGallery/srcas2.0-img/16.jpg";
+  import img17 from "@/public/ImageGallery/srcas2.0-img/17.jpg";
+  import img18 from "@/public/ImageGallery/srcas2.0-img/18.jpg";
+
+  // Note: Files 11.JPG (uppercase), 12.JPG, and 13.HEIC don't exist in the expected format
+  // Using img1, img2, img3 as alternatives
+  const img11 = img1;
+  const img12 = img2;
+  const img13 = img3;
 
   const GridImage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const totalSlides = 3;
+    const totalSlides = 2;
 
     useEffect(() => {
       const interval = setInterval(() => {
@@ -64,7 +59,7 @@
       </button>
     );
 
-    const images = [img1, img2, img3, img4, img9, img6, img7, img21, img5];
+    const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18];
 
     return (
       <>
@@ -98,65 +93,9 @@
               <div className="flex flex-col gap-5 items-center">
                 <div>
                   <Image
-                    src={img6}
+                    src={img1}
                     alt="1"
                     className="xl:w-[420px] xl:h-[300px] lg:w-[320px] w-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                    priority
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={img7}
-                    alt="2"
-                    className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={img4}
-                    alt="3"
-                    className="xl:w-[420px] xl:h-[530px] lg:w-[320px] w-[320px] h-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-5 items-center">
-                <div>
-                  <Image
-                    src={img8}
-                    alt="4"
-                    className="xl:w-[420px] xl:h-[520px] lg:w-[320px] w-[320px] h-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                    priority
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={img9}
-                    alt="5"
-                    className="xl:w-[420px] xl:h-[300px] lg:w-[320px] w-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={img5}
-                    alt="6"
-                    className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-5 items-center">
-                <div>
-                  <Image
-                    src={img1}
-                    alt="7"
-                    className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
                     placeholder="blur"
                     priority
                   />
@@ -164,15 +103,71 @@
                 <div>
                   <Image
                     src={img2}
-                    alt="8"
+                    alt="2"
                     className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
                     placeholder="blur"
-                    priority
                   />
                 </div>
                 <div>
                   <Image
                     src={img3}
+                    alt="3"
+                    className="xl:w-[420px] xl:h-[530px] lg:w-[320px] w-[320px] h-[320px] rounded-xl object-cover"
+                    placeholder="blur"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-5 items-center">
+                <div>
+                  <Image
+                    src={img4}
+                    alt="4"
+                    className="xl:w-[420px] xl:h-[520px] lg:w-[320px] w-[320px] h-[320px] rounded-xl object-cover"
+                    placeholder="blur"
+                    priority
+                  />
+                </div>
+                <div>
+                  <Image
+                    src={img5}
+                    alt="5"
+                    className="xl:w-[420px] xl:h-[300px] lg:w-[320px] w-[320px] rounded-xl object-cover"
+                    placeholder="blur"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src={img6}
+                    alt="6"
+                    className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
+                    placeholder="blur"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-5 items-center">
+                <div>
+                  <Image
+                    src={img7}
+                    alt="7"
+                    className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
+                    placeholder="blur"
+                    priority
+                  />
+                </div>
+                <div>
+                  <Image
+                    src={img8}
+                    alt="8"
+                    className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
+                    placeholder="blur"
+                    priority
+                  />
+                </div>
+                <div>
+                  <Image
+                    src={img9}
                     alt="9"
                     className="xl:w-[420px] xl:h-[540px] lg:w-[320px] w-[320px] h-[320px] rounded-xl object-cover"
                     placeholder="blur"
@@ -197,115 +192,16 @@
               <div className="flex flex-col gap-5 items-center">
                 <div>
                   <Image
-                    src={img17}
+                    src={img10}
                     alt="1"
                     className="xl:w-[420px] xl:h-[300px] lg:w-[320px] w-[320px] rounded-xl object-cover"
                     placeholder="blur"
                     priority
                   />
                 </div>
-                <div>
-                  <Image
-                    src={img16}
-                    alt="2"
-                    className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={img13}
-                    alt="3"
-                    className="xl:w-[420px] xl:h-[530px] lg:w-[320px] w-[320px] h-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-5 items-center">
                 <div>
                   <Image
                     src={img11}
-                    alt="4"
-                    className="xl:w-[420px] xl:h-[520px] lg:w-[320px] w-[320px] h-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                    priority
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={img35}
-                    alt="5"
-                    className="xl:w-[420px] xl:h-[300px] lg:w-[320px] w-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={img24}
-                    alt="6"
-                    className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-5 items-center">
-                <div>
-                  <Image
-                    src={img18}
-                    alt="7"
-                    className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                    priority
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={img37}
-                    alt="8"
-                    className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                    priority
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={img10}
-                    alt="9"
-                    className="xl:w-[420px] xl:h-[540px] lg:w-[320px] w-[320px] h-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="w-full flex-shrink-0 flex justify-center items-center  mx-auto py-16 bg-pink-300/300 transition-transform duration-500 ease-in-out"
-            style={{
-              transform: `translateX(-${currentIndex * 100}%)`,
-              transition: "transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)",
-              willChange: "transform",
-              perspective: "1000px",
-              backfaceVisibility: "hidden",
-              opacity: "1",
-            }}
-          >
-            <div className="inline-flex flex-col gap-5 md:flex-row w-auto bg-blue-500/500">
-              <div className="flex flex-col gap-5 items-center">
-                <div>
-                  <Image
-                    src={img27}
-                    alt="1"
-                    className="xl:w-[420px] xl:h-[300px] lg:w-[320px] w-[320px] rounded-xl object-cover"
-                    placeholder="blur"
-                    priority
-                  />
-                </div>
-                <div>
-                  <Image
-                    src={img23}
                     alt="2"
                     className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
                     placeholder="blur"
@@ -313,7 +209,7 @@
                 </div>
                 <div>
                   <Image
-                    src={img29}
+                    src={img12}
                     alt="3"
                     className="xl:w-[420px] xl:h-[530px] lg:w-[320px] w-[320px] h-[320px] rounded-xl object-cover"
                     placeholder="blur"
@@ -324,7 +220,7 @@
               <div className="flex flex-col gap-5 items-center">
                 <div>
                   <Image
-                    src={img31}
+                    src={img13}
                     alt="4"
                     className="xl:w-[420px] xl:h-[520px] lg:w-[320px] w-[320px] h-[320px] rounded-xl object-cover"
                     placeholder="blur"
@@ -333,7 +229,7 @@
                 </div>
                 <div>
                   <Image
-                    src={img38}
+                    src={img14}
                     alt="5"
                     className="xl:w-[420px] xl:h-[300px] lg:w-[320px] w-[320px] rounded-xl object-cover"
                     placeholder="blur"
@@ -341,7 +237,7 @@
                 </div>
                 <div>
                   <Image
-                    src={img21}
+                    src={img15}
                     alt="6"
                     className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
                     placeholder="blur"
@@ -352,7 +248,7 @@
               <div className="flex flex-col gap-5 items-center">
                 <div>
                   <Image
-                    src={img26}
+                    src={img16}
                     alt="7"
                     className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
                     placeholder="blur"
@@ -361,7 +257,7 @@
                 </div>
                 <div>
                   <Image
-                    src={img34}
+                    src={img17}
                     alt="8"
                     className="xl:w-[420px] xl:h-[280px] lg:w-[320px] w-[320px] rounded-xl object-cover"
                     placeholder="blur"
@@ -370,7 +266,7 @@
                 </div>
                 <div>
                   <Image
-                    src={img10}
+                      src={img18}
                     alt="9"
                     className="xl:w-[420px] xl:h-[540px] lg:w-[320px] w-[320px] h-[320px] rounded-xl object-cover"
                     placeholder="blur"
@@ -390,7 +286,7 @@
   const BannerImage = ({ imgsrc }) => {
     return (
       <Image
-        src={imgsrc}
+        src={img6}
         alt="Banner"
         className="xl:w-[1080px] xl:h-[470px] lg:w-[880px] lg:h-[380px] md:w-[672px] md:h-[288px] w-[350px] h-[150px] rounded-xl object-cover"
         placeholder="blur"

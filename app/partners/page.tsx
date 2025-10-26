@@ -4,6 +4,8 @@ import proclub from "@/public/partnersPage/ProClub.png";
 import { normalSponsorsData } from "@/data/sponsorData";
 import TitleSponsorCard from "@/components/TitleSponsorCard";
 import { Download } from "lucide-react";
+import Image from "next/image";
+import srcasHackLogo from "@/public/assets/srcashack-logo.png";
 
 
 const PartnersPage = () => {
@@ -31,15 +33,24 @@ const PartnersPage = () => {
           lg:px-16 xl:px-28 lg:pb-[92px] pt-[32px] md:pt-[48px] px-4"
       >
         <div className="flex flex-col gap-8 md:gap-12">
-          <div className="text-left">
-            <div className="text-white font-gotham font-black text-[36px] xs:text-[42px] md:text-5xl lg:text-[4.2rem] xl:text-[96px] xl:leading-tight mb-6">
-              Our Partners
-              <br /> who Supported
+          <div className="flex items-start justify-between gap-8">
+            <div className="text-left flex-1">
+              <div className="text-white font-gotham font-black text-[36px] xs:text-[42px] md:text-5xl lg:text-[4.2rem] xl:text-[96px] xl:leading-tight mb-6">
+                Our Partners
+                <br /> who Supported
+              </div>
+              <p className="text-supporting-mediumGray text-left font-medium md:text-xl lg:text-2xl text-lg xs:text-md max-w-[600px]">
+                We are proud to collaborate with visionary organizations that
+                share our passion for innovation and technology.
+              </p>
             </div>
-            <p className="text-supporting-mediumGray text-left font-medium md:text-xl lg:text-2xl text-lg xs:text-md max-w-[600px]">
-              We are proud to collaborate with visionary organizations that
-              share our passion for innovation and technology.
-            </p>
+            <div className="hidden md:block flex-shrink-0">
+              <Image 
+                src={srcasHackLogo} 
+                alt="SRCAS Hackathon 2.0 Logo" 
+                className="w-48 h-24 lg:w-40 lg:h-40 xl:w-[430px] xl:h-[430px] -mt-16 object-contain rotate-12"
+              />
+            </div>
           </div>
         </div>
 
