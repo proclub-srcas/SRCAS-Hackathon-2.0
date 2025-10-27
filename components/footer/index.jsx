@@ -3,6 +3,8 @@ import proclub from "../../public/partnersPage/ProClubLogo.png";
 import srcas from "../../public/partnersPage/srcas.svg";
 import linkedIn from "../../public/FooterLogo/linkedin.svg";
 import instagram from "../../public/FooterLogo/instagram.svg";
+import twitter from "@/public/FooterLogo/twitter.svg";
+import discord from "@/public/FooterLogo/discord.svg";
 import Link from "next/link";
 import AnimatedTitle from "../AnimatedTitle";
 
@@ -64,25 +66,44 @@ const Footer = () => {
               <span>{link.name}</span>
             </Link>
           ))}
-        </div>
-        
-        {/* Social Media Links */}
-        <div className="flex gap-4 sm:gap-6 lg:gap-4 xl:gap-6 items-center mt-4 lg:mt-0">
-          <Link href="https://www.linkedin.com/company/srcas-programming-club">
-            <Image
-              src={linkedIn}
-              alt="linkedIn"
-              className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 hover:scale-110 transition-all duration-300 cursor-pointer"
-            />
-          </Link>
-          <Link href="https://www.instagram.com/proclub_srcas">
-            <Image
-              src={instagram}
-              alt="Instagram"
-              className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 hover:scale-110 transition-all duration-300 cursor-pointer"
-            />
-          </Link>
-        </div>
+        </div>{/* Social Media Links */}
+<div className="flex gap-4 sm:gap-6 lg:gap-4 xl:gap-6 items-center mt-4 lg:mt-0">
+  {/* LinkedIn */}
+  <Link href="https://www.linkedin.com/company/srcas-programming-club" target="_blank">
+    <Image
+      src={linkedIn}
+      alt="LinkedIn"
+      className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 hover:scale-110 transition-all duration-300 cursor-pointer"
+    />
+  </Link>
+
+  {/* Instagram */}
+  <Link href="https://www.instagram.com/proclub_srcas" target="_blank">
+    <Image
+      src={instagram}
+      alt="Instagram"
+      className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 hover:scale-110 transition-all duration-300 cursor-pointer"
+    />
+  </Link>
+
+  {/* Twitter (X) */}
+  <Link href="https://twitter.com/proclub_srcas" target="_blank">
+    <Image
+      src={twitter}
+      alt="Twitter"
+      className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 hover:scale-110 transition-all duration-300 cursor-pointer"
+    />
+  </Link>
+
+  {/* Discord */}
+  <Link href="https://discord.gg/proclub-srcas" target="_blank">
+    <Image
+      src={discord}
+      alt="Discord"
+      className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 hover:scale-110 transition-all duration-300 cursor-pointer"
+    />
+  </Link>
+</div>
       </div>
       <div className="text-supporting-darkGray font-bold text-xs sm:text-sm md:text-base lg:text-lg py-3 lg:py-4 text-center lg:text-left xl:pl-32 lg:pl-10 md:pl-4 px-4">
         © 2025 SRCAS Programming Club, All rights reserved
