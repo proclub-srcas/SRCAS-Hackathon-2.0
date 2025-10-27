@@ -62,15 +62,15 @@ export default function InstagramCard() {
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
           <ul className="space-y-2 md:space-y-4 lg:space-y-6 text-[#007acc] font-bold text-sm sm:text-base md:text-lg xl:text-xl leading-[140%]">
             <li className="flex items-center">
-              <span className="mr-2 text-xl text-black">•</span>
+              <span className="mr-2 text-xl text-black">o</span>
               Tech-related posts and coding tutorials.
             </li>
             <li className="flex items-center">
-              <span className="mr-2 text-xl text-black">•</span>
+              <span className="mr-2 text-xl text-black">o</span>
               Hackathon highlights and success stories.
             </li>
             <li className="flex items-center">
-              <span className="mr-2 text-xl text-black">•</span>
+              <span className="mr-2 text-xl text-black">o</span>
               Programming tips and tech insights.
             </li>
 
