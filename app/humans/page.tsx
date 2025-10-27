@@ -52,7 +52,7 @@ const Humans = () => {
       github: "#",
       twitter: "#",
       role: "Joint Secretary",
-      role2:"Organizer"
+  
     },
   
     {
