@@ -342,7 +342,7 @@ export default function Home() {
           <div key={index} className="mb-16">
             <div className="flex flex-col md:flex-row gap-12 md:gap-16 lg:gap-24">
               {/* Left Half */}
-              <div className="w-full  md:w-2/5 flex flex-col gap-5 ml-14">
+              <div className="w-full  md:w-2/5 flex flex-col gap-5  ">
                 <div className="max-w-[600px] text-white text-3xl md:text-4xl underline underline-offset-2 font-medium leading-[44px] -mr-14">
                   {theme.title}
                 </div>
