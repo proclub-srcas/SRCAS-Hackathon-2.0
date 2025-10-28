@@ -48,7 +48,7 @@ export default function InstagramCard() {
         </div>
 
         {/* Description */}
-        <p className="text-[#161616] mb-4 md:mb-0 text-sm sm:text-base md:text-xl lg:text-2xl leading-[140%] font-normal max-w-full md:max-w-[90%]">
+        <p className="text-[#161616] lg:-mb-16 text-sm sm:text-base md:text-xl lg:text-2xl leading-[140%] font-normal max-w-full md:max-w-[90%]">
           Stay connected with{" "}
           <span className="font-bold">SRCAS Hackathon 2.0</span> on Instagram for
           tech insights and updates.
