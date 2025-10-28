@@ -72,7 +72,7 @@ const FallingText: React.FC<FallingTextProps> = ({
 
     // Add a small delay to ensure DOM is ready
     const timer = setTimeout(() => {
-      const { Engine, Render, World, Bodies, Runner, Mouse, MouseConstraint } = Matter;
+      const { Engine, Render, World, Bodies, Runner } = Matter;
 
       if (!containerRef.current || !canvasContainerRef.current || !textRef.current) return;
 
@@ -110,7 +110,7 @@ const FallingText: React.FC<FallingTextProps> = ({
       const wordSpans = textRef.current.querySelectorAll('span');
       console.log('Found word spans:', wordSpans.length);
       
-      const wordBodies = [...wordSpans].map((elem, index) => {
+      const wordBodies = [...wordSpans].map((elem) => {
         const rect = elem.getBoundingClientRect();
 
         const x = rect.left - containerRect.left + rect.width / 2;
@@ -133,7 +133,7 @@ const FallingText: React.FC<FallingTextProps> = ({
         return { elem, body };
       });
 
-      wordBodies.forEach(({ elem, body }, index) => {
+      wordBodies.forEach(({ elem, body }) => {
         elem.style.position = 'absolute';
         elem.style.left = `${body.position.x}px`;
         elem.style.top = `${body.position.y}px`;

@@ -1,8 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import {
-  TwitterLogoIcon,
   LinkedInLogoIcon,
-  GitHubLogoIcon,
   InstagramLogoIcon,
 } from "@radix-ui/react-icons";
 
@@ -50,8 +48,6 @@ const HumansCard: React.FC<HumansCardProps> = ({
   role2,
   profilepic,
   linkedin = "#",
-  twitter = "#",
-  github = "#",
   instagram = "#",
   showSocialLinks = true
 }: HumansCardProps) => {
