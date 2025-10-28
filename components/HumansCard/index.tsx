@@ -3,6 +3,7 @@ import {
   TwitterLogoIcon,
   LinkedInLogoIcon,
   GitHubLogoIcon,
+  InstagramLogoIcon,
 } from "@radix-ui/react-icons";
 
 import { IconProps } from "@radix-ui/react-icons/dist/types";
@@ -35,9 +36,10 @@ interface HumansCardProps {
   role2?: string;
   role3?: string;
   profilepic: StaticImageData;
-  linkedin: string;
-  twitter: string;
-  github: string;
+  linkedin?: string;
+  twitter?: string;
+  github?: string;
+  instagram?: string;
   behance?: string;
   showSocialLinks?: boolean;
 }
@@ -47,9 +49,11 @@ const HumansCard: React.FC<HumansCardProps> = ({
   role,
   role2,
   profilepic,
-  linkedin,
-  twitter,
-  github
+  linkedin = "#",
+  twitter = "#",
+  github = "#",
+  instagram = "#",
+  showSocialLinks = true
 }: HumansCardProps) => {
   // Helper function to add line breaks after every 3 words
   const addLineBreaks = (text: string) => {
@@ -94,12 +98,12 @@ const HumansCard: React.FC<HumansCardProps> = ({
           )}
             
        
-            <div className="flex gap-6 justify-center">
-              <SocialMediaIcon href={linkedin} Icon={LinkedInLogoIcon} />
-              <SocialMediaIcon href={twitter} Icon={TwitterLogoIcon} />
-              
-                <SocialMediaIcon href={github} Icon={GitHubLogoIcon} />
+            {showSocialLinks && (
+              <div className="flex gap-6 justify-center">
+                {linkedin && <SocialMediaIcon href={linkedin} Icon={LinkedInLogoIcon} />}
+                {instagram && <SocialMediaIcon href={instagram} Icon={InstagramLogoIcon} />}
               </div>
+            )}
         
         </div>
       </div>

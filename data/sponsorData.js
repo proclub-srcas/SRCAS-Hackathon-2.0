@@ -1,7 +1,7 @@
 // Sponsors
 import startuptn from "@/public/partnersPage/startuptn.webp";
 import deloitte from "@/public/partnersPage/deloitte.webp";
-import viyen from "@/public/partnersPage/viyen.webp";
+
 import tcs from "@/public/partnersPage/tcs.webp";
 
 export const normalSponsorsData = [
@@ -17,12 +17,7 @@ export const normalSponsorsData = [
     sponsorimgsrc: deloitte,
     site: "https://www2.deloitte.com/",
   },
-  {
-    sponsor: "Viyen",
-    category: "Partner",
-    sponsorimgsrc: viyen,
-    site: "#",
-  },
+
   {
     sponsor: "TCS",
     category: "Partner",

@@ -18,6 +18,7 @@ import timerSvg from "@/public/HomePageLogo/timer.svg";
 import * as motion from "motion/react-client";
 import AnimatedTitle from "@/components/AnimatedTitle";
 import Link from "next/link";
+import FallingText from "@/components/FallingText";
 import { useState } from "react";
 import { Download } from "lucide-react";
 
@@ -247,7 +248,7 @@ export default function Home() {
               Why Participate?
             </h2>
             <p className="text-lg md:text-xl text-supporting-mediumGray mb-8 max-w-4xl mx-auto">
-              Join thousands of students in Tamil Nadu&apos;s premier hackathon and unlock your potential
+              Join students in Tamil Nadu&apos;s premier hackathon and unlock your potential
             </p>
           </div>
 
@@ -327,6 +328,34 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Falling Text Animation Section - Hidden on Mobile */}
+      <div className="w-full py-16 px-4 mb-16 hidden md:block">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 leading-tight">
+              Interactive Experience
+            </h2>
+            <p className="text-lg md:text-xl text-supporting-mediumGray mb-8 max-w-4xl mx-auto">
+              Experience the power of technology through interactive animations
+            </p>
+          </div>
+          
+          <div className="bg-transparent rounded-2xl p-8 min-h-[500px] flex items-center justify-center pb-16 overflow-visible">
+            <FallingText
+              text="SRCAS Hackathon 2.0 brings together brilliant minds to code innovate and build the future of technology through cutting-edge solutions and collaborative development"
+              highlightWords={["SRCAS", "Hackathon", "code", "innovate", "technology", "solutions", "development"]}
+              trigger="scroll"
+              backgroundColor="transparent"
+              wireframes={false}
+              gravity={0.5}
+              fontSize="2.8rem"
+              mouseConstraintStiffness={0.7}
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Problem Statements Section */}
       <div className="flex flex-col  p-4 md:pb-16 lg:px-[7%]  ">
         <div className="text-center mb-16">

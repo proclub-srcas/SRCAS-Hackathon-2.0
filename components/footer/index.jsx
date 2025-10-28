@@ -21,10 +21,21 @@ const sidebarLinks = [
 
 const Footer = () => {
   return (
-    <div className="overflow-hidden bg-[#161616]">
-      <div className="flex flex-col lg:flex-row lg:justify-between items-center xl:mx-32 lg:mx-20 md:mx-12 mx-4 gap-8 lg:gap-0 mt-12 mb-20">
+    <div className="overflow-hidden bg-[#161616] border-t-2 border-white/10 border-dotted" >
+      <div className="flex flex-col items-center xl:mx-32 lg:mx-20 md:mx-12 mx-4 gap-8 mt-12 mb-20">
         {/* Logo Section */}
-        <div className="flex flex-col items-center gap-4 lg:items-start">
+
+
+          {/* Tagline Section - Centered */}
+          <div className="flex flex-col gap-2 justify-center items-center mb-8 w-full">
+          <div className="text-center text-supporting-lightGray text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
+            <AnimatedTitle viewport={true}>Code to Innovate</AnimatedTitle>
+          </div>
+          <div className="text-center text-supporting-mediumGray text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal">
+            <AnimatedTitle viewport={true}>Build the Future</AnimatedTitle>
+          </div>
+        </div>
+        <div className="flex flex-col items-center gap-4">
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
             <div className="flex flex-col items-center gap-2">
               <Image
@@ -43,15 +54,7 @@ const Footer = () => {
           </div>
         </div>
         
-        {/* Tagline Section */}
-        <div className="flex flex-col gap-2 justify-center items-center lg:items-end pt-4 lg:pt-8 w-full lg:w-auto">
-          <div className="text-center lg:text-right text-supporting-lightGray text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
-            <AnimatedTitle viewport={true}>Code to Innovate</AnimatedTitle>
-          </div>
-          <div className="text-center lg:text-right text-supporting-mediumGray text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal">
-            <AnimatedTitle viewport={true}>Build the Future</AnimatedTitle>
-          </div>
-        </div>
+      
       </div>
 
       <div className="flex flex-col lg:flex-row justify-between items-center xl:px-32 lg:px-10 md:px-4 px-4 mt-8 bg-[#007acc] rotate-2 py-4 lg:py-6">

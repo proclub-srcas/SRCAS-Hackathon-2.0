@@ -29,7 +29,7 @@ export default function Prizes() {
                     className="w-full text-white
                   text-center text-[1rem] md:text-[1.5rem] font-semibold"
                   >
-                    Join the biggest hackathon in Tamil Nadu! 🚀
+                    Join the National hackathon in Tamil Nadu! 🚀
                   </p>
                 </div>
               </div>
