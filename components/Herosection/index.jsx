@@ -91,11 +91,11 @@ const HeroSection = () => {
           </Link>
         </div>
         <div className="flex lg:gap-16 md:gap-12 gap-3 xs:gap-14 rotate-[0deg] md:rotate-0 sm:justify-start justify-center items-center">
-        <Image
+        {/* <Image
           src={startuptn}
           alt="startuptn"
           className="lg:w-[125px] md:w-[150px] w-32"
-        />
+        /> */}
         {/* <Image
           src={unstop}
           alt="unstop"
