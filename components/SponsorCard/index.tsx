@@ -54,7 +54,7 @@ const SponsorCard: React.FC<SponsorCardProps> = ({
           <div className={`w-full font-gotham text-white ${index % 3 == 0 ? "hover:-rotate-3" : "hover:rotate-3"} hover:scale-105 transition-all ease-in-out duration-500 max-w-[350px] md:w-[310px] lg:w-[330px] xl:w-[355px]`}>
             <Image
               src={sponsorimgsrc}
-              className="w-full h-[181px] xl:h-[216px] rounded-t-[20px] outline-none object-cover"
+              className="w-full h-[181px] xl:h-[216px] rounded-t-[20px] outline-none object-contain bg-white p-4"
               placeholder="blur"
               alt={sponsor}
             />

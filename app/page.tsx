@@ -6,11 +6,11 @@ import InstagramCard from "@/components/instaCard";
 import g1 from "@/public/HomePageLogo/g1.svg";
 import g2 from "@/public/HomePageLogo/g2.svg";
 import g3 from "@/public/HomePageLogo/g3.svg";
-import g4 from "@/public/HomePageLogo/g4.svg";
 import g5 from "@/public/HomePageLogo/g5.svg";
-import g6 from "@/public/HomePageLogo/g6.svg";
+import idCard from "@/public/HomePageLogo/id-card.svg";
+
 import g7 from "@/public/HomePageLogo/g7.svg";
-import g8 from "@/public/HomePageLogo/g8.svg";
+
 import g9 from "@/public/HomePageLogo/g9.svg";
 import g10 from "@/public/HomePageLogo/g10.svg";
 import downloadSvg from "@/public/assets/download-svg.svg";
@@ -183,6 +183,7 @@ export default function Home() {
     description:
       "Download and use our official PPT template for submissions. Ensure uniformity and professionalism in your presentation.",
   },
+
   {
     icon: g2,
     title: "No Prerequisites",
@@ -190,46 +191,36 @@ export default function Home() {
       "Any college student can join, no prerequisites—just bring your creativity!",
   },
   {
+    icon: idCard,
+    title: "ID Card Mandatory",
+    description:
+      "All participants must carry their valid college ID cards throughout the event for identification and security purposes.",
+  }
+    ,
+  {
     icon: g3,
     title: "Form Team",
     description:
       "Team up with 2-4 members from the same college; join our community to find teammates and get the latest updates!",
   },
-  {
-    icon: g4,
-    title: "Flexible Teams",
-    description:
-      "Add teammates later by submitting an individual application, and they'll be added once approved.",
-  },
+
   {
     icon: g5,
-    title: "Zero Fees, Full Perks",
-    description: "No cost to participate, plus free meals and accommodation at SRCAS campus.",
-  },
-  {
-    icon: g6,
-    title: "Free Food",
-    description:
-      "Enjoy complimentary meals, water, and coffee throughout the event at SRCAS.",
+    title: "Zero Fees, Full Perk and Free Food",
+    description: "No cost to participate, plus free meals and refreshments at SRCAS campus.",
   },
   {
     icon: g7,
     title: "In-person Event",
-    description: "SRCAS Hackathon 2.0 is an in-person / offline hackathon event at SRCAS Coimbatore.",
+    description: "SRCAS Hackathon 2.0 is an in-person (offline) hackathon event at SRCAS Coimbatore.",
   },
-  {
-    icon: g8,
-    title: "Hassle-Free Stay",
-    description:
-      "Accommodation arrangements will be provided for outstation participants at SRCAS campus.",
-  },
+
   {
     icon: g9,
     title: "Venue",
     description:
       "SRCAS Coimbatore awaits—explore our beautiful campus and bring innovative ideas to life.",
   },
-
 
   ];
 
@@ -268,7 +259,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4 text-center transition-colors duration-300">Learn & Grow</h3>
               <p className="text-gray-300 text-base leading-relaxed text-center">
-                Enhance your technical skills, learn new technologies, and work on real-world problems that matter.
+                Enhance your technical skills, learn new technologies and work on real-world problems that matter.
               </p>
             </motion.div>
 
@@ -286,7 +277,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4 text-center transition-colors duration-300">Network & Connect</h3>
               <p className="text-gray-300 text-base leading-relaxed text-center">
-                Meet like-minded peers, industry experts, and potential collaborators. Build lasting relationships.
+                Meet like-minded peers, industry experts and potential collaborators. Build lasting relationships.
               </p>
             </motion.div>
 
@@ -304,7 +295,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4 text-center transition-colors duration-300">Win Amazing Prizes</h3>
               <p className="text-gray-300 text-base leading-relaxed text-center">
-                Compete for exciting prizes, recognition, and opportunities. Showcase your innovation to industry leaders.
+                Compete for exciting prizes, recognition and opportunities. Showcase your innovation to industry leaders.
               </p>
             </motion.div>
 
@@ -322,7 +313,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4 text-center transition-colors duration-300">Make an Impact</h3>
               <p className="text-gray-300 text-base leading-relaxed text-center">
-                Contribute to solving real-world challenges aligned with UN Sustainable Development Goals.
+                Contribute to solving real-world challenges aligned with Sustainable Development Goals.
               </p>
             </motion.div>
           </div>
@@ -340,7 +331,7 @@ export default function Home() {
               Experience the power of technology through interactive animations
             </p>
           </div>
-          
+
           <div className="bg-transparent rounded-2xl p-8 min-h-[500px] flex items-center justify-center pb-16 overflow-visible">
             <FallingText
               text="SRCAS Hackathon 2.0 brings together brilliant minds to code innovate and build the future of technology through cutting-edge solutions and collaborative development"
@@ -486,7 +477,7 @@ export default function Home() {
                                   <p className="text-gray-300 text-base">{problem.SDG}</p>
                                 </div>
                                 <div>
-                                  
+
                                   <h5 className="text-gray-200 font-semibold mb-2">Type:</h5>
                                   <p className="text-gray-300 text-base">{problem.type}</p>
                                 </div>

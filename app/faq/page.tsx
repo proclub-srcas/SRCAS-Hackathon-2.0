@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     question: "Will the Hackathon be in person or online ?",
-    answer: "SRCAS Hackathon will be conducted in complete offline/in-person mode.",
+    answer: "SRCAS Hackathon will be conducted in complete (offline) in-person mode.",
   },
   {
     question: "What is the schedule of the hackathon?",

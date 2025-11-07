@@ -13,11 +13,15 @@ const TitleSponsorCard = ({ title, description, imageSrc, link }) => {
       >
         <div className="flex flex-col h-full shadow-lg rounded-[20px] overflow-hidden min-h-[400px]">
           
-            <Image
-              className="w-full h-[181px] xl:h-[216px] rounded-t-[20px] object-cover hover:scale-110 transition-transform duration-500 ease-in-out"
-              src={imageSrc}
-              alt={title}
-            />
+            <div className={`w-full h-[250px] xl:h-[300px] flex items-center justify-center p-8 rounded-t-[20px] overflow-hidden ${title.includes("Programming Club") ? "bg-black" : "bg-white"}`}>
+              <div className="w-full h-full flex items-center justify-center hover:scale-102 transition-transform duration-500 ease-in-out">
+                <Image
+                  className={`${title.includes("Programming Club") ? "w-full h-[300px] xl:h-[400px] object-contain" : "w-full h-full object-contain"}`}
+                  src={imageSrc}
+                  alt={title}
+                />
+              </div>
+            </div>
           
           <div className="flex flex-col justify-center items-start bg-[#1a365d] px-4 xl:px-8 py-8 md:p-[40px] gap-2 flex-1">
             <p className="text-[#63b3ed] font-bold text-[1rem] md:text-[1rem]">

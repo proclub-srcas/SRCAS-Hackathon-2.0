@@ -1,0 +1,13 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="80" height="80" rx="12" fill="#FFAE0C"/>
+    <path d="M60 20H20C17.2386 20 15 22.2386 15 25V55C15 57.7614 17.2386 60 20 60H60C62.7614 60 65 57.7614 65 55V25C65 22.2386 62.7614 20 60 20Z" stroke="white" stroke-width="3"/>
+    <!-- Photo placeholder -->
+    <rect x="25" y="30" width="20" height="20" rx="2" stroke="white" stroke-width="3"/>
+    <!-- Text lines -->
+    <path d="M53 33H58" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <path d="M53 38H58" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <path d="M25 55H58" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <!-- Person silhouette -->
+    <circle cx="35" cy="36" r="4" fill="white"/>
+    <path d="M30 45C30 41.6863 32.6863 39 36 39C39.3137 39 42 41.6863 42 45" stroke="white" stroke-width="3"/>
+</svg>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import proclub from "../../public/partnersPage/ProClubLogo.png";
-import srcas from "../../public/partnersPage/srcas.svg";
+import srcas from "../../public/assets/srcas.png";
 import linkedIn from "../../public/FooterLogo/linkedin.svg";
 import instagram from "../../public/FooterLogo/instagram.svg";
 import twitter from "@/public/FooterLogo/twitter.svg";
