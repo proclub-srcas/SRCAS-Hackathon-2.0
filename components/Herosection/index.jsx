@@ -5,7 +5,7 @@ import twitter from "@/public/FooterLogo/twitter.svg";
 import discord from "@/public/FooterLogo/discord.svg";
 
 import og3Cropped from "@/public/assets/banner-mobile.svg";
-import startuptn from "@/public/partnersPage/startuptn-bg.png";
+
 
 import Link from "next/link";
 import BannerAnim from "@/components/BannerAnim";
