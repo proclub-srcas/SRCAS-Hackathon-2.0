@@ -3,8 +3,18 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import srcasHackLogo from "@/public/assets/srcashack-logo.png";
 
+interface Finalist {
+  serial: number;
+  theme: string;
+  problemStatement: string;
+  teamName: string;
+  teamID: string;
+  leaderName: string;
+  collegeName: string;
+}
+
 export default function Shortlisted() {
-  const finalists: any[] = [];
+  const finalists: Finalist[] = [];
 
   return (
     <div className="overflow-hidden ">
