@@ -84,7 +84,7 @@ const Schedule = () => {
             <TabsContent value="Day 1">
               <div className="w-full flex flex-col sm:flex-row justify-between sm:items-center py-8 font-gotham font-black text-white">
                 <div className="text-[28px] xs:text-[32px] sm:text-[48px] lg:text-[64px] text-nowrap lg:pl-6 xl:pl-12">
-                  14th August
+                  20th August
                 </div>
               </div>
               <div className="lg:pl-6 xl:pl-12">
@@ -180,7 +180,7 @@ const Schedule = () => {
             <TabsContent value="Day 2">
               <div className="w-full flex flex-col sm:flex-row justify-between sm:items-center py-8 font-gotham font-black text-white">
                 <div className="text-[28px] xs:text-[32px] sm:text-[48px] lg:text-[64px] text-nowrap lg:pl-6 xl:pl-12">
-                  15th August
+                  21st August
                 </div>
               </div>
               <div className="lg:pl-6 xl:pl-12">
