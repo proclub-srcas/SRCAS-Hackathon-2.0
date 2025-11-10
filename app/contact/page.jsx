@@ -150,7 +150,7 @@ export default function ContactSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                    <a
               href="/assets/srcas-hackathon.pptx"
-              download="SRCAS-Hackathon-2024-Event-Guide.pptx"
+              download="SRCAS-Hackathon.pptx"
               className="bg-white/5 hover:bg-white/10 border-2 border-white/30 rounded-lg text-white font-normal py-4 px-8 text-lg transition-colors duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl"
             >
               <Download className="w-5 h-5" />

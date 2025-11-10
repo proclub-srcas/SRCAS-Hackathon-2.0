@@ -132,32 +132,7 @@ const Humans = () => {
           />
         </div>
 
-        {/* Staff Coordinators Section */}
-        <div className="mt-16 mb-8">
-          <div className="text-center mb-12">
-            <h2 className="text-white font-black text-[28px] xs:text-[32px] md:text-[2.5rem] lg:text-[3rem] xl:text-[60px] xl:leading-[4rem] mb-4">
-              Staff Coordinators
-            </h2>
-            <p className="text-supporting-mediumGray font-medium lg:text-xl md:text-lg text-base">
-              Meet our dedicated faculty members who guide and support our hackathon
-            </p>
-          </div>
-          
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
-              place-content-center place-items-center gap-10 max-w-6xl mx-auto"
-          >
-            {staffCoordinatorsData.map((staff, index) => (
-              <MagicCard
-                key={`staff-${index}`}
-                className="cursor-pointer flex-col items-center justify-center whitespace-nowrap"
-                gradientColor="#D9D9D955"
-              >
-                <HumansCard index={index} {...staff} showSocialLinks={false} />
-              </MagicCard>
-            ))}
-          </div>
-        </div>
+
 
         {/* Student Organizers Section */}
         <div className="mt-16 mb-8">
@@ -185,6 +160,32 @@ const Humans = () => {
               ))}
             </div>
             </div>
+                    {/* Staff Coordinators Section */}
+        <div className="mt-16 mb-8">
+          <div className="text-center mb-12">
+            <h2 className="text-white font-black text-[28px] xs:text-[32px] md:text-[2.5rem] lg:text-[3rem] xl:text-[60px] xl:leading-[4rem] mb-4">
+              Staff Coordinators
+            </h2>
+            <p className="text-supporting-mediumGray font-medium lg:text-xl md:text-lg text-base">
+              Meet our dedicated faculty members who guide and support our hackathon
+            </p>
+          </div>
+          
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
+              place-content-center place-items-center gap-10 max-w-6xl mx-auto"
+          >
+            {staffCoordinatorsData.map((staff, index) => (
+              <MagicCard
+                key={`staff-${index}`}
+                className="cursor-pointer flex-col items-center justify-center whitespace-nowrap"
+                gradientColor="#D9D9D955"
+              >
+                <HumansCard index={index} {...staff} showSocialLinks={false} />
+              </MagicCard>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
