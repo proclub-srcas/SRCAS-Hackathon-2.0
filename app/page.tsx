@@ -73,96 +73,62 @@ export default function Home() {
     });
   };
 
-  const themes = [
+  const problemStatements = [
     {
-      title: "Theme 1: Education and Empowerment",
-      description: "Explore innovative solutions for education and empowerment.",
-      problems: [
-        {
-          title: "T1PS01: Develop a Voice-Based Data Entry System for Accessibility",
-          description: "Create a system enabling individuals with limited typing abilities or visual impairments to input data using natural language commands, promoting accessibility in digital interactions.",
-          expectedOutcome: "Creation of a voice-based data entry system that enables individuals with limited typing abilities or visual impairments to interact with digital platforms using natural language. This system will promote digital inclusion, aiming to increase digital accessibility for 1 million users globally.",
-          note: "The idea/solution is not limited to this expected outcome. We encourage you to think outside the box and come up with your own innovative solutions and ideas as well!",
-          SDG: "SDG 10 - Reduced Inequalities",
-          type: "Software"
-        },
-        {
-          title: "T1PS02: Create a Microfinance Platform for Women Entrepreneurs",
-          description: "Establish a blockchain-powered platform to provide women entrepreneurs in underserved communities with access to credit, financial literacy resources, and mentorship, empowering gender equality and economic growth.",
-          expectedOutcome: "Establishment of a blockchain-powered microfinance platform providing women entrepreneurs in underserved communities with access to credit, financial literacy resources, and mentorship. This platform will empower gender equality and economic growth, with a target of supporting 100,000 women entrepreneurs and increasing their business success rates by 40%.",
-          note: "The idea/solution is not limited to this expected outcome. We encourage you to think outside the box and come up with your own innovative solutions and ideas as well!",
-          SDG: "SDG 5 - Gender Equality, SDG 8 - Decent Work and Economic Growth",
-          type: "Software"
-        },
-        {
-          title: "T1PS03: Digital Reputation Management",
-          description: "Offer tools and services to monitor and manage online reputation across social media and search engine results, protecting brand integrity and promoting responsible digital citizenship.",
-          expectedOutcome: "Development of tools and services for monitoring and managing online reputations across social media and search engines. This service will protect brand integrity and promote responsible digital citizenship, aiming to reduce negative online incidents and improve reputation scores for 5,000 individuals and businesses by 30%.",
-          note: "The idea/solution is not limited to this expected outcome. We encourage you to think outside the box and come up with your own innovative solutions and ideas as well!",
-          SDG: "SDG 16 - Peace, Justice, and Strong Institutions",
-          type: "Software"
-        }
-      ]
+      id: 1,
+      title: "Mobile App for Cyberbullying Detection & Prevention",
+      problem: "With the growing use of social media and messaging platforms, cyberbullying among teenagers and students has become a major psychological and social issue. Victims often hesitate to report incidents due to fear or lack of awareness, leading to mental distress and social withdrawal. Existing moderation systems are platform-specific and fail to protect users across multiple apps or private chats.",
+      goal: "To develop an AI-powered mobile application that continuously monitors user messages, social media interactions, and public comments for offensive, threatening, or abusive content. Using natural language processing (NLP) and sentiment analysis, the app should detect harmful patterns and issue real-time alerts or guidance. It should also provide reporting options, mental health resources, and parental dashboards (optional for minors).",
+      expectedOutcome: "A real-time, privacy-aware mobile safety companion that automatically identifies and flags cyberbullying incidents, promotes digital well-being, and supports early intervention. The project aims to reduce online harassment rates and increase awareness among youth and parents."
     },
     {
-      title: "Theme 2: Sustainable Agriculture and Environmental Conservation",
-      description: "Explore innovative solutions for sustainable agriculture and environmental conservation.",
-      problems: [
-        {
-          title: "T2PS01: Precision Agriculture for Sustainable Food Production",
-          description: "Implement AI-driven solutions to optimize resource allocation, monitor crop health, and manage pests and diseases, promoting sustainable farming practices and enhancing food security.",
-          expectedOutcome: "Implementation of AI-driven tools to optimize resource use, monitor crop health, and manage pests in real-time. This approach will enhance sustainable farming practices, increase crop yields by 15%, and contribute to food security and conservation goals.",
-          note: "The idea/solution is not limited to this expected outcome. We encourage you to think outside the box and come up with your own innovative solutions and ideas as well!",
-          SDG: "SDG 2 - Zero Hunger, SDG 15 - Life on Land",
-          type: "Hardware and Software (any one of the solution is enough)"
-        },
-        {
-          title: "T2PS02: NFT-Based Conservation Funding Platform",
-          description: "Establish a platform using NFTs to fund environmental conservation projects, such as wildlife protection and habitat restoration, by tokenizing digital artworks and experiences.",
-          expectedOutcome: "Establishment of a platform leveraging NFTs to raise funds for environmental conservation projects. By tokenizing digital artworks and experiences, this platform will generate substantial funding for wildlife protection and habitat restoration, targeting an annual increase of $10 million in conservation investments.",
-          note: "The idea/solution is not limited to this expected outcome. We encourage you to think outside the box and come up with your own innovative solutions and ideas as well!",
-          SDG: "SDG 14 - Life Below Water, SDG 15 - Life on Land",
-          type: "Software"
-        },
-        {
-          title: "T2PS03: Augmented Reality Farming Simulator",
-          description: "Design an AR application to simulate farming scenarios, allowing farmers to test crop management strategies virtually before implementation, improving agricultural efficiency and productivity.",
-          expectedOutcome: "Development of an AR application allowing farmers to simulate and test crop management strategies virtually. This tool will improve agricultural efficiency and productivity, reducing trial-and-error in actual farming and increasing crop yields by 10% through better planning and resource management.",
-          note: "The idea/solution is not limited to this expected outcome. We encourage you to think outside the box and come up with your own innovative solutions and ideas as well!",
-          SDG: "SDG 2 - Zero Hunger, SDG 9 - Industry, Innovation, and Infrastructure",
-          type: "Software"
-        }
-      ]
+      id: 2,
+      title: "LLM for Cyber Issue SOPs",
+      problem: "Citizens often face cyber issues like fake profiles, online scams, identity theft, and harassment but are unaware of proper reporting channels or standard operating procedures (SOPs). Information on government and cyber cell websites is often fragmented and hard to navigate.",
+      goal: "To design an LLM-powered assistant (web/app/chatbot) trained on official government guidelines, CERT-In advisories, and cybercrime SOPs. The model should understand natural queries (e.g., \"Someone made a fake account of me\" or \"How to report online money fraud?\") and instantly provide step-by-step instructions, relevant official links, and reporting forms.",
+      expectedOutcome: "An interactive, multilingual knowledge assistant that empowers users with accurate, immediate, and verified responses to cybercrime-related queries — reducing dependency on manual support and increasing the speed of citizen response in cyber incidents."
     },
     {
-      title: "Theme 3: Renewable Energy and solutions",
-      description: "Explore innovative solutions for integrating renewable energy sources into smart grids to promote sustainable and efficient energy management.",
-      problems: [
-        {
-          title: "T3PS01: Decentralized Renewable Energy Systems",
-          description: "Develop a decentralized renewable energy system that integrates solar, wind, and other renewable sources into local energy grids. This system should optimize energy distribution and storage at the community level.",
-          expectedOutcome: "Creation of a decentralized energy system that integrates various renewable sources, reducing dependency on centralized power plants and fossil fuels. This system will increase the adoption of renewable energy by 30% in targeted communities and decrease energy costs by 20%.",
-          note: "The idea/solution is not limited to this expected outcome. We encourage you to think outside the box and come up with your own innovative solutions and ideas as well!",
-          SDG: "SDG 7 - Affordable and Clean Energy, SDG 11 - Sustainable Cities and Communities",
-          type: "Hardware and Software (any one of the solution is enough)",
-        },
-        {
-          title: "T3PS02: AI-Driven Energy Management Platforms",
-          description: "Create an AI-driven platform for smart energy management that monitors and optimizes energy usage in real-time for residential and commercial buildings. The platform should also predict and manage peak loads to enhance grid stability.",
-          expectedOutcome: "Development of an AI-driven energy management platform that reduces energy consumption by 15% and enhances grid stability by predicting and managing peak loads. This platform will contribute to more efficient energy use and lower energy bills for users.",
-          note: "The idea/solution is not limited to this expected outcome. We encourage you to think outside the box and come up with your own innovative solutions and ideas as well!",
-          SDG: "SDG 7 - Affordable and Clean Energy, SDG 9 - Industry, Innovation, and Infrastructure",
-          type: "Software",
-        },
-        {
-          title: "T3PS03: Blockchain for Renewable Energy Trading",
-          description: "Implement a blockchain-based platform for peer-to-peer renewable energy trading. This platform will allow individuals and businesses to buy, sell, and trade excess renewable energy directly, promoting decentralized energy markets.",
-          expectedOutcome: "Establishment of a blockchain-based energy trading platform that facilitates peer-to-peer trading of renewable energy. This will increase the efficiency of energy markets, empower consumers, and potentially reduce energy waste by 25%.",
-          note: "The idea/solution is not limited to this expected outcome. We encourage you to think outside the box and come up with your own innovative solutions and ideas as well!",
-          SDG: "SDG 7 - Affordable and Clean Energy, SDG 12 - Responsible Consumption and Production",
-          type: "Software",
-        }
-      ]
+      id: 3,
+      title: "SOS & Geo-Fencing App for Women & Elderly",
+      problem: "In emergencies, women and elderly individuals may not have time to contact help or share their location. Current safety apps often require manual actions or fail when there's no internet connectivity.",
+      goal: "To create a lightweight safety mobile app that supports one-touch SOS alerts, geo-fencing, and real-time location sharing. The system automatically detects if a user exits a predefined safe zone or triggers panic detection (e.g., sudden acceleration, loud noise). The app should send alerts via SMS, WhatsApp, or calls to pre-registered contacts and local authorities even in low-network conditions.",
+      expectedOutcome: "A reliable personal safety system offering proactive protection and rapid response. The app enhances security for vulnerable groups, fosters community safety awareness, and can be integrated with local police helplines or smart city emergency frameworks."
+    },
+    {
+      id: 4,
+      title: "AI Chatbot for Privacy Awareness",
+      problem: "Most users lack awareness about how their data is tracked, stored, or shared online. As a result, they unknowingly give consent to unsafe cookies, phishing links, and malicious apps, exposing themselves to data theft and privacy violations.",
+      goal: "To develop an AI-based educational chatbot that interacts with users through engaging conversations, quizzes, and examples to raise awareness about data privacy, cookies, phishing, social engineering, and safe browsing practices. The chatbot should personalize advice based on user behavior (e.g., \"You often use public Wi-Fi, here's how to stay safe\").",
+      expectedOutcome: "An interactive and gamified chatbot platform that makes cybersecurity education accessible and enjoyable. It aims to improve user digital literacy, reduce privacy-related incidents, and build a culture of safe digital behavior among the general public and students."
+    },
+    {
+      id: 5,
+      title: "IoT Device Security Analyzer",
+      problem: "IoT devices like smart cameras, wearables, and home assistants often have weak security configurations. Many users are unaware that their devices are vulnerable to attacks or misconfigured, exposing their networks to exploitation.",
+      goal: "To build a network-scanning and vulnerability-assessment tool that detects IoT devices connected to a local Wi-Fi network, identifies their make/model, and checks for known vulnerabilities (CVE database) or default credentials. The tool should provide a security score and recommendations for securing each device (e.g., firmware updates, port closures).",
+      expectedOutcome: "A comprehensive IoT vulnerability scanner that empowers users and enterprises to detect, analyze, and mitigate IoT security risks. This leads to stronger endpoint security, reduced attack surfaces, and greater visibility in smart home or industrial IoT environments."
+    },
+    {
+      id: 6,
+      title: "E-Waste Tracking & Incentive Platform",
+      problem: "India is the third-largest producer of electronic waste, yet over 90% of e-waste is handled by the unorganized sector with minimal environmental safeguards. In Tamil Nadu, informal recycling practices and lack of citizen participation exacerbate environmental and health risks. There's no unified, transparent system for tracking how e-waste moves from households to collection centers or recyclers.",
+      goal: "To develop a prototype web/mobile platform for tracking e-waste collection and incentivizing responsible disposal using a lightweight blockchain or ledger-based system. Users can register and log their e-waste items, receive digital \"eco-points\" for each submission. Collectors update the system when items are collected, transported, or recycled. Authorities can view real-time dashboards for tracking e-waste flow.",
+      expectedOutcome: "A functional end-to-end prototype demonstrating the digital traceability of e-waste and citizen-driven participation model. Expected results include improved transparency between citizens, collectors, and local authorities, and a scalable model supporting SDG 12: Responsible Consumption and Production."
+    },
+    {
+      id: 7,
+      title: "Predictive Community Water Safety System",
+      problem: "In many semi-urban and rural areas of India, especially in Tamil Nadu, groundwater and local reservoirs are contaminated by industrial waste, fertilizers, and heavy metals. Water quality testing is mostly manual, infrequent, and reactive — contamination is often detected only after disease outbreaks or visible waterborne issues occur.",
+      goal: "To design a low-cost, AI-powered predictive system for monitoring and forecasting water contamination levels using a combination of IoT sensors, open data, and machine learning models. The system should provide real-time visibility, predict contamination spikes, and notify village panchayats, NGOs, and public health departments.",
+      expectedOutcome: "A proof-of-concept predictive monitoring platform capable of providing real-time visibility into community water safety, predicting contamination events days in advance, and empowering local authorities with actionable insights. Contributing to SDG 6 (Clean Water and Sanitation) and SDG 3 (Good Health and Well-being)."
+    },
+    {
+      id: 8,
+      title: "Accelerating Realistic Road Network Modeling for Indian Traffic Simulations",
+      problem: "India's urban road networks are uniquely complex — characterized by irregular lane patterns, mixed traffic, temporary barricades, frequent construction zones, and poor road maintenance. Current traffic modeling tools fail to accurately capture these real-world irregularities, leading to inaccurate predictions for congestion, safety risks, and infrastructure planning.",
+      goal: "To design and develop an AI-assisted, MATLAB-integrated toolset that automatically generates realistic digital twins of Indian road networks from minimal inputs such as map data, drone imagery, or sensor datasets. The system should simplify digital twin creation, incorporate generative AI for auto-populating road environments, and integrate seamlessly with MATLAB, Simulink, and RoadRunner.",
+      expectedOutcome: "A prototype workflow that automates Indian road network model creation, achieving 70–90% reduction in manual modeling time, increased realism in simulation scenarios, and seamless integration with MATLAB tools. This enables more data-driven urban planning and autonomous driving research."
     }
   ];
 
@@ -244,7 +210,7 @@ export default function Home() {
           </div>
 
           {/* Why Participate Content - 1x4 Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-8 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8  ">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -348,151 +314,122 @@ export default function Home() {
       </div>
 
       {/* Problem Statements Section */}
-      <div className="flex flex-col  p-4 md:pb-16 lg:px-[7%]  ">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 leading-tight">
+      <div className="flex flex-col px-4 py-8 md:py-16  lg:px-[7%]">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-4 md:mb-6 leading-tight">
             Problem Statements
           </h2>
-          <p className="text-lg md:text-xl text-supporting-mediumGray mb-8 max-w-4xl mx-auto">
-            Choose from our curated problem statements across three exciting themes. Each problem offers unique challenges and opportunities for innovation.
+          <p className="text-base sm:text-lg md:text-xl text-supporting-mediumGray mb-4 md:mb-8 max-w-4xl mx-auto px-2">
+            Choose from our curated problem statements focusing on cybersecurity, sustainability, and smart city solutions. Each problem offers unique challenges and opportunities for innovation.
           </p>
         </div>
 
-        {themes.map((theme, index) => (
-          <div key={index} className="mb-16">
-            <div className="flex flex-col md:flex-row gap-12 md:gap-16 lg:gap-24">
-              {/* Left Half */}
-              <div className="w-full  md:w-2/5 flex flex-col gap-5  ">
-                <div className="max-w-[600px] text-white text-3xl md:text-4xl underline underline-offset-2 font-medium leading-[44px] -mr-14">
-                  {theme.title}
-                </div>
-                <div className="max-w-[700px] text-[#C3C3C3]  font-normal text-lg leading-7">
-                  {theme.description}
-                </div>
-              </div>
+        <div className="grid grid-cols-1 gap-4 md:gap-6 max-w-6xl mx-auto w-full">
+          {problemStatements.map((problem, index) => {
+            const problemId = `problem-${problem.id}`;
+            const isExpanded = expandedProblem === problemId;
 
-              {/* Right Half */}
-              <div className="w-full md:w-3/5 flex flex-col gap-5">
-                {theme.problems.map((problem, problemIndex) => {
-                  const problemId = `${index}-${problemIndex}`;
-                  const isExpanded = expandedProblem === problemId;
-
-                  return (
-                    <motion.div
-                      key={problemIndex}
-                      className="mb-4"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: problemIndex * 0.1 }}
-                    >
-                      <div
-                        className="rounded-lg border-2 border-supporting-darkGray transition-all duration-300 cursor-pointer group"
-                        onClick={() => toggleProblem(problemId)}
-                      >
-                        {/* Problem Header */}
-                        <div className="flex items-center justify-between p-4">
-                          <div className="flex-1">
-                            <div className="text-white text-lg font-medium leading-7 hover:underline hover:underline-offset-4">
-                              {problem.title}
-                            </div>
-                          </div>
-                          <div className="ml-4 flex-shrink-0">
-                            <div className="w-8 h-8 rounded-full border-2 border-supporting-darkGray transition-colors duration-300 flex items-center justify-center">
-                              <svg
-                                className={`w-4 h-4 text-white transition-transform duration-300 ${isExpanded ? 'rotate-45' : ''}`}
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Expanded Content */}
-                        <motion.div
-                          initial={false}
-                          animate={isExpanded ? "open" : "closed"}
-                          variants={{
-                            open: {
-                              opacity: 1,
-                              height: "auto",
-                              transition: {
-                                duration: 0.3,
-                                ease: "easeInOut",
-                                opacity: { duration: 0.2, delay: 0.1 }
-                              }
-                            },
-                            closed: {
-                              opacity: 0,
-                              height: 0,
-                              transition: {
-                                duration: 0.3,
-                                ease: "easeInOut",
-                                opacity: { duration: 0.1 }
-                              }
-                            }
-                          }}
-                          className="overflow-hidden"
+            return (
+              <motion.div
+                key={problem.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="w-full"
+              >
+                <div
+                  className="rounded-lg border-2 border-supporting-darkGray transition-all duration-300 cursor-pointer hover:border-white/30 bg-black/20"
+                  onClick={() => toggleProblem(problemId)}
+                >
+                  
+                  <div className="flex items-center justify-between p-3 sm:p-4 md:p-6">
+                    <div className="flex items-start gap-2 sm:gap-3 md:gap-4 flex-1 min-w-0">
+                      <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 border-white/50 flex items-center justify-center">
+                        <span className="text-white font-bold text-sm sm:text-base md:text-lg">{problem.id}</span>
+                      </div>
+                      <div className="flex-1 min-w-0 pr-2">
+                        <h3 className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold leading-tight sm:leading-snug md:leading-7 pt-1 sm:pt-1.5 md:pt-2 hover:underline hover:underline-offset-4 break-words">
+                          {problem.title}
+                        </h3>
+                      </div>
+                    </div>
+                    <div className="flex-shrink-0 ml-2 sm:ml-3 md:ml-4">
+                      <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-supporting-darkGray transition-colors duration-300 flex items-center justify-center hover:border-white/40">
+                        <svg
+                          className={`w-4 h-4 sm:w-5 sm:h-5 text-white transition-transform duration-300 ${isExpanded ? 'rotate-45' : ''}`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
                         >
-                          <div className="px-4 pb-4 border-t border-supporting-darkGray">
-                            <div className="pt-4 space-y-4">
-                              <motion.div
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                                transition={{ duration: 0.2, delay: isExpanded ? 0.1 : 0 }}
-                              >
-                                <h5 className="text-gray-200 font-semibold mb-2">Description:</h5>
-                                <p className="text-gray-300 text-base leading-relaxed">{problem.description}</p>
-                              </motion.div>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
 
-                              <motion.div
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                                transition={{ duration: 0.2, delay: isExpanded ? 0.15 : 0 }}
-                              >
-                                <h5 className="text-gray-200 font-semibold mb-2">Expected Outcome:</h5>
-                                <p className="text-gray-300 text-base leading-relaxed">{problem.expectedOutcome}</p>
-                              </motion.div>
+                  {/* Expanded Content */}
+                  <motion.div
+                    initial={false}
+                    animate={isExpanded ? "open" : "closed"}
+                    variants={{
+                      open: {
+                        opacity: 1,
+                        height: "auto",
+                        transition: {
+                          duration: 0.3,
+                          ease: "easeInOut",
+                          opacity: { duration: 0.2, delay: 0.1 }
+                        }
+                      },
+                      closed: {
+                        opacity: 0,
+                        height: 0,
+                        transition: {
+                          duration: 0.3,
+                          ease: "easeInOut",
+                          opacity: { duration: 0.1 }
+                        }
+                      }
+                    }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-3 sm:px-4 md:px-6 pb-3 sm:pb-4 md:pb-6 border-t border-supporting-darkGray">
+                      <div className="pt-3 sm:pt-4 md:pt-6 space-y-3 sm:space-y-4 md:space-y-5">
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                          transition={{ duration: 0.2, delay: isExpanded ? 0.1 : 0 }}
+                        >
+                          <h5 className="text-white font-bold mb-1.5 sm:mb-2 text-base sm:text-lg">Problem:</h5>
+                          <p className="text-gray-300 text-sm sm:text-base leading-relaxed break-words">{problem.problem}</p>
+                        </motion.div>
 
-                              <motion.div
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                                transition={{ duration: 0.2, delay: isExpanded ? 0.2 : 0 }}
-                              >
-                                <h5 className="text-gray-200 font-semibold mb-2">Note:</h5>
-                                <p className="text-gray-300 text-base leading-relaxed">{problem.note}</p>
-                              </motion.div>
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                          transition={{ duration: 0.2, delay: isExpanded ? 0.15 : 0 }}
+                        >
+                          <h5 className="text-white font-bold mb-1.5 sm:mb-2 text-base sm:text-lg">Goal:</h5>
+                          <p className="text-gray-300 text-sm sm:text-base leading-relaxed break-words">{problem.goal}</p>
+                        </motion.div>
 
-                              <motion.div
-                                className="flex gap-4"
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                                transition={{ duration: 0.2, delay: isExpanded ? 0.25 : 0 }}
-                              >
-                                <div>
-                                  <h5 className="text-gray-200 font-semibold mb-2">SDG:</h5>
-                                  <p className="text-gray-300 text-base">{problem.SDG}</p>
-                                </div>
-                                <div>
-
-                                  <h5 className="text-gray-200 font-semibold mb-2">Type:</h5>
-                                  <p className="text-gray-300 text-base">{problem.type}</p>
-                                </div>
-                              </motion.div>
-                            </div>
-                          </div>
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                          transition={{ duration: 0.2, delay: isExpanded ? 0.2 : 0 }}
+                        >
+                          <h5 className="text-white font-bold mb-1.5 sm:mb-2 text-base sm:text-lg">Expected Outcome:</h5>
+                          <p className="text-gray-300 text-sm sm:text-base leading-relaxed break-words">{problem.expectedOutcome}</p>
                         </motion.div>
                       </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        ))}
+                    </div>
+                  </motion.div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
       {/* Guidelines */}
       <div className="flex flex-col items-center gap-4 md:gap-16">

@@ -89,23 +89,7 @@ const Footer = () => {
     />
   </Link>
 
-  {/* Twitter (X) */}
-  <Link href="https://twitter.com/proclub_srcas" target="_blank">
-    <Image
-      src={twitter}
-      alt="Twitter"
-      className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 hover:scale-110 transition-all duration-300 cursor-pointer"
-    />
-  </Link>
 
-  {/* Discord */}
-  <Link href="https://discord.gg/proclub-srcas" target="_blank">
-    <Image
-      src={discord}
-      alt="Discord"
-      className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 hover:scale-110 transition-all duration-300 cursor-pointer"
-    />
-  </Link>
 </div>
       </div>
       <div className="text-supporting-darkGray font-bold text-xs sm:text-sm md:text-base lg:text-lg py-3 lg:py-4 text-center lg:text-left xl:pl-32 lg:pl-10 md:pl-4 px-4">

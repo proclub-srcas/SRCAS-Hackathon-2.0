@@ -19,7 +19,8 @@ export default function Shortlisted() {
   return (
     <div className="overflow-hidden ">
       {/* Hero Section */}
-      <div className="w-full  px-4 mt-20">
+      <div className="w-full 
+       px-4 mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-start justify-between gap-8 mb-12">
             <div className="text-left flex-1">

@@ -75,20 +75,7 @@ const HeroSection = () => {
           className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
           />
         </Link>
-        <Link href="https://x.com/proclub_srcas">
-          <Image
-          src={twitter}
-          alt="Twitter"
-          className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
-          />
-        </Link>
-        <Link href="https://discord.gg/">
-          <Image
-          src={discord}
-          alt="Discord"
-          className="w-6 md:w-7 xl:w-8 hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
-          />
-          </Link>
+ 
         </div>
         <div className="flex lg:gap-16 md:gap-12 gap-3 xs:gap-14 rotate-[0deg] md:rotate-0 sm:justify-start justify-center items-center">
         {/* <Image
