@@ -3,9 +3,14 @@ import srcas from "@/public/assets/srcas-bg.png";
 import proclub from "@/public/partnersPage/ProClub.png";
 import { normalSponsorsData } from "@/data/sponsorData";
 import TitleSponsorCard from "@/components/TitleSponsorCard";
+import MentorCard from "@/components/MentorCard";
 import { Download } from "lucide-react";
 import Image from "next/image";
 import srcasHackLogo from "@/public/assets/srcashack-logo.png";
+import ranjith from "@/public/assets/mentors/ranjith.jpeg";
+import aswinram from "@/public/assets/mentors/aswinram.png";
+import sriram from "@/public/assets/mentors/sriram.jpeg";
+import dinesh from "@/public/assets/mentors/dinesh.jpeg";
 
 
 const PartnersPage = () => {
@@ -13,7 +18,7 @@ const PartnersPage = () => {
     {
       title: "Sri Ramakrishna College of Arts and Science ",
         description:
-          "Sri Ramakrishna College of Arts and Science (SRCAS), Coimbatore, ranked 76th in NIRF 2025, excels in teaching, research, and learning resources. Accredited with NAAC ‘A+’ grade and affiliated to Bharathiar University, SRCAS offers diverse programs and empowers students through innovation and quality education."
+          "Sri Ramakrishna College of Arts and Science (SRCAS), Coimbatore, ranked 76th in NIRF 2025, excels in teaching, research, and learning resources. Accredited with NAAC 'A+' grade and affiliated to Bharathiar University, SRCAS offers diverse programs and empowers students through innovation and quality education."
         ,imageSrc: srcas,
       link: "https://www.srcas.ac.in/",
     },
@@ -25,6 +30,37 @@ const PartnersPage = () => {
       link: "https://srcasprogrammingclub.vercel.app/",
     },
    
+  ];
+
+  const MentorsData = [
+    {
+      name: "Dr. Ranjithkumar Rajamani",
+      role: "Vice President",
+      company: "Einstein Research Academy",
+      profilepic: ranjith,
+      linkedin: "https://www.linkedin.com/in/dr-ranjithkumar-rajamani-b626059a/",
+    },
+    {
+      name: "Aswin Ram",
+      role: "Product Owner",
+      company: "BOSCH",
+      profilepic: aswinram,
+      linkedin: "https://www.linkedin.com/in/aswin-ram-07/",
+    },
+    {
+      name: "Sriram M",
+      role: "Data Architect",
+      company: "Deloitte",
+      profilepic: sriram,
+      linkedin: "https://www.linkedin.com/in/sriram-m-a07b95161",
+    },
+    {
+      name: "Dinesh Paranthagan",
+      role: "CEO & Founder",
+      company: "Hackup Technology",
+      profilepic: dinesh,
+      linkedin: "https://www.linkedin.com/in/dineshparanthagan/",
+    },
   ];
   return (
     <>
@@ -74,6 +110,23 @@ const PartnersPage = () => {
                 {normalSponsorsData.map((sponsor, index) => {
                   return <SponsorCard key={index} index={index} {...sponsor} />;
                 })}
+              </div>
+            </div>
+
+            {/* Mentors Section */}
+            <div className="w-full mt-16 md:mt-24 lg:mt-32">
+              <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-12 md:mb-16">
+                Our Mentors
+              </h3>
+              <div className="w-full flex justify-center">
+                <div
+                  className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
+                  gap-8 lg:gap-6 place-items-center"
+                >
+                  {MentorsData.map((mentor, index) => (
+                    <MentorCard key={index} index={index} {...mentor} />
+                  ))}
+                </div>
               </div>
             </div>
           </div>

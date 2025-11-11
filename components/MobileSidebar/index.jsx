@@ -32,9 +32,15 @@ const MobileSidebar = () => {
   const [fullyopen, setFullyopen] = useState(false);
   const [open, setOpen] = useState(false);
   const [scope, animate] = useAnimate();
+  const [isClient, setIsClient] = useState(false);
   const pathname = usePathname();
   const sidebarRef = useRef(null);
-  const ishome = pathname === "/";
+  
+  const ishome = isClient && pathname === "/";
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {

@@ -1,13 +1,22 @@
 // components/DotBackground.js
 "use client";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 const InteractiveBackground = ({ children }) => {
   const canvasRef = useRef(null);
   const hexes = useRef([]);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+    
     const canvas = canvasRef.current;
+    if (!canvas) return;
+    
     const ctx = canvas.getContext("2d");
     let cw = window.innerWidth;
     let ch = window.innerHeight;
@@ -119,25 +128,29 @@ const InteractiveBackground = ({ children }) => {
       window.removeEventListener("mousemove", handleMouseDown);
       window.removeEventListener("mouseup", handleMouseUp);
     };
-  }, []);
+  }, [isClient]);
 
   return (
-    <div style={{ position: "relative", width: "100vw" }}>
-      <canvas
-        ref={canvasRef}
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: -100,
-          pointerEvents: "none",
-        }}
-        className="sm:px-12 py-8 px-1"
-      />
+    <>
+      {isClient && (
+        <div style={{ position: "relative", width: "100vw" }}>
+          <canvas
+            ref={canvasRef}
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: -100,
+              pointerEvents: "none",
+            }}
+            className="sm:px-12 py-8 px-1"
+          />
+        </div>
+      )}
       {children}
-    </div>
+    </>
   );
 };
 
