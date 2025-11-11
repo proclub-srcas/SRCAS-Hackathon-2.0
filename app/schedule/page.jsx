@@ -1,7 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import schedule from "@/public/schedule.png";
-import { Download } from "lucide-react";
+import { Download, Clock } from "lucide-react";
 
 
 const Schedule = () => {
@@ -33,6 +33,24 @@ const Schedule = () => {
               </p>
             )}
           </div>
+        </div>
+      </div>
+    );
+  };
+
+  const ComingSoonBanner = () => {
+    return (
+      <div className="w-full flex flex-col items-center justify-center py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="flex items-center justify-center mb-6">
+            <Clock className="w-16 h-16 text-secondary-blue animate-pulse" />
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Schedule Coming Soon
+          </h2>
+          <p className="text-lg md:text-xl text-supporting-mediumGray max-w-3xl mx-auto">
+            We're finalizing the exact schedule for SRCAS Hackathon 2.0. Stay tuned for detailed timings and event flow for both days!
+          </p>
         </div>
       </div>
     );
@@ -71,185 +89,34 @@ const Schedule = () => {
                 className="sm:text-xl text-md font-bold text-supporting-mediumGray
                          sm:py-2 sm:px-5 p-2 rounded-[8px]"
               >
-                Day 1
+                Day 1 - 13 Dec
               </TabsTrigger>
               <TabsTrigger
                 value="Day 2"
                 className="sm:text-xl text-md font-bold text-supporting-mediumGray 
                          sm:py-2 sm:px-5 p-2 rounded-[8px]"
               >
-                Day 2
+                Day 2 - 14 Dec
               </TabsTrigger>
             </TabsList>
             <TabsContent value="Day 1">
               <div className="w-full flex flex-col sm:flex-row justify-between sm:items-center py-8 font-gotham font-black text-white">
                 <div className="text-[28px] xs:text-[32px] sm:text-[48px] lg:text-[64px] text-nowrap lg:pl-6 xl:pl-12">
-                  20th August
+                  13th December
                 </div>
               </div>
               <div className="lg:pl-6 xl:pl-12">
-                <EventFlowBox
-                  h="50px"
-                  bgColor="#0275f6"
-                  time="8:00 AM"
-                  title="Registration"
-                  description="Conference Hall - 1"
-                />
-                <EventFlowBox
-                  h="50px"
-                  bgColor="#0275f6"
-                  time="8:30 AM"
-                  title="Inauguration"
-                  description="Conference Hall - 1"
-                />
-                <EventFlowBox
-                  h="150px"
-                  bgColor="#007acc"
-                  time="9:00 AM"
-                  title="Assembling the System"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="25px"
-                  bgColor="#FFC20C"
-                  time="11:00 AM"
-                  title="Refreshment - 1"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="100px"
-                  bgColor="#1EB848"
-                  time="11:15 AM"
-                  title="Evaluation Phase - 1"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="75px"
-                  bgColor="#FFC20C"
-                  time="12:30 PM"
-                  title="Lunch"
-                  description="Hostel Dining area"
-                />
-                <EventFlowBox
-                  h="200px"
-                  bgColor="#007acc"
-                  time="1:30 PM"
-                  title="Assembling the System"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="25px"
-                  bgColor="#FFC20C"
-                  time="5:00 PM"
-                  title="Refreshment & Networking"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="150px"
-                  bgColor="#007acc"
-                  time="5:15 PM"
-                  title="Assembling the System"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="75px"
-                  bgColor="#FFC20C"
-                  time="7:15 PM"
-                  title="Dinner"
-                  description="Hostel Dining area"
-                />
-                <EventFlowBox
-                  h="50px"
-                  bgColor="#007acc"
-                  time="8:15 PM"
-                  title="Assembling the System"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="150px"
-                  bgColor="#1EB848"
-                  time="9:00 PM"
-                  title="Evaluation Phase 2"
-                  description="Allotted Venue"
-                />
-                <div className="font-bold text-xl sm:text-2xl text-supporting-lightGr min-w-[116px] text-white">
-                  12:00 AM
-                </div>
+                <ComingSoonBanner />
               </div>
             </TabsContent>
             <TabsContent value="Day 2">
               <div className="w-full flex flex-col sm:flex-row justify-between sm:items-center py-8 font-gotham font-black text-white">
                 <div className="text-[28px] xs:text-[32px] sm:text-[48px] lg:text-[64px] text-nowrap lg:pl-6 xl:pl-12">
-                  21st August
+                  14th December
                 </div>
               </div>
               <div className="lg:pl-6 xl:pl-12">
-                <EventFlowBox
-                  h="50px"
-                  bgColor="#FFC20C"
-                  time="12:00 AM"
-                  title="Tea break"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="150px"
-                  bgColor="#007acc"
-                  time="12:30 AM"
-                  title="Assembling the System"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="100px"
-                  bgColor="#1EB848"
-                  time="3:30 AM"
-                  title="Evaluation Phase 3"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="50px"
-                  bgColor="#FFC20C"
-                  time="5:00 AM"
-                  title="Fun Event"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="25px"
-                  bgColor="#FFC20C"
-                  time="5:30 AM"
-                  title="Refreshment"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="100px"
-                  bgColor="#007acc"
-                  time="5:45 AM"
-                  title="Assembling the System"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="100px"
-                  bgColor="#1EB848"
-                  time="7:00 AM"
-                  title="Final Evaluation"
-                  description="Allotted Venue"
-                />
-                <EventFlowBox
-                  h="75px"
-                  bgColor="#FFC20C"
-                  time="8:00 AM"
-                  title="Breakfast"
-                  description="Hostel Dining area"
-                />
-                <EventFlowBox
-                  h="75px"
-                  bgColor="#0275F6"
-                  time="9:00 AM"
-                  title="Valedictory"
-                  description="Conference Hall - 1"
-                />
-                <div className="font-bold text-xl sm:text-2xl text-supporting-lightGray min-w-[116px]">
-                  10:15 AM
-                </div>
+                <ComingSoonBanner />
               </div>
             </TabsContent>
           </Tabs>
