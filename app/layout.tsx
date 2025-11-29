@@ -6,6 +6,23 @@ import ClientLayout from "@/components/ClientLayout";
 
 import localFont from "next/font/local";
 
+export const metadata = {
+  title: "SRCAS Hackathon 2.0",
+  description: "A thrilling 24-hour coding marathon where teams collaborate, innovate, and build amazing solutions from scratch. Registration is now open!",
+  keywords: "SRCAS, Hackathon, SRCAS Hackathon, Coding, Innovation, Technology",
+  openGraph: {
+    title: "SRCAS Hackathon 2.0",
+    description: "Expected Outcome: ... A thrilling 24-hour coding marathon where teams collaborate, innovate, and build amazing solutions from scratch. ... Registration is now open!",
+    url: "https://srcashackathon.web.app",
+    images: "/favicon.ico",
+    siteName: "SRCAS Hackathon 2.0",
+    type: "website",
+    locale: "en_US",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 const gotham = localFont({
   src: [
@@ -42,10 +59,10 @@ export default function RootLayout({
     <html lang="en" className={`${gotham.variable} font-sans`}>
       <body>
         <InteractiveBackground>
-        <ClientLayout />
-        {children}
-        <Footer />
-        <Toaster />
+          <ClientLayout />
+          {children}
+          <Footer />
+          <Toaster />
         </InteractiveBackground>
       </body>
     </html>
