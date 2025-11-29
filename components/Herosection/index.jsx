@@ -50,14 +50,14 @@ const HeroSection = () => {
       {/* This btn is for the Desktop view */}
       <div className="hidden sm:flex justify-center md:justify-end md:mr-8 lg:mr-16 md:-mt-24 lg:-mt-12 xl:-mt-16 mb-8">
         <PulsatingButton className="px-6 xl:px-8 py-2 xl:py-3 bg-white text-[#007acc] font-bold text-[28px] xl:text-[32px] hover:bg-black hover:text-white z-10 hover:cursor-pointer transition-colors ease-in-out duration-700">
-        <a href="">Register Now!</a>
+        <a href="https://forms.gle/a3XCtq4eDKTSzRoo7" target="_blank" rel="noopener noreferrer">Register Now!</a>
         </PulsatingButton>
       </div>
       <div className="flex flex-col gap-8 justify-center md:gap-0 md:flex-row md:justify-between lg:px-16 px-2 xs:px-8 md:pb-16 md: pb-4 sm:mt-0 mt-40">
         {/* This is the btn for the Mobile view */}
         <div className="sm:hidden flex justify-center md:justify-end md:mr-8 lg:mr-16 md:-mt-24 lg:-mt-12 xl:-mt-20 mb-8 z-10 mt-8">
         <PulsatingButton className="px-6 xl:px-8 py-2 xl:py-3 bg-white text-[#007acc] font-bold text-[28px] xl:text-[32px] hover:bg-black hover:text-white z-10 hover:cursor-pointer">
-          <a href=" ">Register Now!</a>
+          <a href="https://forms.gle/a3XCtq4eDKTSzRoo7" target="_blank" rel="noopener noreferrer">Register Now!</a>
         </PulsatingButton>
         </div>
         <div className="flex justify-evenly md:justify-center gap-4 md:ml-10 md:pt-6 z-20">

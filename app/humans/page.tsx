@@ -7,10 +7,10 @@ import pravin from "@/public/humansPage/pravin.jpg";
 import sarath from "@/public/humansPage/sarath.jpg";
 import dhanjay from "@/public/humansPage/dhanjay.jpg";
 import girl from "@/public/humansPage/girl.jpg";
-import satheshwaran from "@/public/humansPage/Satheshwaran-V.jpg";
-import vikaas from "@/public/humansPage/vikaas.webp";
-import velan from "@/public/humansPage/velan.jpeg";
-import kanishka from "@/public/humansPage/kanishka.jpg";
+// import satheshwaran from "@/public/humansPage/Satheshwaran-V.jpg";
+// import vikaas from "@/public/humansPage/vikaas.webp";
+// import velan from "@/public/humansPage/velan.jpeg";
+// import kanishka from "@/public/humansPage/kanishka.jpg";
 import sumathi from "@/public/humansPage/mentor/sumathi.png";
 import praneesh from "@/public/humansPage/mentor/praneesh.png";
 import manoj from "@/public/humansPage/mentor/manoj.png";
@@ -24,7 +24,7 @@ const Humans = () => {
       linkedin: "#",
       instagram: "#",
       role: "Chairman",
-      
+
     },
     {
       name: "Sarath",
@@ -32,14 +32,14 @@ const Humans = () => {
       linkedin: "#",
       instagram: "#",
       role: "Vice Chairman",
-      
+
     },
     {
       name: "Vaishnavi",
       profilepic: girl,
       linkedin: "#",
       instagram: "#",
-      role: "Secretary",  
+      role: "Secretary",
 
     },
     {
@@ -48,37 +48,37 @@ const Humans = () => {
       linkedin: "#",
       instagram: "#",
       role: "Joint Secretary",
-  
+
     },
-  
-    {
-      name: "Satheshwaran V",
-      profilepic: satheshwaran,
-      linkedin: "#",
-      instagram: "#",
-      role: "Web Developer",
-    },
-    {
-      name: "Vikaas",
-      profilepic: vikaas,
-      linkedin: "#",
-      instagram: "#",
-      role: "Organizer",
-    },
-    {
-      name: "Velan",
-      profilepic: velan,
-      linkedin: "#",
-      instagram: "#",
-      role: "Organizer",
-    },
-    {
-      name: "Kanishka",
-      profilepic: kanishka,
-      linkedin: "#",
-      instagram: "#",
-      role: "Organizer",
-    },
+
+    // {
+    //   name: "Satheshwaran V",
+    //   profilepic: satheshwaran,
+    //   linkedin: "#",
+    //   instagram: "#",
+    //   role: "Web Developer",
+    // },
+    // {
+    //   name: "Vikaas",
+    //   profilepic: vikaas,
+    //   linkedin: "#",
+    //   instagram: "#",
+    //   role: "Organizer",
+    // },
+    // {
+    //   name: "Velan",
+    //   profilepic: velan,
+    //   linkedin: "#",
+    //   instagram: "#",
+    //   role: "Organizer",
+    // },
+    // {
+    //   name: "Kanishka",
+    //   profilepic: kanishka,
+    //   linkedin: "#",
+    //   instagram: "#",
+    //   role: "Organizer",
+    // },
   ];
 
   const staffCoordinatorsData = [
@@ -144,23 +144,23 @@ const Humans = () => {
               Meet the passionate students who make this hackathon possible
             </p>
           </div>
-          
-            <div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
+
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
                 place-content-center place-items-center gap-10"
-            >
+          >
             {membersData.map((human, index) => (
-                <MagicCard
-                  key={index}
-                  className="cursor-pointer flex-col items-center justify-center whitespace-nowrap"
-                  gradientColor="#D9D9D955"
-                >
-                  <HumansCard index={index} {...human} />
-                </MagicCard>
-              ))}
-            </div>
-            </div>
-                    {/* Staff Coordinators Section */}
+              <MagicCard
+                key={index}
+                className="cursor-pointer flex-col items-center justify-center whitespace-nowrap"
+                gradientColor="#D9D9D955"
+              >
+                <HumansCard index={index} {...human} />
+              </MagicCard>
+            ))}
+          </div>
+        </div>
+        {/* Staff Coordinators Section */}
         <div className="mt-16 mb-8">
           <div className="text-center mb-12">
             <h2 className="text-white font-black text-[28px] xs:text-[32px] md:text-[2.5rem] lg:text-[3rem] xl:text-[60px] xl:leading-[4rem] mb-4">
@@ -170,7 +170,7 @@ const Humans = () => {
               Meet our dedicated faculty members who guide and support our hackathon
             </p>
           </div>
-          
+
           <div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
               place-content-center place-items-center gap-10 max-w-6xl mx-auto"

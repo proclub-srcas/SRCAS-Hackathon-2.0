@@ -1,9 +1,8 @@
 import "./globals.css";
-import MobileSidebar from "@/components/MobileSidebar";
-import { Sidebar } from "@/components/sidebar";
 import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
 import InteractiveBackground from "@/components/dotbg";
+import ClientLayout from "@/components/ClientLayout";
 
 import localFont from "next/font/local";
 
@@ -43,13 +42,7 @@ export default function RootLayout({
     <html lang="en" className={`${gotham.variable} font-sans`}>
       <body>
         <InteractiveBackground>
-        {/* <Sidebar /> */}
-        <div className="sm:block hidden">
-          <Sidebar />
-        </div>
-        <div className="sm:hidden">
-          <MobileSidebar />
-        </div>
+        <ClientLayout />
         {children}
         <Footer />
         <Toaster />

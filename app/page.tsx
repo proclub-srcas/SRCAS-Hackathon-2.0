@@ -19,7 +19,7 @@ import * as motion from "motion/react-client";
 import AnimatedTitle from "@/components/AnimatedTitle";
 import Link from "next/link";
 import FallingText from "@/components/FallingText";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Download } from "lucide-react";
 
 interface GuidlinesCard {
@@ -61,6 +61,15 @@ function GuidelinesCard({ title, description, icon, index, className }: Guidline
 
 export default function Home() {
   const [expandedProblem, setExpandedProblem] = useState<string | null>(null);
+  const [showWhatsAppModal, setShowWhatsAppModal] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowWhatsAppModal(true);
+    }, 5000); // Show after 5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const toggleProblem = (problemId: string) => {
     setExpandedProblem(prev => {
@@ -97,34 +106,13 @@ export default function Home() {
     },
     {
       id: 4,
-      title: "AI Chatbot for Privacy Awareness",
-      problem: "Most users lack awareness about how their data is tracked, stored, or shared online. As a result, they unknowingly give consent to unsafe cookies, phishing links, and malicious apps, exposing themselves to data theft and privacy violations.",
-      goal: "To develop an AI-based educational chatbot that interacts with users through engaging conversations, quizzes, and examples to raise awareness about data privacy, cookies, phishing, social engineering, and safe browsing practices. The chatbot should personalize advice based on user behavior (e.g., \"You often use public Wi-Fi, here's how to stay safe\").",
-      expectedOutcome: "An interactive and gamified chatbot platform that makes cybersecurity education accessible and enjoyable. It aims to improve user digital literacy, reduce privacy-related incidents, and build a culture of safe digital behavior among the general public and students."
-    },
-    {
-      id: 5,
       title: "IoT Device Security Analyzer",
       problem: "IoT devices like smart cameras, wearables, and home assistants often have weak security configurations. Many users are unaware that their devices are vulnerable to attacks or misconfigured, exposing their networks to exploitation.",
       goal: "To build a network-scanning and vulnerability-assessment tool that detects IoT devices connected to a local Wi-Fi network, identifies their make/model, and checks for known vulnerabilities (CVE database) or default credentials. The tool should provide a security score and recommendations for securing each device (e.g., firmware updates, port closures).",
       expectedOutcome: "A comprehensive IoT vulnerability scanner that empowers users and enterprises to detect, analyze, and mitigate IoT security risks. This leads to stronger endpoint security, reduced attack surfaces, and greater visibility in smart home or industrial IoT environments."
     },
     {
-      id: 6,
-      title: "E-Waste Tracking & Incentive Platform",
-      problem: "India is the third-largest producer of electronic waste, yet over 90% of e-waste is handled by the unorganized sector with minimal environmental safeguards. In Tamil Nadu, informal recycling practices and lack of citizen participation exacerbate environmental and health risks. There's no unified, transparent system for tracking how e-waste moves from households to collection centers or recyclers.",
-      goal: "To develop a prototype web/mobile platform for tracking e-waste collection and incentivizing responsible disposal using a lightweight blockchain or ledger-based system. Users can register and log their e-waste items, receive digital \"eco-points\" for each submission. Collectors update the system when items are collected, transported, or recycled. Authorities can view real-time dashboards for tracking e-waste flow.",
-      expectedOutcome: "A functional end-to-end prototype demonstrating the digital traceability of e-waste and citizen-driven participation model. Expected results include improved transparency between citizens, collectors, and local authorities, and a scalable model supporting SDG 12: Responsible Consumption and Production."
-    },
-    {
-      id: 7,
-      title: "Predictive Community Water Safety System",
-      problem: "In many semi-urban and rural areas of India, especially in Tamil Nadu, groundwater and local reservoirs are contaminated by industrial waste, fertilizers, and heavy metals. Water quality testing is mostly manual, infrequent, and reactive — contamination is often detected only after disease outbreaks or visible waterborne issues occur.",
-      goal: "To design a low-cost, AI-powered predictive system for monitoring and forecasting water contamination levels using a combination of IoT sensors, open data, and machine learning models. The system should provide real-time visibility, predict contamination spikes, and notify village panchayats, NGOs, and public health departments.",
-      expectedOutcome: "A proof-of-concept predictive monitoring platform capable of providing real-time visibility into community water safety, predicting contamination events days in advance, and empowering local authorities with actionable insights. Contributing to SDG 6 (Clean Water and Sanitation) and SDG 3 (Good Health and Well-being)."
-    },
-    {
-      id: 8,
+      id: 5,
       title: "Accelerating Realistic Road Network Modeling for Indian Traffic Simulations",
       problem: "India's urban road networks are uniquely complex — characterized by irregular lane patterns, mixed traffic, temporary barricades, frequent construction zones, and poor road maintenance. Current traffic modeling tools fail to accurately capture these real-world irregularities, leading to inaccurate predictions for congestion, safety risks, and infrastructure planning.",
       goal: "To design and develop an AI-assisted, MATLAB-integrated toolset that automatically generates realistic digital twins of Indian road networks from minimal inputs such as map data, drone imagery, or sensor datasets. The system should simplify digital twin creation, incorporate generative AI for auto-populating road environments, and integrate seamlessly with MATLAB, Simulink, and RoadRunner.",
@@ -142,7 +130,7 @@ export default function Home() {
     icon: g1,
     title: "Register with Ease",
     description:
-      "Pre-registration opens January 2025—no red tape, just one click away!",
+      "Registration is now open! Sign up quickly and join us for an amazing hackathon experience.",
   }, {
     icon: downloadSvg,
     title: "Use Official PPT Template",
@@ -192,10 +180,413 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
+      {/* WhatsApp Modal */}
+      {showWhatsAppModal && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            className="relative bg-gradient-to-br from-[#2a2a2a] to-[#1f1f1f] border border-white/20 rounded-3xl p-8 md:p-12 max-w-lg w-full shadow-2xl"
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setShowWhatsAppModal(false)}
+              className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300"
+            >
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* WhatsApp Icon */}
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg shadow-green-500/40">
+                <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="text-center space-y-4">
+              <h3 className="text-2xl md:text-3xl font-black text-white">
+                Join Our WhatsApp Group
+              </h3>
+              <p className="text-base md:text-lg text-white/70 leading-relaxed">
+                Stay updated with the latest hackathon announcements, FAQs, and important notifications. Join our community now!
+              </p>
+
+              <a
+                href="https://chat.whatsapp.com/Ldpuv6oaszdD65feKi7K4u"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setShowWhatsAppModal(false)}
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 mt-6"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                </svg>
+                Join WhatsApp Group
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Floating WhatsApp Widget */}
+      <a
+        href="https://chat.whatsapp.com/Ldpuv6oaszdD65feKi7K4u"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-40 group"
+      >
+        <div className="relative">
+          {/* Ping animation */}
+          <span className="absolute inset-0 w-full h-full bg-green-500 rounded-full animate-ping opacity-75"></span>
+
+          {/* Main button */}
+          <div className="relative bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white p-4 rounded-full shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110">
+            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+          </div>
+
+          {/* Tooltip */}
+          <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+            <div className="bg-gray-900 text-white text-sm font-medium px-4 py-2 rounded-lg shadow-lg">
+              WhatsApp Group for Updates & FAQ
+            </div>
+          </div>
+        </div>
+      </a>
+
       <HeroSection />
 
+      {/* Prize Pool Section */}
+      <div className="w-full py-12 md:py-16 px-4 mt-8 md:mt-12">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative group"
+          >
+            <div className="bg-gradient-to-br from-[#1a1a1a] via-[#222222] to-[#1a1a1a] border border-white/10 rounded-3xl p-8 md:p-12 lg:p-16 hover:border-secondary-orange/30 hover:shadow-2xl hover:shadow-secondary-orange/10 transition-all duration-500 overflow-hidden">
 
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary-orange/5 via-transparent to-secondary-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
+              {/* Money Icon Stack */}
+              <div className="flex justify-center mb-8 relative z-10">
+                <div className="relative">
+                  {/* Outer glow ring */}
+                  <div className="absolute -inset-4 bg-gradient-to-br from-emerald-500/20 to-green-600/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+
+                  {/* Main icon container */}
+                  <div className="relative w-28 h-28 md:w-36 md:h-36 bg-gradient-to-br from-[#2a2a2a] to-[#1f1f1f] rounded-2xl flex items-center justify-center border border-white/10 group-hover:border-emerald-500/40 transition-all duration-500 group-hover:scale-105">
+
+                    {/* Stacked coins effect */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      {/* Back coin */}
+                      <div className="absolute w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-emerald-400/40 to-green-500/30 rounded-full -translate-x-2 translate-y-2 blur-[1px] opacity-60"></div>
+
+                      {/* Middle coin */}
+                      <div className="absolute w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-emerald-400/50 to-green-500/40 rounded-full translate-x-1 -translate-y-1 blur-[0.5px] opacity-80"></div>
+
+                      {/* Front coin with rupee symbol */}
+                      <div className="relative w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-emerald-500 via-emerald-400 to-green-500 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/40 border-2 border-emerald-400/30 group-hover:shadow-emerald-400/60 group-hover:border-emerald-400/50 transition-all duration-500">
+                        <span className="text-2xl md:text-3xl font-black text-[#1a1a1a]">₹</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Orbiting particles */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-48 md:h-48">
+                    <div className="absolute top-0 left-1/2 w-2 h-2 bg-emerald-400/60 rounded-full blur-sm animate-pulse"></div>
+                    <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-green-500/60 rounded-full blur-sm animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="text-center space-y-5 relative z-10">
+                <h2 className="text-lg md:text-xl font-bold text-supporting-mediumGray uppercase tracking-widest">
+                  Total Prize Pool
+                </h2>
+
+                <div className="relative">
+                  <div className="flex items-center justify-center gap-4">
+                    <div className="h-[2px] w-16 md:w-24 bg-gradient-to-r from-transparent via-secondary-orange/50 to-secondary-orange rounded-full"></div>
+                    <p className="text-6xl md:text-7xl lg:text-8xl font-black bg-gradient-to-br from-white via-white to-white/80 bg-clip-text text-transparent tracking-tighter">
+                      ₹75,000
+                    </p>
+                    <div className="h-[2px] w-16 md:w-24 bg-gradient-to-l from-transparent via-secondary-orange/50 to-secondary-orange rounded-full"></div>
+                  </div>
+
+                  {/* Subtle shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
+                </div>
+
+                <p className="text-base md:text-lg text-supporting-mediumGray max-w-2xl mx-auto leading-relaxed px-4">
+                  Compete for exciting cash prizes and recognition. Top teams will be rewarded for their innovation and problem-solving excellence.
+                </p>
+
+                {/* Link to prizes page */}
+                <div className="pt-6">
+                  <Link
+                    href="/prizes"
+                    className="inline-flex items-center gap-2 text-sm md:text-base text-secondary-orange hover:text-white transition-colors duration-300 group/link px-6 py-2 rounded-lg border border-secondary-orange/20 hover:border-secondary-orange/40 hover:bg-secondary-orange/5"
+                  >
+                    <span className="font-medium">
+                      Check detailed info
+                    </span>
+                    <svg className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Subtle corner accents */}
+              <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-secondary-orange/5 to-transparent rounded-tl-3xl"></div>
+              <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-secondary-green/5 to-transparent rounded-br-3xl"></div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Important Dates Section */}
+      <div className="w-full py-12 md:py-16 px-4 mt-8 md:mt-12 mb-4 md:mb-8">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedTitle viewport={true}>
+            <h2 className="text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-white mb-3 md:mb-4 text-center">
+              Mark Your Calendar
+            </h2>
+          </AnimatedTitle>
+          <p className="text-base md:text-lg lg:text-xl text-supporting-mediumGray mb-10 md:mb-16 text-center max-w-3xl mx-auto">
+            Stay on track with these key milestones for SRCAS Hackathon 2.0
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6 lg:gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <div className="relative bg-gradient-to-br from-[#2a2a2a] to-[#1f1f1f] border border-white/20 rounded-2xl p-10 hover:border-secondary-orange/60 hover:shadow-lg hover:shadow-secondary-orange/10 transition-all duration-300 h-full overflow-hidden group">
+                {/* Subtle corner accent */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-secondary-orange/5 to-transparent rounded-bl-full"></div>
+
+                <div className="relative z-10">
+                  <div className="flex justify-center mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="text-center space-y-4">
+                    <h3 className="text-xs md:text-sm font-bold text-[#3B82F6] uppercase tracking-[0.2em]">
+                      Idea Submission
+                    </h3>
+                    <p className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none">
+                      Dec 5
+                    </p>
+                    <p className="text-lg md:text-xl text-white/40 font-medium">2025</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <div className="relative bg-gradient-to-br from-[#2a2a2a] to-[#1f1f1f] border border-white/20 rounded-2xl p-10 hover:border-secondary-orange/60 hover:shadow-lg hover:shadow-secondary-orange/10 transition-all duration-300 h-full overflow-hidden group">
+                {/* Subtle corner accent */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-secondary-orange/5 to-transparent rounded-bl-full"></div>
+
+                <div className="relative z-10">
+                  <div className="flex justify-center mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="text-center space-y-4">
+                    <h3 className="text-xs md:text-sm font-bold text-[#3B82F6] uppercase tracking-[0.2em]">
+                      Finalists Announced
+                    </h3>
+                    <p className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none">
+                      Dec 8
+                    </p>
+                    <p className="text-lg md:text-xl text-white/40 font-medium">2025</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <div className="relative bg-gradient-to-br from-[#2a2a2a] to-[#1f1f1f] border border-white/20 rounded-2xl p-10 hover:border-secondary-orange/60 hover:shadow-lg hover:shadow-secondary-orange/10 transition-all duration-300 h-full overflow-hidden group">
+                {/* Subtle corner accent */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-secondary-orange/5 to-transparent rounded-bl-full"></div>
+
+                <div className="relative z-10">
+                  <div className="flex justify-center mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="text-center space-y-4">
+                    <h3 className="text-xs md:text-sm font-bold text-[#3B82F6] uppercase tracking-[0.2em]">
+                      24 Hours Hackathon
+                    </h3>
+                    <p className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none">
+                      Dec 13
+                    </p>
+                    <p className="text-lg md:text-xl text-white/40 font-medium">2025</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Problem Statements Section */}
+      <div className="flex flex-col px-4 py-8 md:py-16  lg:px-[7%]">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-4 md:mb-6 leading-tight">
+            Problem Statements
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-supporting-mediumGray mb-4 md:mb-8 max-w-4xl mx-auto px-2">
+            Choose from our curated problem statements focusing on cybersecurity, sustainability, and smart city solutions. Each problem offers unique challenges and opportunities for innovation.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 md:gap-6 max-w-6xl mx-auto w-full">
+          {problemStatements.map((problem, index) => {
+            const problemId = `problem-${problem.id}`;
+            const isExpanded = expandedProblem === problemId;
+
+            return (
+              <motion.div
+                key={problem.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="w-full"
+              >
+                <div
+                  className="rounded-lg border-2 border-supporting-darkGray transition-all duration-300 cursor-pointer hover:border-white/30 bg-black/20"
+                  onClick={() => toggleProblem(problemId)}
+                >
+
+                  <div className="flex items-center justify-between p-3 sm:p-4 md:p-6">
+                    <div className="flex items-start gap-2 sm:gap-3 md:gap-4 flex-1 min-w-0">
+                      <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 border-white/50 flex items-center justify-center">
+                        <span className="text-white font-bold text-sm sm:text-base md:text-lg">{problem.id}</span>
+                      </div>
+                      <div className="flex-1 min-w-0 pr-2">
+                        <h3 className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold leading-tight sm:leading-snug md:leading-7 pt-1 sm:pt-1.5 md:pt-2 hover:underline hover:underline-offset-4 break-words">
+                          {problem.title}
+                        </h3>
+                      </div>
+                    </div>
+                    <div className="flex-shrink-0 ml-2 sm:ml-3 md:ml-4">
+                      <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-supporting-darkGray transition-colors duration-300 flex items-center justify-center hover:border-white/40">
+                        <svg
+                          className={`w-4 h-4 sm:w-5 sm:h-5 text-white transition-transform duration-300 ${isExpanded ? 'rotate-45' : ''}`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Expanded Content */}
+                  <motion.div
+                    initial={false}
+                    animate={isExpanded ? "open" : "closed"}
+                    variants={{
+                      open: {
+                        opacity: 1,
+                        height: "auto",
+                        transition: {
+                          duration: 0.3,
+                          ease: "easeInOut",
+                          opacity: { duration: 0.2, delay: 0.1 }
+                        }
+                      },
+                      closed: {
+                        opacity: 0,
+                        height: 0,
+                        transition: {
+                          duration: 0.3,
+                          ease: "easeInOut",
+                          opacity: { duration: 0.1 }
+                        }
+                      }
+                    }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-3 sm:px-4 md:px-6 pb-3 sm:pb-4 md:pb-6 border-t border-supporting-darkGray">
+                      <div className="pt-3 sm:pt-4 md:pt-6 space-y-3 sm:space-y-4 md:space-y-5">
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                          transition={{ duration: 0.2, delay: isExpanded ? 0.1 : 0 }}
+                        >
+                          <h5 className="text-white font-bold mb-1.5 sm:mb-2 text-base sm:text-lg">Problem:</h5>
+                          <p className="text-gray-300 text-sm sm:text-base leading-relaxed break-words">{problem.problem}</p>
+                        </motion.div>
+
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                          transition={{ duration: 0.2, delay: isExpanded ? 0.15 : 0 }}
+                        >
+                          <h5 className="text-white font-bold mb-1.5 sm:mb-2 text-base sm:text-lg">Goal:</h5>
+                          <p className="text-gray-300 text-sm sm:text-base leading-relaxed break-words">{problem.goal}</p>
+                        </motion.div>
+
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                          transition={{ duration: 0.2, delay: isExpanded ? 0.2 : 0 }}
+                        >
+                          <h5 className="text-white font-bold mb-1.5 sm:mb-2 text-base sm:text-lg">Expected Outcome:</h5>
+                          <p className="text-gray-300 text-sm sm:text-base leading-relaxed break-words">{problem.expectedOutcome}</p>
+                        </motion.div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
       {/* Why Participate Section */}
       <div className="w-full py-16 px-4 mt-20 mb-8">
         <div className="max-w-7xl mx-auto">
@@ -313,124 +704,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Problem Statements Section */}
-      <div className="flex flex-col px-4 py-8 md:py-16  lg:px-[7%]">
-        <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-4 md:mb-6 leading-tight">
-            Problem Statements
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-supporting-mediumGray mb-4 md:mb-8 max-w-4xl mx-auto px-2">
-            Choose from our curated problem statements focusing on cybersecurity, sustainability, and smart city solutions. Each problem offers unique challenges and opportunities for innovation.
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 gap-4 md:gap-6 max-w-6xl mx-auto w-full">
-          {problemStatements.map((problem, index) => {
-            const problemId = `problem-${problem.id}`;
-            const isExpanded = expandedProblem === problemId;
-
-            return (
-              <motion.div
-                key={problem.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="w-full"
-              >
-                <div
-                  className="rounded-lg border-2 border-supporting-darkGray transition-all duration-300 cursor-pointer hover:border-white/30 bg-black/20"
-                  onClick={() => toggleProblem(problemId)}
-                >
-                  
-                  <div className="flex items-center justify-between p-3 sm:p-4 md:p-6">
-                    <div className="flex items-start gap-2 sm:gap-3 md:gap-4 flex-1 min-w-0">
-                      <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 border-white/50 flex items-center justify-center">
-                        <span className="text-white font-bold text-sm sm:text-base md:text-lg">{problem.id}</span>
-                      </div>
-                      <div className="flex-1 min-w-0 pr-2">
-                        <h3 className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-bold leading-tight sm:leading-snug md:leading-7 pt-1 sm:pt-1.5 md:pt-2 hover:underline hover:underline-offset-4 break-words">
-                          {problem.title}
-                        </h3>
-                      </div>
-                    </div>
-                    <div className="flex-shrink-0 ml-2 sm:ml-3 md:ml-4">
-                      <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-supporting-darkGray transition-colors duration-300 flex items-center justify-center hover:border-white/40">
-                        <svg
-                          className={`w-4 h-4 sm:w-5 sm:h-5 text-white transition-transform duration-300 ${isExpanded ? 'rotate-45' : ''}`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Expanded Content */}
-                  <motion.div
-                    initial={false}
-                    animate={isExpanded ? "open" : "closed"}
-                    variants={{
-                      open: {
-                        opacity: 1,
-                        height: "auto",
-                        transition: {
-                          duration: 0.3,
-                          ease: "easeInOut",
-                          opacity: { duration: 0.2, delay: 0.1 }
-                        }
-                      },
-                      closed: {
-                        opacity: 0,
-                        height: 0,
-                        transition: {
-                          duration: 0.3,
-                          ease: "easeInOut",
-                          opacity: { duration: 0.1 }
-                        }
-                      }
-                    }}
-                    className="overflow-hidden"
-                  >
-                    <div className="px-3 sm:px-4 md:px-6 pb-3 sm:pb-4 md:pb-6 border-t border-supporting-darkGray">
-                      <div className="pt-3 sm:pt-4 md:pt-6 space-y-3 sm:space-y-4 md:space-y-5">
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                          transition={{ duration: 0.2, delay: isExpanded ? 0.1 : 0 }}
-                        >
-                          <h5 className="text-white font-bold mb-1.5 sm:mb-2 text-base sm:text-lg">Problem:</h5>
-                          <p className="text-gray-300 text-sm sm:text-base leading-relaxed break-words">{problem.problem}</p>
-                        </motion.div>
-
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                          transition={{ duration: 0.2, delay: isExpanded ? 0.15 : 0 }}
-                        >
-                          <h5 className="text-white font-bold mb-1.5 sm:mb-2 text-base sm:text-lg">Goal:</h5>
-                          <p className="text-gray-300 text-sm sm:text-base leading-relaxed break-words">{problem.goal}</p>
-                        </motion.div>
-
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={isExpanded ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                          transition={{ duration: 0.2, delay: isExpanded ? 0.2 : 0 }}
-                        >
-                          <h5 className="text-white font-bold mb-1.5 sm:mb-2 text-base sm:text-lg">Expected Outcome:</h5>
-                          <p className="text-gray-300 text-sm sm:text-base leading-relaxed break-words">{problem.expectedOutcome}</p>
-                        </motion.div>
-                      </div>
-                    </div>
-                  </motion.div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-      </div>
       {/* Guidelines */}
       <div className="flex flex-col items-center gap-4 md:gap-16">
         <div className=" text-supporting-lightGray lg:text-5xl monitor:text-7xl xl:text-6xl md:text-4xl text-center text-3xl xs:text-2xl font-bold leading-[48px] xs:leading-[64px]">

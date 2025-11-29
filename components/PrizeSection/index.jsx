@@ -15,11 +15,7 @@ const PrizeCard = ({
   textColor,
 }) => (
   <div
-    className={`flex flex-col items-center justify-center sm:-ml-8 lg:-ml-12 mt-8 sm:mt-28 ${
-      prizeDescription == "2nd Prize - Silver"
-        ? "sm:order-2 order-2"
-        : "order-1 sm:order-1 md:mb-16 lg:mb-20 xl:mb-32"
-    }`}
+    className="flex flex-col items-center justify-center mt-8 sm:mt-28 order-1"
   >
     <div className="flex flex-col items-center justify-center xl:w-[460px]">
      
@@ -55,22 +51,12 @@ const PrizeSection = () => {
     {
       lampImage: lamp_yellow,
       cupImage: cup1,
-      prizeAmount: "INR 10K",
-      prizeDescription: "1st Prize - Gold",
+      prizeAmount: "INR 75K",
+      prizeDescription: "Total Prize Pool",
       gradientColors:
         "from-[#FFAE0C]/30 via-[#FFAE0C]/40 to-transparent to-85%",
       gradientClasses: "clip-trapezium",
       textColor: "text-[#FFAE0C]",
-    },
-    {
-      lampImage: lamp_white,
-      cupImage: cup2,
-      prizeAmount: "INR 5K",
-      prizeDescription: "2nd Prize - Silver",
-      gradientColors:
-        "from-supporting-mediumGray/30 via-supporting-mediumGray/40 to-transparent to-85%",
-      gradientClasses: "clip-trapezium",
-      textColor: "text-supporting-mediumGray",
     },
   ];
 
