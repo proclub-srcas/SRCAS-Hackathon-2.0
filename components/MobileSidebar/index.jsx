@@ -146,8 +146,9 @@ const MobileSidebar = () => {
             
             {/* PPT Download Button */}
             <a
-              href="/assets/srcas-hackathon.pptx"
-              download="SRCAS-Hackathon-Presentation.pptx"
+              href="https://1drv.ms/p/c/ee26bfeaf9ec4963/ESZ_AjZI9t5HinELNXd6dpUBXVgB4lqo1Fi1_PylfmntbQ?e=GucJl1"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 px-2 py-2 rounded-lg text-white/60 hover:text-[#007acc] hover:bg-[#007acc]/10 transition-all duration-300"
               onClick={() => setOpen(false)}
             >

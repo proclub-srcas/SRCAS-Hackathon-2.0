@@ -52,8 +52,9 @@ export const Sidebar = () => {
         ))}
         
         <a
-          href="/assets/srcas-hackathon.pptx"
-          download="SRCAS-Hackathon-Presentation.pptx"
+          href="https://1drv.ms/p/c/ee26bfeaf9ec4963/ESZ_AjZI9t5HinELNXd6dpUBXVgB4lqo1Fi1_PylfmntbQ?e=GucJl1"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center space-x-4 text-base pl-[12px] w-12 bg-[#007acc] text-white  group-hover:w-44 rounded-[2.5rem] h-10 xl:h-12 hover:shadow-[0_4px_40px_rgba(0,0,0,0.10)] hover:backdrop-blur-[20px] hover:bg-[#007acc] hover:text-white hover:scale-105 transition duration-300 ease-in-out"
         >
           <Download className="w-auto h-auto monitor:w-8 monitor:h-8" />

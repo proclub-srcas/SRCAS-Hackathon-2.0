@@ -127,8 +127,9 @@ export default function Prizes() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                    <a
-              href="/assets/srcas-hackathon.pptx"
-              download="SRCAS-Hackathon.pptx"
+              href="https://1drv.ms/p/c/ee26bfeaf9ec4963/ESZ_AjZI9t5HinELNXd6dpUBXVgB4lqo1Fi1_PylfmntbQ?e=GucJl1"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white/5 hover:bg-white/10 border-2 border-white/30 rounded-lg text-white font-normal py-4 px-8 text-lg transition-colors duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl"
             >
               <Download className="w-5 h-5" />
