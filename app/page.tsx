@@ -62,13 +62,21 @@ function GuidelinesCard({ title, description, icon, index, className }: Guidline
 export default function Home() {
   const [expandedProblem, setExpandedProblem] = useState<string | null>(null);
   const [showWhatsAppModal, setShowWhatsAppModal] = useState(false);
+  const [showResultsModal, setShowResultsModal] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowWhatsAppModal(true);
     }, 5000); // Show after 5 seconds
 
-    return () => clearTimeout(timer);
+    const resultsTimer = setTimeout(() => {
+      setShowResultsModal(true);
+    }, 8000); // Show results modal after 8 seconds
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(resultsTimer);
+    };
   }, []);
 
   const toggleProblem = (problemId: string) => {
@@ -230,6 +238,99 @@ export default function Home() {
                 Join WhatsApp Group
               </a>
             </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Results Announcement Modal */}
+      {showResultsModal && (
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="relative bg-gradient-to-br from-[#2a2a2a] via-[#1f1f1f] to-[#2a2a2a] border-2 border-secondary-orange/40 rounded-3xl p-8 md:p-12 max-w-2xl w-full shadow-2xl shadow-secondary-orange/20"
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setShowResultsModal(false)}
+              className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 group"
+            >
+              <svg className="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Celebration particles */}
+            <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
+              <div className="absolute top-0 left-1/4 w-2 h-2 bg-yellow-400 rounded-full animate-ping" style={{ animationDelay: '0s' }}></div>
+              <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-secondary-orange rounded-full animate-ping" style={{ animationDelay: '0.3s' }}></div>
+              <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping" style={{ animationDelay: '0.6s' }}></div>
+            </div>
+
+            {/* Trophy Icon */}
+            <div className="flex justify-center mb-6">
+              <motion.div
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 0.6, delay: 0.2, type: "spring" }}
+                className="relative"
+              >
+                <div className="absolute -inset-4 bg-gradient-to-br from-yellow-500/20 to-secondary-orange/20 rounded-full blur-xl animate-pulse"></div>
+                <div className="relative w-24 h-24 bg-gradient-to-br from-yellow-500 via-secondary-orange to-yellow-600 rounded-full flex items-center justify-center shadow-2xl shadow-yellow-500/40 border-4 border-yellow-300/30">
+                  <svg className="w-14 h-14 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                  </svg>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Content */}
+            <div className="text-center space-y-6 relative z-10">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                <h2 className="text-4xl md:text-5xl font-black text-white mb-3 bg-gradient-to-r from-white via-secondary-orange to-white bg-clip-text text-transparent">
+                  🎉 Results Announced! 🎉
+                </h2>
+                <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-lg mx-auto">
+                  The finalists for <span className="text-secondary-orange font-bold">SRCAS Hackathon 2.0</span> have been selected! Check if your team made it to the finals.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="pt-4"
+              >
+                <Link
+                  href="/shortlisted"
+                  onClick={() => setShowResultsModal(false)}
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-secondary-orange to-yellow-500 hover:from-yellow-500 hover:to-secondary-orange text-white font-black py-4 px-10 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 text-lg"
+                >
+                  <span>View Finalists</span>
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className="text-sm text-white/50 pt-2"
+              >
+                Congratulations to all selected teams! 🏆
+              </motion.p>
+            </div>
+
+            {/* Decorative elements */}
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-br from-secondary-orange/10 to-transparent rounded-bl-3xl"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-tl from-yellow-500/10 to-transparent rounded-tr-3xl"></div>
           </motion.div>
         </div>
       )}

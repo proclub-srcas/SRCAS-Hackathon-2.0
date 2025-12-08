@@ -9,6 +9,7 @@ import {
   Image as Gallery,
   Phone,
   Download,
+  Star,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -18,6 +19,7 @@ const sidebarLinks = [
   { name: "Gallery", icon: <Gallery className="w-auto h-auto monitor:w-8 monitor:h-8" />, href: "/gallery" },
   { name: "Partners", icon: <Handshake className="w-auto h-auto monitor:w-8 monitor:h-8" />, href: "/partners" },
   { name: "Prizes", icon: <Trophy className="w-auto h-auto monitor:w-8 monitor:h-8" />, href: "/prizes" },
+  { name: "Shortlisted", icon: <Star className="w-auto h-auto monitor:w-8 monitor:h-8" />, href: "/shortlisted" },
   { name: "Schedule", icon: <Calendar className="w-auto h-auto monitor:w-8 monitor:h-8" />, href: "/schedule" },
   { name: "Humans", icon: <Users className="w-auto h-auto monitor:w-8 monitor:h-8" />, href: "/humans" },
   { name: "FAQs", icon: <Info className="w-auto h-auto monitor:w-8 monitor:h-8" />, href: "/faq" },
